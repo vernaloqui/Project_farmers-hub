@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Farmer's Hub Help Page</title>
+    <link rel="icon" href="img/logo2.jpg" type="image/icon type">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body class="d-flex flex-column min-vh-100" style="background: linear-gradient(-120deg,white 50%, RGBA(162, 219, 183, 0.4) 50%);">
+
+    <!--Navigation Bar-->
+    <div class="container-fluid" style="background-color:#F8FEFA;">
+        <div class="navbar navbar-expand-md">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/logo.png" class="rounded-circle border border-2" style="width:75px;">
+                    </a>
+                    <button class="navbar-toggler"
+                                    type="button" 
+                                    data-bs-toggle="collapse" 
+                                    data-bs-target="#navbarMark" 
+                                    aria-controls="navbarMark" 
+                                    aria-expanded="false" 
+                                    aria-label="Toggle Navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                            <div class="collapse navbar-collapse" id="navbarMark">
+                                <ul class="navbar-nav text-uppercase">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="Products.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#073418;">Farm Produce</a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <li><a class="dropdown-item" href="Fruits.html">Fruits</a></li>
+                                            <li><a class="dropdown-item" href="Veggies.html">Vegetables</a></li>
+                                            <li><a class="dropdown-item" href="SHerbs.html">Spices and Herbs</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="BestSellers.html"  style="color:#073418;">Best Sellers</a>
+                                    </li>
+                                    
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="OnSale.html"  style="color:#073418;">On Sale</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="Login.html"  style="color:#073418">My Account</a>
+                                    </li>
+                                </ul>
+                                <div class="float-right px-2">
+                                    <a class="nav-link" href="Cart.html"  style="color:#073418">
+                                    <i class="bi bi-cart4" style="font-size:30px;"></i></a>
+                                </div>
+                                <form class="d-flex ms-auto" role="search">
+                                    <input type="text" class="form-control" placeholder="Search" aria-label="search">
+                                    <button type="submit" class="btn btn-outline" style="background-color: #073418; color:#A2DBB7;">Search</button>
+                                </form>                            
+                            </div>
+        </div>
+    </div>
+<!--end of nav bar>-->
+<br>
+
+    <!--Start of Help Page-->
+    <h3 class="fw-bold mt-5 ms-3">Frequently Asked Questions</h3>
+    <!--FAQ section-->
+    <div class="m-3">
+      <div class="accordion" id="myAccordion">
+        <!--Question #1-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne"> Where are your fruits and vegetables sourced? </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse">
+            <div class="card-body">
+              <p class="ms-3 mt-3"> We get our products from farmers all over the country. We import fruits and vegetables that are not grown locally. </p>
+            </div>
+          </div>
+        </div>
+        <!--Question #1-->
+        <!--Question #2-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"> How should your products be stored? </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse show">
+            <div class="card-body">
+              <p class="ms-3 mt-3"> This varies depending on the product. In general, store leafy vegetables in the refrigerator. Root crops, such as potatoes and onions, can be stored at room temperature in a cool, dry place. Fruits should be refrigerated. </p>
+            </div>
+          </div>
+        </div>
+        <!--Question #2-->
+        <!--Question #3-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseThree"> How quickly can you deliver? </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse show">
+            <div class="card-body">
+              <p class="ms-3 mt-3"> We have our own delivery service and can deliver to your door the next day (except Sundays) if you place your order before the daily cutoff time of 8 p.m. </p>
+            </div>
+          </div>
+        </div>
+        <!--Question #3-->
+        <!--Question #4-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseFour"> How do you deliver our orders? </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse show">
+            <div class="card-body">
+              <p class="ms-3 mt-3"> We deliver your orders using our fleet of refrigerated vans to ensure the freshness of your order. </p>
+            </div>
+          </div>
+        </div>
+        <!--Question #4-->
+        <!--Question #5-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFive">
+            <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseFive"> If I am not satisfied with my orders, what are my options? </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse show">
+            <div class="card-body">
+              <p class="ms-3 mt-3"> Due to the nature of our products, it is our policy that once the items are received and accepted, it is assumed that you have inspected and are satisfied with our products. We do allow you to reject items on the spot if you are dissatisfied with them. As a result, we strongly recommend that you or your representative inspect the delivered items one by one. </p>
+            </div>
+          </div>
+        </div>
+        <!--Question #5-->
+        <!--Question #6-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSix">
+            <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseSix"> Do you accept bulk orders? </button>
+          </h2>
+          <div id="collapseSix" class="accordion-collapse collapse show">
+            <div class="card-body">
+              <p class="ms-3 mt-3"> We certainly do! Large orders for businesses, restaurants, and parties are welcome. If you have any further questions, please contact us via email and we will get back to you. </p>
+            </div>
+          </div>
+        </div>
+        <!--Question #6-->
+      </div>
+      <!--FAQ section-->
+      <!--Contact Us Form-->
+      <div class="form-area">
+        <div class="container">
+          <div class="row single-form g-0">
+            <div class="col-sm-12 col-lg-6">
+              <div class="left">
+                <h2>
+                  <span>Get in</span>
+                  <br>touch with us!
+                </h2>
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+              <div class="right">
+                <i class="bi bi-caret-right-fill" style="color: #A2DBB7;"></i>
+                <form>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Your Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Message</label>
+                    <textarea type="password" class="form-control" id="exampleInputPassword1"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Contact Us Form-->
+      <!--End of Help Page-->
+      <br>
+<!--start of footer-->
+<br>
+<footer class="container-fluid text-center text-dark" style="background-color:#F8FEFA;">   
+<hr>
+    <div class="row">
+        <!--Paragraph-->
+        <div class="col d-flex justify-content-center">
+            <p class="h5">
+                "A moment on the lips, a lifetime on the hips. Always eat what's right. If you want to run for long, avoid junk food...
+           <br> <br>
+               Be Fit by Eating Fresh."
+           </p> 
+        </div>
+        <!--Icons-->
+        <div class="col justify-content-center">
+            <div><p class="text-dark text-uppercase fw-bold">Follow us </p></div>
+            <p><a href="#" i class="bi bi-facebook mx-4" style="color:#A2DBB7;"></i></a>
+            <a href="#" i class="bi bi-instagram mx-4" style="color:#A2DBB7;"></i></a>
+            <a href="#" i class="bi bi-twitter mx-4" style="color:#A2DBB7;"></i></a></p>
+        </div>
+    </div>
+<br>
+   <div class="row text-center p-3 d-flex justify-content-center" style="background-color: #A2DBB7;">
+        <div class="col-md-2">
+           <h6 class="text-uppercase fw-bold">
+               <a href="AboutUs.html" style="color:#073418;">About us</a>
+           </h6>
+        </div>
+
+        <div class="col-md-2">
+            <h6 class="text-uppercase fw-bold">
+                <a href="FarmerPartner.html" style="color:#073418;">Be a Farmer Partner</a>
+            </h6>
+         </div>
+
+        <div class="col-md-2">
+           <h6 class="text-uppercase fw-bold">
+               <a href="#" style="color:#073418;">  © 2020 Copyright</a>
+           </h6>
+        </div>
+
+        <div class="col-md-2">
+           <h6 class="text-uppercase fw-bold">
+               <a href="SellerCenter.html" style="color:#073418;">Seller Center</a>
+           </h6>
+         </div>
+
+         <div class="col-md-2">
+            <h6 class="text-uppercase fw-bold">
+                <a href="help.html" style="color:#073418;">Help</a>
+            </h6>
+          </div>
+   </div>
+</section>
+
+</footer>
+<!-- Footer -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
+</html>

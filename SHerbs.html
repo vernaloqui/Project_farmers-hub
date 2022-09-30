@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Farmer's Hub</title>
+        <link rel="icon" href="img/logo2.jpg" type="image/icon type">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family:'Poppins', sans-serif;
+        }
+        .inner{
+            overflow: hidden;
+        }
+        .inner img{
+            transition: all 1.5s ease;
+            width: 100%;
+            height:200px; 
+            object-fit: cover;
+        }
+        .inner:hover img{
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100" style="background: linear-gradient(-120deg,white 50%, RGBA(162, 219, 183, 0.4) 50%);">
+
+    <!--Navigation Bar-->
+    <div class="container-fluid" style="background-color:#F8FEFA;">
+        <div class="navbar navbar-expand-md">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/logo.png" class="rounded-circle border border-2" style="width:75px;">
+                    </a>
+                    <button class="navbar-toggler"
+                                    type="button" 
+                                    data-bs-toggle="collapse" 
+                                    data-bs-target="#navbarMark" 
+                                    aria-controls="navbarMark" 
+                                    aria-expanded="false" 
+                                    aria-label="Toggle Navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                            <div class="collapse navbar-collapse" id="navbarMark">
+                                <ul class="navbar-nav text-uppercase">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="Products.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#073418;">Farm Produce</a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <li><a class="dropdown-item" href="Fruits.html">Fruits</a></li>
+                                            <li><a class="dropdown-item" href="Veggies.html">Vegetables</a></li>
+                                            <li><a class="dropdown-item" href="SHerbs.html">Spices and Herbs</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="BestSellers.html"  style="color:#073418;">Best Sellers</a>
+                                    </li>
+                                    
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="OnSale.html"  style="color:#073418;">On Sale</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="Login.html"  style="color:#073418">My Account</a>
+                                    </li>
+                                </ul>
+                                <div class="float-right px-2">
+                                    <a class="nav-link" href="Cart.html"  style="color:#073418">
+                                    <i class="bi bi-cart4" style="font-size:30px;"></i></a>
+                                </div>
+                                <form class="d-flex ms-auto" role="search">
+                                    <input type="text" class="form-control" placeholder="Search" aria-label="search">
+                                    <button type="submit" class="btn btn-outline" style="background-color: #073418; color:#A2DBB7;">Search</button>
+                                </form>                            
+                            </div>
+        </div>
+    </div>
+<!--end of nav bar>-->
+<br>
+
+<div class="container-fluid d-flex m-auto p-0">
+    <img src="img/veggies.png" class="d-block w-100">
+</div><br>
+
+<section class="container-fluid border-bottom border-success p-2">
+    <div class="row">
+        <!--Location Filter-->
+        <div class="col text-start">
+            <label class="text-uppercase">buy from within</label>
+            <select id="sortCategory">
+                <option value="Anywhere">Anywhere</option>
+                <option value="NCR">NCR</option>
+                <option value="Ilocos Region">Ilocos Region</option>
+                <option value="Cagayan Valley">Cagayan Valley</option>
+                <option value="Central Luzon">Central Luzon</option>
+                <option value="CALABARZON">CALABARZON</option>
+                <option value="MIMAROPA">MIMAROPA</option>
+                <option value="Bicol">Bicol Region</option>
+                <option value="Western">Western Visayas</option>
+                <option value="Central">Central Visayas</option>
+                <option value="Eastern">Eastern Visayas</option>
+                <option value="Zamboanga">Zamboanga Peninsula</option>
+                <option value="Northern Mindanao">Northern Mindanao</option>
+                <option value="Davao Region">Davao Region</option>
+                <option value="SOCCSKSARGEN">SOCCSKSARGEN</option>
+                <option value="Caraga">Caraga</option>
+                <option value="CAR">CAR</option>
+                <option value="Bangsamoro">Bangsamoro</option>
+            </select>
+        </div>
+        <!--Start of Sort section-->
+        <div class="col text-end mx-3">
+            <label class="text-uppercase">sort by </label>
+            <select id="sortCategory">
+                <option value="Alphabetically ascend">Alphabetically, A-Z</option>
+                <option value="Alphabetically descend">Alphabetically, Z-A</option>
+                <option value="Best Selling">Best Selling</option>
+                <option value="Price low">Price, low to high</option>
+                <option value="Price high">Price, high to low</option>
+            </select>
+        </div>
+        <!--End of Sort section-->
+    </div>
+</section>
+
+
+<br>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3">
+            <!--Navbar to the Side for Product Categories-->
+            <ul class="nav flex-column shadow" style="background-color:#A2DBB7;">
+                <li class="nav-item border">
+                <a class="nav-link" href="Veggies.html" style="color:#073418;">Vegetables</a>
+                </li>
+                <li class="nav-item border">
+                <a class="nav-link" href="Fruits.html" style="color:#073418;">Fruits</a>
+                </li>
+                <li class="nav-item border" style="background-color:#F8FEFA;">
+                <a class="nav-link active" href="SHerbs.html" style="color:#073418;">Spices and Herbs</a>
+                </li>
+                <li class="nav-item border">
+                <a class="nav-link" href="BestSellers.html" style="color:#073418;">Best Sellers</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-9">
+            <!--Start of Products Gallery-->
+            <div class="container d-flex">
+                <div class="row g-2">
+                    <div class="col-12 col-md-3 col-lg-3">
+                        <div class="card shadow mb-2">
+                            <div class="inner">
+                                <img src="img/basil.png" class="card-img-top w-100">
+                            </div>
+                            <div class="card-body  text-center">Basil</p>
+                                <p class="card-text" style="font-size:15px;">₱27.5 / 250g</p>
+                                <div class="mb-2">
+                                    <span class="fw-bold text-center"><strong></strong></span>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <div class="input-group">
+                                        <label class="input-group-text">QTY</label>
+                                        <input type="number" class="form-control" min="0" placeholder="0">
+                                    </div><br>     
+                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-3">
+                        <div class="card shadow mb-2">
+                            <div class="inner">
+                                <img src="img/chives.png" class="card-img-top w-100" style="height:200px; object-fit: cover;">
+                            </div>
+                            <div class="card-body  text-center">
+                                <p class="h6 fw-bold" class="card-title">Chives</p>
+                                <p class="card-text" style="font-size:15px;">₱32.00 / 50g</p>
+                                <div class="mb-2">
+                                    <span class="fw-bold text-center"><strong></strong></span>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <div class="input-group">
+                                        <label class="input-group-text">QTY</label>
+                                        <input type="number" class="form-control" min="0" placeholder="0">
+                                    </div><br>     
+                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-3">
+                        <div class="card shadow mb-2">
+                            <div class="inner">
+                                <img src="img/cilantro.png" class="card-img-top">
+                            </div>
+                            <div class="card-body  text-center">
+                                <p class="h6 fw-bold" class="card-title">Cilantro/p>
+                                <p class="card-text" style="font-size:15px;">₱45.00 / 50g</p>
+                                <div class="mb-2">
+                                    <span class="fw-bold text-center"><strong></strong></span>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <div class="input-group">
+                                        <label class="input-group-text">QTY</label>
+                                        <input type="number" class="form-control" min="0" placeholder="0">
+                                    </div><br>     
+                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-3">
+                        <div class="card shadow mb-2">
+                            <div class="inner">
+                                <img src="img/laurel.png" class="card-img-top">
+                            </div>
+                            <div class="card-body  text-center">
+                                <p class="h6 fw-bold" class="card-title">Dahon ng Laurel</p>
+                                <p class="card-text" style="font-size:15px;">₱15.00 / pack</p>
+                                <div class="mb-2">
+                                    <span class="fw-bold text-center"><strong></strong></span>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <div class="input-group">
+                                        <label class="input-group-text">QTY</label>
+                                        <input type="number" class="form-control" min="0" placeholder="0">
+                                    </div><br>     
+                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            
+        </div>
+        <div class="col-9">
+            <!--Start of 2nd row of Products Gallery-->
+            <div class="container d-flex">
+                <div class="row g-2">
+                    <div class="col-12 col-md-3 col-lg-3">
+                        <div class="card shadow mb-2">
+                            <div class="inner">
+                                <img src="img/himalayan.png" class="card-img-top">
+                            </div>
+                            <div class="card-body  text-center">
+                                <p class="h6 fw-bold" class="card-title">Himalayan Salt</p>
+                                <p class="card-text" style="font-size:15px;">₱225.00 / 200g</p>
+                                <div class="mb-2">
+                                    <span class="fw-bold text-center"><strong></strong></span>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <div class="input-group">
+                                        <label class="input-group-text">QTY</label>
+                                        <input type="number" class="form-control" min="0" placeholder="0">
+                                    </div><br>     
+                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-3">
+                        <div class="card shadow mb-2">
+                            <div class="inner">
+                                <img src="img/mint.png" class="card-img-top">
+                            </div>
+                            <div class="card-body  text-center">
+                                <p class="h6 fw-bold" class="card-title">Mint leaves</p>
+                                <p class="card-text" style="font-size:15px;">₱35.00 / 50g</p>
+                                <div class="mb-2">
+                                    <span class="fw-bold text-center"><strong></strong></span>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <div class="input-group">
+                                        <label class="input-group-text">QTY</label>
+                                        <input type="number" class="form-control" min="0" placeholder="0">
+                                    </div><br>     
+                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-3">
+                        <div class="card shadow mb-2">
+                            <div class="inner">
+                                <img src="img/honey.png" class="card-img-top">
+                            </div>
+                            <div class="card-body  text-center">
+                                <p class="h6 fw-bold" class="card-title">Pure Honey</p>
+                                <p class="card-text" style="font-size:15px;">₱250.00 / bottle</p>
+                                <div class="mb-2">
+                                    <span class="fw-bold text-center"><strong></strong></span>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <div class="input-group">
+                                        <label class="input-group-text">QTY</label>
+                                        <input type="number" class="form-control" min="0" placeholder="0">
+                                    </div><br>     
+                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-3">
+                        <div class="card shadow mb-2">
+                            <div class="inner">
+                                <img src="img/roack sesalt.png" class="card-img-top">
+                            </div>
+                            <div class="card-body  text-center">
+                                <p class="h6 fw-bold" class="card-title">Sea Salt</p>
+                                <p class="card-text" style="font-size:15px;">₱65.00 / kg</p>
+                                <div class="mb-2">
+                                    <span class="fw-bold text-center"><strong></strong></span>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <div class="input-group">
+                                        <label class="input-group-text">QTY</label>
+                                        <input type="number" class="form-control" min="0" placeholder="0">
+                                    </div><br>     
+                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            
+        </div>
+        <div class="col-9">
+            <!--Start of 2nd row of Products Gallery-->
+            <div class="container d-flex">
+                <div class="row g-2">
+                    <div class="col-12 col-md-3 col-lg-3">
+                        <div class="card shadow mb-2">
+                            <div class="inner">
+                                <img src="img/star.png" class="card-img-top">
+                            </div>
+                            <div class="card-body  text-center">
+                                <p class="h6 fw-bold" class="card-title">Star Anise</p>
+                                <p class="card-text" style="font-size:15px;">₱35.00 / 50g</p>
+                                <div class="mb-2">
+                                    <span class="fw-bold text-center"><strong></strong></span>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <div class="input-group">
+                                        <label class="input-group-text">QTY</label>
+                                        <input type="number" class="form-control" min="0" placeholder="0">
+                                    </div><br>     
+                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-3">
+                        <div class="card shadow mb-2">
+                            <div class="inner">
+                                <img src="img/salay.png" class="card-img-top">
+                            </div>
+                            <div class="card-body  text-center">
+                                <p class="h6 fw-bold" class="card-title">Tanglad</p>
+                                <p class="card-text" style="font-size:15px;">₱12.00 / 50g</p>
+                                <div class="mb-2">
+                                    <span class="fw-bold text-center"><strong></strong></span>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <div class="input-group">
+                                        <label class="input-group-text">QTY</label>
+                                        <input type="number" class="form-control" min="0" placeholder="0">
+                                    </div><br>     
+                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-3">
+                        <div class="card shadow mb-2">
+                            <div class="inner">
+                                <img src="img/turmeric.png" class="card-img-top">
+                            </div>
+                            <div class="card-body  text-center">
+                                <p class="h6 fw-bold" class="card-title">Turmeric Powder</p>
+                                <p class="card-text" style="font-size:15px;">₱49.00 / 50g</p>
+                                <div class="mb-2">
+                                    <span class="fw-bold text-center"><strong></strong></span>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <div class="input-group">
+                                        <label class="input-group-text">QTY</label>
+                                        <input type="number" class="form-control" min="0" placeholder="0">
+                                    </div><br>     
+                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-3">
+                        <div class="card shadow mb-2">
+                            <div class="inner">
+                                <img src="img/pepp.png" class="card-img-top">
+                            </div>
+                            <div class="card-body  text-center">
+                                <p class="h6 fw-bold" class="card-title">Whole Black Peppercorn</p>
+                                <p class="card-text" style="font-size:15px;">₱65.00 / 500g</p>
+                                <div class="mb-2">
+                                    <span class="fw-bold text-center"><strong></strong></span>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <div class="input-group">
+                                        <label class="input-group-text">QTY</label>
+                                        <input type="number" class="form-control" min="0" placeholder="0">
+                                    </div><br>     
+                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>
+<br>
+
+<br>
+<!--start of footer-->
+<br>
+<footer class="container-fluid text-center text-dark" style="background-color:#F8FEFA;">   
+<hr>
+    <div class="row">
+        <!--Paragraph-->
+        <div class="col d-flex justify-content-center">
+            <p class="h5">
+                "A moment on the lips, a lifetime on the hips. Always eat what's right. If you want to run for long, avoid junk food...
+           <br> <br>
+               Be Fit by Eating Fresh."
+           </p> 
+        </div>
+        <!--Icons-->
+        <div class="col justify-content-center">
+            <div><p class="text-dark text-uppercase fw-bold">Follow us </p></div>
+            <p><a href="#" i class="bi bi-facebook mx-4" style="color:#A2DBB7;"></i></a>
+            <a href="#" i class="bi bi-instagram mx-4" style="color:#A2DBB7;"></i></a>
+            <a href="#" i class="bi bi-twitter mx-4" style="color:#A2DBB7;"></i></a></p>
+        </div>
+    </div>
+<br>
+   <div class="row text-center p-3 d-flex justify-content-center" style="background-color: #A2DBB7;">
+        <div class="col-md-2">
+           <h6 class="text-uppercase fw-bold">
+               <a href="AboutUs.html" style="color:#073418;">About us</a>
+           </h6>
+        </div>
+
+        <div class="col-md-2">
+            <h6 class="text-uppercase fw-bold">
+                <a href="FarmerPartner.html" style="color:#073418;">Be a Farmer Partner</a>
+            </h6>
+         </div>
+
+        <div class="col-md-2">
+           <h6 class="text-uppercase fw-bold">
+               <a href="#" style="color:#073418;">  © 2020 Copyright</a>
+           </h6>
+        </div>
+
+        <div class="col-md-2">
+           <h6 class="text-uppercase fw-bold">
+               <a href="SellerCenter.html" style="color:#073418;">Seller Center</a>
+           </h6>
+         </div>
+
+         <div class="col-md-2">
+            <h6 class="text-uppercase fw-bold">
+                <a href="help.html" style="color:#073418;">Help</a>
+            </h6>
+          </div>
+   </div>
+</section>
+
+</footer>
+<!-- Footer -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+

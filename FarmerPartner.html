@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Farmer's Hub</title>
+        <link rel="icon" href="img/logo2.jpg" type="image/icon type">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family:'Poppins', sans-serif;
+        }
+        .accordion-button{
+            background-color:rgba(0, 0, 0, 0.2); color:#073418;
+        }
+        .logIn {
+            padding: 5rem 2.5rem;
+            border-radius: 1rem;
+            border: 1px solid transparent;
+            backdrop-filter: blur (1rem);
+            box-shadow:1.3rem 1.3rem 1.3rem rgba(0,0,0, 0.5);
+            border-top-color: rgba(225, 225, 225, 225, 0.5);
+            border-left-color: rgba(225, 225, 225, 225, 0.5);
+            border-bottom-color: rgba(225, 225, 225, 225, 0.5);
+            border-right-color: rgba(225, 225, 225, 225, 0.5);
+
+            background-color: linear-gradient(to right bottom, rgba(225, 225,225, 0.5), rgba(225,225,225,0.3));
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100" style="background: linear-gradient(-120deg,white 50%, RGBA(162, 219, 183, 0.4) 50%);">
+
+    <!--Navigation Bar-->
+    <div class="container-fluid" style="background-color:#F8FEFA;">
+        <div class="navbar navbar-expand-md">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/logo.png" class="rounded-circle border border-2" style="width:75px;">
+                    </a>
+                    <button class="navbar-toggler"
+                                    type="button" 
+                                    data-bs-toggle="collapse" 
+                                    data-bs-target="#navbarMark" 
+                                    aria-controls="navbarMark" 
+                                    aria-expanded="false" 
+                                    aria-label="Toggle Navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                            <div class="collapse navbar-collapse" id="navbarMark">
+                                <ul class="navbar-nav text-uppercase">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="Products.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#073418;">Farm Produce</a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <li><a class="dropdown-item" href="Fruits.html">Fruits</a></li>
+                                            <li><a class="dropdown-item" href="Veggies.html">Vegetables</a></li>
+                                            <li><a class="dropdown-item" href="SHerbs.html">Spices and Herbs</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="BestSellers.html"  style="color:#073418;">Best Sellers</a>
+                                    </li>
+                                    
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="OnSale.html"  style="color:#073418;">On Sale</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="Login.html"  style="color:#073418">My Account</a>
+                                    </li>
+                                </ul>
+                                <div class="float-right px-2">
+                                    <a class="nav-link" href="Cart.html"  style="color:#073418">
+                                    <i class="bi bi-cart4" style="font-size:30px;"></i></a>
+                                </div>
+                                <form class="d-flex ms-auto" role="search">
+                                    <input type="text" class="form-control" placeholder="Search" aria-label="search">
+                                    <button type="submit" class="btn btn-outline" style="background-color: #073418; color:#A2DBB7;">Search</button>
+                                </form>                            
+                            </div>
+        </div>
+    </div>
+<!--end of nav bar>-->
+<br>
+<!--Form Header-->
+<div class="container-fluid text-center" style="background-color: rgba(0, 0, 0, 0.2);">
+    <p class="display-6" style="color:#073418;">Farmer's Hub</p>
+    <p class="fw-bold" style="color:#073418;">Farmer Partner Registration</p>
+</div>
+
+<!--Form-->
+<section class="container mt-5">
+    
+    <form class="logIn container border border-secondary rounded p-4">
+        <div class="accordion accordion-flush" id="RegisterAccount">
+            <!--Log in Info-->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="RegHeading">
+                    <button class="accordion-button btn btn-outline fw-bold" 
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#RegBody"
+                            aria-expanded="true"
+                            aria-controls="RegBody">
+                            Log in details
+                    </button>
+                </h2>
+                
+                <div class="accordion-collapsee"
+                    id="RegBody"
+                    aria-labelledby="#RegHeading"
+                    data-bs-parent="#RegisterAccount">
+                        <div class="accordion-body text-justify">
+                            <div class="input-group" mb-3>
+                                <span class="input-group-text" id="EmailUser">Email address:</span>
+                                <input type="email" name="email" id="email" class="form-control">
+                            </div><br>
+                            <div class="input-group" mb-3>
+                                <label for="password" class="input-group-text">Password:</label>
+                                <input type="password" class="form-control" id="password">
+                            </div><br>
+                            <div class="input-group" mb-3>
+                                <label for="password" class="input-group-text">Confirm Password:</label>
+                                <input type="password" class="form-control" id="confirmpassword">
+                            </div><br>
+                        </div>
+                </div>
+            </div>
+            <!--Personal Info-->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="PersonalInfo">
+                    <button class="accordion-button fw-bold collapsed" 
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#PersonalInfoBody"
+                            aria-expanded="true"
+                            aria-controls="PersonalInfoBody">
+                            Personal Information
+                    </button>
+                </h2>
+                
+                <div class="accordion-collapse collapse"
+                    id="PersonalInfoBody"
+                    aria-labelledby="#PersonalInfo"
+                    data-bs-parent="#RegisterAccount">
+                        <div class="accordion-body text-justify">
+                            <div class="input-group" mb-3>
+                                <span class="input-group-text" id="fName">First Name:</span>
+                                <input type="text" class="form-control" id="fName">
+                                <span class="input-group-text" id="mName">Middle Initial:</span>
+                                <input type="text" class="form-control" id="mName">
+                                <span class="input-group-text" id="lName">Last Name:</span>
+                                <input type="text" class="form-control" id="lName">
+                            </div><br>
+                            <div class="input-group" mb-3>
+                                <label for="date" class="input-group-text">Date of Birth:</label>
+                                <input type="date" class="form-control" id="dob">
+                            </div><br>
+                            <div class="input-group" mb-3>
+                                <span class="input-group-text">Upload ID card:</span>
+                                <input type="file" class="form-control" id="idCard">
+                            </div>
+                                <p style="font-size:12px;">Max of 5MB with jpg, jpeg, pdf, png file types only</p>
+                            <div class="input-group" mb-3>
+                                <label for="phoneNum" class="input-group-text">Cellphone number:</label>
+                                <input type="tel" class="form-control" id="phoneNum" placeholder="09XXXXXXXXX" maxlength="11" minlength="11">
+                            </div><br>
+                            <div class="input-group" mb-3>
+                                <label for="gender" class="input-group-text">Gender:</label>
+                                <select name="gender" id="gender" class="form-control">
+                                    <option value="male">MALE</option>
+                                    <option value="female">FEMALE</option>
+                                </select>
+                            </div><br>
+                            <div class="border-top">
+                                <p class="fw-bold" style="font-size:15px;">Address</p>
+                            </div>
+                            <div class="input-group" mb-3>
+                                <label for="Housenum" class="input-group-text">House Number:</label>
+                                    <input type="text" class="form-control" id="Address1" placeholder="Address Line 1">
+                                    <label for="Street" class="input-group-text">Street:</label>
+                                    <input type="text" class="form-control" id="Address2" placeholder="Address Line 2"> 
+                            </div><br>
+                            <div class="input-group" mb-3>
+                                <label for="Barangay" class="input-group-text">Barangay:</label>
+                                <input type="text" class="form-control" id="barangay" placeholder="Barangay">
+                                <label for="Municipality" class="input-group-text">Municipality:</label>
+                                <input type="text" class="form-control" id="town" placeholder="Municipality">
+                            </div><br>
+                            <div class="input-group" mb-3>
+                                <label for="province" class="input-group-text">Province:</label>
+                                <input type="text" class="form-control" id="province" placeholder="Province">
+                                <label for="zipCode" class="input-group-text">Postal Code:</label>
+                                <input type="text" class="form-control" id="zipCode" placeholder="Postal Code">
+                            </div><br>
+                        </div>
+                </div>
+            </div>
+            <!--Billing Info-->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="BillingHeading">
+                    <button class="accordion-button fw-bold collapsed" 
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#BillingBody"
+                            aria-expanded="true"
+                            aria-controls="BillingBody">
+                            Billing Information
+                    </button>
+                </h2>
+                
+                <div class="accordion-collapse collapse"
+                    id="BillingBody"
+                    aria-labelledby="#BillingHeading"
+                    data-bs-parent="#RegisterAccount">
+                        
+                        <div class="accordion-body text-justify">
+                            <p class="fw-bold" style="font-size:15px;">Credit card details</p>
+                            <br>
+                            <div class="input-group" mb-3>
+                                <span class="input-group-text" id="EmailUser">Credit card number:</span>
+                                <input type="number" name="CCnum" id="CCnum" class="form-control" minlength="16" maxlength="16">
+                            </div><br>
+                            <div class="input-group" mb-3>
+                                <label for="CCname" class="input-group-text">Cardholder's name:</label>
+                                <input type="text" class="form-control" id="CCname">
+                            </div><br>
+                            <div class="input-group" mb-3>
+                                <label for="expDate" class="input-group-text">Expires on:</label>
+                                <input type="month" class="form-control" id="expDate">
+                            </div><br>
+                        </div>
+                </div>
+            </div>
+            <!--Store Info-->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="StoreHeading">
+                    <button class="accordion-button fw-bold collapsed" 
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#StoreBody"
+                            aria-expanded="true"
+                            aria-controls="StoreBody">
+                            Store Information
+                    </button>
+                </h2>
+                
+                <div class="accordion-collapse collapse"
+                    id="StoreBody"
+                    aria-labelledby="#StoreHeading"
+                    data-bs-parent="#RegisterAccount">
+                        
+                        <div class="accordion-body text-justify">
+                            <p class="fw-bold" style="font-size:15px;">Store and Product Information</p>
+                            <br>
+                            
+                            <div class="input-group" mb-3>
+                                <span class="input-group-text" id="storeName">Store name:</span>
+                                <input type="text" name="storeName" id="storeName" class="form-control">
+                            </div><br>
+                            <p style="font-size:12px;">Please select the category/ies of products you want to sell.</p>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="fruits">
+                                <label class="form-check-label" for="fruits">  Fruits</label><br>
+                                <input type="checkbox" class="form-check-input" id="veges">
+                                <label class="form-check-label" for="veges">Vegetables</label><br>
+                                <input type="checkbox" class="form-check-input" id="Spices">
+                                <label class="form-check-label" for="spices">Spices</label><br>
+                                <input type="checkbox" class="form-check-input" id="herbs">
+                                <label class="form-check-label" for="herbs">Herbs</label><br>
+                                <input type="checkbox" class="form-check-input" id="grains">
+                                <label class="form-check-label" for="grains">Grains</label>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+        </div>
+
+        <br>
+        
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="tandC">
+            <label class="form-check-label" for="tandC">I agree with the <a href="">Terms and Conditions</a>.</label>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="privacy">
+            <label class="form-check-label" for="privacy">I agree with the <a href="">Privacy Policy</a>.</label>
+        </div>
+        <br>
+        <button type="submit" class="btn text-capitalize" style="background-color:#A2DBB7; border-radius:5px; box-shadow:5px 5px grey;">Register Account</button>
+    </form>
+</section>  
+
+<br><br>
+
+<br><br>
+<!--start of footer-->
+<br>
+<footer class="container-fluid text-center text-dark" style="background-color:#F8FEFA;">   
+<hr>
+    <div class="row">
+        <!--Paragraph-->
+        <div class="col d-flex justify-content-center">
+            <p class="h5">
+                "A moment on the lips, a lifetime on the hips. Always eat what's right. If you want to run for long, avoid junk food...
+           <br> <br>
+               Be Fit by Eating Fresh."
+           </p> 
+        </div>
+        <!--Icons-->
+        <div class="col justify-content-center">
+            <div><p class="text-dark text-uppercase fw-bold">Follow us </p></div>
+            <p><a href="#" i class="bi bi-facebook mx-4" style="color:#A2DBB7;"></i></a>
+            <a href="#" i class="bi bi-instagram mx-4" style="color:#A2DBB7;"></i></a>
+            <a href="#" i class="bi bi-twitter mx-4" style="color:#A2DBB7;"></i></a></p>
+        </div>
+    </div>
+<br>
+   <div class="row text-center p-3 d-flex justify-content-center" style="background-color: #A2DBB7;">
+        <div class="col-md-2">
+           <h6 class="text-uppercase fw-bold">
+               <a href="AboutUs.html" style="color:#073418;">About us</a>
+           </h6>
+        </div>
+
+        <div class="col-md-2">
+            <h6 class="text-uppercase fw-bold">
+                <a href="FarmerPartner.html" style="color:#073418;">Be a Farmer Partner</a>
+            </h6>
+         </div>
+
+        <div class="col-md-2">
+           <h6 class="text-uppercase fw-bold">
+               <a href="#" style="color:#073418;">  © 2020 Copyright</a>
+           </h6>
+        </div>
+
+        <div class="col-md-2">
+           <h6 class="text-uppercase fw-bold">
+               <a href="SellerCenter.html" style="color:#073418;">Seller Center</a>
+           </h6>
+         </div>
+
+         <div class="col-md-2">
+            <h6 class="text-uppercase fw-bold">
+                <a href="help.html" style="color:#073418;">Help</a>
+            </h6>
+          </div>
+   </div>
+</section>
+
+</footer>
+<!-- Footer -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+
+</html>
