@@ -22,7 +22,7 @@
             max-width:400px;
             padding: 5rem 2.5rem;
             border-radius: 1rem;
-            border: 1px solid transparent;
+            border: 1px solid #A2DBB7;
             backdrop-filter: blur (1rem);
             box-shadow:1.3rem 1.3rem 1.3rem rgba(0,0,0, 0.5);
             border-top-color: rgba(225, 225, 225, 225, 0.5);
@@ -87,116 +87,108 @@
 <!--end of nav bar>-->
 <br>
 
-<!--Start of Shopping Cart section-->
-
+<!--Start of Check Out section-->
+<form class="container border shadow border-secondary rounded p-4">
     <div class="container-fluid" style="background-color: rgba(0, 0, 0, 0.2);">
-        <p class="display-6 text-center text-uppercase" style="color: #073418">Shopping Cart</p>
+        <p class="display-6 text-center text-uppercase" style="color: #073418">Checkout</p>
     </div>
     <br><br>
-<section class="container mt-2">
-    
-    <div class="container border shadow-sm p-1">
-        <p class="text-center fw-bold">Your cart is empty! Add some items to checkout.</p>
-    </div><br>
-    <div class="text-end">
-        <label for="date">Select date of Delivery:</label>
-        <input type="date" id="Deldate" class="border shadow-sm p-1" style="border-color: #073418;">
-    </div><br><br>
-    <div class="row">
-        <div class="col">
-            <label>Special Instructions to the Seller:</label><br>
-            <textarea class="border shadow-sm p-1" rows="6" cols="75"></textarea>
-        </div>
-        <div class="col text-end">
-            <p class="h4 fw-bolder">Php 0.00</p>
-                <p>Taxes and shipping calculated at checkout
-            </p><br>
-            <button class="btn" data-bs-toggle="modal" data-bs-target="#confirmCO" style="border-radius:5px; box-shadow:5px 5px grey; background-color: #A2DBB7;">Check Out</button>          
-        </div>
-    </div>
-
-    <br>
-    <br>
-    <br>
-    <!--Item Suggestions-->
-    <div class="container d-sm-block text-center">
-        <p class="h4" style="background: rgba(0, 0, 0, 0.1)">Items you might like</p>
-        <div class="row g-2">
-            <div class="col-12 col-lg-3 col-md-3">
-                <div class="card p-0 h-100 overflow-auto" style="color:#073418;"> 
-                    <img src="img/Ulam.png" class="card-img img-thumbnail">                       
-                    <div class="card-body" style="background: rgba(0, 0, 0, 0.1);">                  
-                        <h5 class="card-title">Ulam Bundles</h5>
-                        <a href="BestSellers.html#UlamBundles" class="btn" style="background-color:#A2DBB7">Shop Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-3 col-md-3">
-                <div class="card p-0 h-100 overflow-auto" style="color:#073418;"> 
-                    <img src="img/fruitBasket.jpg" class="card-img img-thumbnail">                       
-                    <div class="card-body" style="background: rgba(0, 0, 0, 0.1);">                    
-                        <h5 class="card-title" >Fruits Basket</h5>
-                        <a href="BestSellers.html#FBContent" class="btn" style="background-color:#A2DBB7;">Shop Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-3 col-md-3">
-                <div class="card p-0 h-100 overflow-auto" style="color:#073418;"> 
-                    <img src="img/salad.jpg" class="card-img img-thumbnail">                       
-                    <div class="card-body" style="background: rgba(0, 0, 0, 0.1);">                   
-                        <h5 class="card-title">Salad Set</h5>
-                        <a href="BestSellers.html#SaladSet" class="btn" style="background-color:#A2DBB7;">Shop Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-3 col-md-3">
-                <div class="card p-0 h-100 overflow-auto" style="color:#073418;"> 
-                    <img src="img/pantry.png" class="card-img img-thumbnail">                       
-                    <div class="card-body" style="background: rgba(0, 0, 0, 0.1);">                 
-                        <h5 class="card-title">Pantry Essentials</h5>
-                        <a href="BestSellers.html#Pantry" class="btn" style="background-color:#A2DBB7;">Shop Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--End of Shopping Cart section-->
-<br>
-
-<!--Modal-->
-<div class="modal fade" id="confirmCO" tabindex="-1">
-    <div class="modal-dialog"> <!--dialog box-->
-        <div class="modal-content">
-        <!--start of modal header-->
-        <div class="modal-header">
-            <h5 class="modal-title text-center" id="modalTitle">
-                Confirm Check-out</h5>
-                <button class="btn-close" 
+<section class="container mt-2  text-center">
+    <div class="accordion accordion-flush" id="CheckOut">
+        <!--Shipping Address Info-->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="AddressHeading">
+                <button class="accordion-button btn btn-outline fw-bold" 
                         type="button"
-                        data-bs-dismiss="modal"
-                        aria-label="close">
-                </button>  <!--X button sa dialog box-->
-        </div>
-        <!--End of modal header-->
-
-        <!--start of modal body-->
-        <div class="modal-body">
-            <p >Already have an account? <a href="Login.html">Log in here</a></p>
-            <br>
-            <br>
-            <p>If you'd like to proceed to check-out without an account click Proceed.</p>
+                        data-bs-toggle="collapse"
+                        data-bs-target="#AddressBody"
+                        aria-expanded="true"
+                        aria-controls="AddressBody">
+                        Shipping Address
+                </button>
+            </h2>
             
-            <a href="CheckOut.html" class="text-end m-auto p-3"><button class="btn"
-                    style="background-color:#A2DBB7; border-radius:5px; box-shadow:5px 5px grey;">
-                    Proceed
-            </button></a>
+            <div class="accordion-collapsee"
+                id="AddressBody"
+                aria-labelledby="#AddressHeading"
+                data-bs-parent="#CheckOut">
+                    <div class="accordion-body text-justify">
+                        <div class="input-group" mb-3>
+                            <label for="Housenum" class="input-group-text">House No.:</label>
+                                <input type="text" class="form-control" id="Address1" placeholder="Address Line 1">
+                        </div><br>
+                        <div class="input-group" mb-3>
+                                <label for="Street" class="input-group-text">Street:</label>
+                                <input type="text" class="form-control" id="Address2" placeholder="Address Line 2"> 
+                        </div><br>
+                        <div class="input-group" mb-3>
+                            <label for="Barangay" class="input-group-text">Barangay:</label>
+                            <input type="text" class="form-control" id="barangay">
+                        </div><br>
+                        <div class="input-group" mb-3>
+                            <label for="Municipality" class="input-group-text">Municipality:</label>
+                            <input type="text" class="form-control" id="town">
+                        </div><br>
+                        <div class="input-group" mb-3>
+                            <label for="province" class="input-group-text">Province:</label>
+                            <input type="text" class="form-control" id="province">
+                        </div><br>
+                        <div class="input-group" mb-3>
+                            <label for="zipCode" class="input-group-text">Postal Code:</label>
+                            <input type="text" class="form-control" id="zipCode">
+                        </div><br>
+                    </div>
+            </div>
         </div>
-         <!--End of modal body-->
+         <!--Payment Method Info-->
+         <div class="accordion-item">
+            <h2 class="accordion-header" id="PayHeading">
+                <button class="accordion-button btn btn-outline fw-bold" 
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#PayBody"
+                        aria-expanded="true"
+                        aria-controls="PayBody">
+                        Payment Method
+                </button>
+            </h2>
+            
+            <div class="accordion-collapsee"
+                id="PayBody"
+                aria-labelledby="#PayHeading"
+                data-bs-parent="#CheckOut">
+                    <div class="accordion-body text-justify">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Payment" id="cod">
+                            <label class="form-check-label" for="cod">Cash on Delivery
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Payment" id="card">
+                            <label class="form-check-label" for="card">Card
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Payment" id="Gcash">
+                            <label class="form-check-label" for="Gcash">Gcash
+                            </label>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Payment" id="maya">
+                            <label class="form-check-label" for="maya">Maya
+                            </label>
+                        </div>
+                    </div>
+            </div>
         </div>
     </div>
-</div>
-
+    <br>
+    <button class="btn" style="border-radius:5px; box-shadow:5px 5px grey; background-color:#A2DBB7;">Place Order</button>
+</form>
+</section>
+<!--End of Checkout section-->
+<br>
 <!--start of footer-->
 <br>
 <footer class="container-fluid text-center text-dark" style="background-color:#F8FEFA;">   
