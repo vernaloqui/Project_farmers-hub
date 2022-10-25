@@ -11,59 +11,60 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="stylesheet.css">
 
     <style>
         body {
             font-family:'Poppins', sans-serif;
         }
         .nav-tabs .nav-link.active{
-                background-color:#A2DBB7;
-                color:#073418;
-                border: 3px solid #A2DBB7;
-            }
-            .nav-tabs .nav-link{
-                background-color: #fff;
-                color: #A2DBB7;
-                border: 3px solid #A2DBB7;
-            }
-            .nav-tabs .nav-link:hover{
-                border: 3px solid #073418;
-            }
-            .nav-tabs {
-                border-bottom: 1px solid #A2DBB7;
-                backdrop-filter: blur (1rem);
-                box-shadow:1.3rem 1.3rem 1.3rem rgba(0,0,0, 0.5);
-                border-top-color: rgba(225, 225, 225, 225, 0.5);
-                border-left-color: rgba(225, 225, 225, 225, 0.5);
-                border-bottom-color: rgba(225, 225, 225, 225, 0.5);
-                border-right-color: rgba(225, 225, 225, 225, 0.5);
-            }
-            .tab-content{
-                    border: 1px solid #A2DBB7;
-                    padding: 20px;
-                    backdrop-filter: blur (1rem);
-                    box-shadow:1.3rem 1.3rem 1.3rem rgba(0,0,0, 0.5);
-                    border-top-color: rgba(225, 225, 225, 225, 0.5);
-                    border-left-color: rgba(225, 225, 225, 225, 0.5);
-                    border-bottom-color: rgba(225, 225, 225, 225, 0.5);
-                    border-right-color: rgba(225, 225, 225, 225, 0.5);
-            }
-            .accordion-button{
+            background-color:#A2DBB7;
+            color:#073418;
+            border: 3px solid #A2DBB7;
+        }
+        .nav-tabs .nav-link{
+            background-color: #fff;
+            color: #A2DBB7;
+            border: 3px solid #A2DBB7;
+        }
+        .nav-tabs .nav-link:hover{
+            border: 3px solid #073418;
+        }
+        .nav-tabs {
+            border-bottom: 1px solid #A2DBB7;
+            backdrop-filter: blur (1rem);
+            box-shadow:1.3rem 1.3rem 1.3rem rgba(0,0,0, 0.5);
+            border-top-color: rgba(225, 225, 225, 225, 0.5);
+            border-left-color: rgba(225, 225, 225, 225, 0.5);
+            border-bottom-color: rgba(225, 225, 225, 225, 0.5);
+            border-right-color: rgba(225, 225, 225, 225, 0.5);
+        }
+        .tab-content{
+            border: 1px solid #A2DBB7;
+            padding: 20px;
+            backdrop-filter: blur (1rem);
+            box-shadow:1.3rem 1.3rem 1.3rem rgba(0,0,0, 0.5);
+            border-top-color: rgba(225, 225, 225, 225, 0.5);
+            border-left-color: rgba(225, 225, 225, 225, 0.5);
+            border-bottom-color: rgba(225, 225, 225, 225, 0.5);
+            border-right-color: rgba(225, 225, 225, 225, 0.5);
+        }
+        .accordion-button{
             background-color:rgba(0, 0, 0, 0.2); color:#073418;
-            }
-            .card{
-                width:18rem;
-                border-radius: 1rem;
-                border: 1px solid #A2DBB7;
-                backdrop-filter: blur (1rem);
-                box-shadow:1.3rem 1.3rem 1.3rem rgba(0,0,0, 0.5);
-                border-top-color: rgba(225, 225, 225, 225, 0.5);
-                border-left-color: rgba(225, 225, 225, 225, 0.5);
-                border-bottom-color: rgba(225, 225, 225, 225, 0.5);
-                border-right-color: rgba(225, 225, 225, 225, 0.5);
+        }
+        .card{
+            width:18rem;
+            border-radius: 1rem;
+            border: 1px solid #A2DBB7;
+            backdrop-filter: blur (1rem);
+            box-shadow:1.3rem 1.3rem 1.3rem rgba(0,0,0, 0.5);
+            border-top-color: rgba(225, 225, 225, 225, 0.5);
+            border-left-color: rgba(225, 225, 225, 225, 0.5);
+            border-bottom-color: rgba(225, 225, 225, 225, 0.5);
+            border-right-color: rgba(225, 225, 225, 225, 0.5);
 
-                background-color: linear-gradient(to right bottom, rgba(225, 225,225, 0.5), rgba(225,225,225,0.3));
-            }
+            background-color: linear-gradient(to right bottom, rgba(225, 225,225, 0.5), rgba(225,225,225,0.3));
+        }
     </style>
 </head>
 
@@ -95,7 +96,7 @@
                                         </ul>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="BestSellers.html"  style="color:#073418;">Best Sellers</a>
+                                        <a class="nav-link active" href="BestSellers.html"  style="color:#073418;">Best Sellers</a>
                                     </li>
                                     
                                     <li class="nav-item">
@@ -105,11 +106,11 @@
                                         <a class="nav-link" href="Login.html"  style="color:#073418">My Account</a>
                                     </li>
                                 </ul>
-                                <div class="float-right px-2">
-                                    <a class="nav-link" href="Cart.html"  style="color:#073418">
-                                    <i class="bi bi-cart4" style="font-size:30px;"></i></a>
-                                </div>
                                 <form class="d-flex ms-auto" role="search">
+                                    <div class="px-2" style="float:right;">
+                                    <a class="nav-link" href="Cart.html"  style="color:#073418">
+                                        <i class="bi bi-cart4" style="font-size:30px;"></i></a>
+                                    </div>
                                     <input type="text" class="form-control" placeholder="Search" aria-label="search">
                                     <button type="submit" class="btn btn-outline" style="background-color: #073418; color:#A2DBB7;">Search</button>
                                 </form>                            
@@ -151,11 +152,14 @@
                         <div class="card-body text-center d-flex flex-column">   
                             <h5 class="card-title" style="background: rgba(0, 0, 0, 0.1);">Pakbet</h5>
                             <p class="card-text">₱35.00</p>
-                            <div class="input-group">
-                               <label class="input-group-text" id="Qty">Quantity</label>
-                               <input type="number" class="form-control text-center" placeholder="1"  min="0">
-                            </div><br>
-                            <button class="btn mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                        </div>
+                        <div class="card-footer d-flex flex-column justify-content-between">
+                            <div class="input-group mb-3 align-center  mt-auto"  >
+                                <span class="input-group-text">-</span>
+                                <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                <span class="input-group-text">+</span>
+                            </div><br>     
+                            <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                         </div> 
                     </div>
                 </div>
@@ -165,12 +169,15 @@
                         <div class="card-body text-center d-flex flex-column">   
                             <h5 class="card-title" style="background: rgba(0, 0, 0, 0.1);">Chop Seuy</h5>  
                             <p class="card-text">₱35.00</p>
-                            <div class="input-group">
-                               <label class="input-group-text" id="Qty">Quantity</label>
-                               <input type="number" class="form-control text-center" placeholder="1"  min="0">
-                            </div><br>
-                            <button class="btn mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
                         </div> 
+                        <div class="card-footer d-flex flex-column justify-content-between">
+                            <div class="input-group mb-3 align-center  mt-auto"  >
+                                <span class="input-group-text">-</span>
+                                <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                <span class="input-group-text">+</span>
+                            </div><br>     
+                            <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
@@ -179,12 +186,15 @@
                         <div class="card-body text-center d-flex flex-column">   
                             <h5 class="card-title" style="background: rgba(0, 0, 0, 0.1);">Sinigang with Gabi</h5>                 
                             <p class="card-text">₱50.00</p>
-                            <div class="input-group">
-                               <label class="input-group-text" id="Qty">Quantity</label>
-                               <input type="number" class="form-control text-center" placeholder="1"  min="0">
-                            </div><br>
-                            <button class="btn mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
                         </div> 
+                        <div class="card-footer d-flex flex-column justify-content-between">
+                            <div class="input-group mb-3 align-center  mt-auto"  >
+                                <span class="input-group-text">-</span>
+                                <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                <span class="input-group-text">+</span>
+                            </div><br>     
+                            <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
@@ -193,12 +203,15 @@
                         <div class="card-body text-center d-flex flex-column">   
                             <h5 class="card-title" style="background: rgba(0, 0, 0, 0.1);">Seafood Sinigang</h5>
                             <p class="card-text">₱50.00</p>
-                            <div class="input-group">
-                               <label class="input-group-text" id="Qty">Quantity</label>
-                               <input type="number" class="form-control text-center" placeholder="1"  min="0">
-                            </div><br>
-                            <button class="btn mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
                         </div> 
+                        <div class="card-footer d-flex flex-column justify-content-between">
+                            <div class="input-group mb-3 align-center  mt-auto"  >
+                                <span class="input-group-text">-</span>
+                                <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                <span class="input-group-text">+</span>
+                            </div><br>     
+                            <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -210,12 +223,16 @@
                         <img src="img/karekare.jpg" class="card-img img-thumbnail"> 
                         <div class="card-body">   
                             <h5 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Kare-Kare</h5> 
-                            <div class="input-group">
-                               <label class="input-group-text" id="Qty">Quantity</label>
-                               <input type="text" class="form-control text-center" placeholder="1">
-                            </div><br>
-                            <button class="btn" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                            <p class="card-text">₱50.00</p>
                         </div> 
+                        <div class="card-footer d-flex flex-column justify-content-between">
+                            <div class="input-group mb-3 align-center  mt-auto"  >
+                                <span class="input-group-text">-</span>
+                                <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                <span class="input-group-text">+</span>
+                            </div><br>     
+                            <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
@@ -224,12 +241,15 @@
                         <div class="card-body text-center d-flex flex-column">   
                             <h5 class="card-title" style="background: rgba(0, 0, 0, 0.1);">Monggo</h5> 
                             <p class="card-text">₱40.00</p>
-                            <div class="input-group">
-                               <label class="input-group-text" id="Qty">Quantity</label>
-                               <input type="number" class="form-control text-center" placeholder="1"  min="0">
-                            </div><br>
-                            <button class="btn mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
                         </div> 
+                        <div class="card-footer d-flex flex-column justify-content-between">
+                            <div class="input-group mb-3 align-center  mt-auto"  >
+                                <span class="input-group-text">-</span>
+                                <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                <span class="input-group-text">+</span>
+                            </div><br>     
+                            <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
@@ -238,12 +258,15 @@
                         <div class="card-body  text-center d-flex flex-column">   
                             <h5 class="card-title" style="background: rgba(0, 0, 0, 0.1);">Miswa</h5>
                             <p class="card-text">₱30.00</p>
-                            <div class="input-group">
-                               <label class="input-group-text" id="Qty">Quantity</label>
-                               <input type="number" class="form-control text-center" placeholder="1"  min="0">
-                            </div><br>
-                            <button class="btn mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
                         </div> 
+                        <div class="card-footer d-flex flex-column justify-content-between">
+                            <div class="input-group mb-3 align-center  mt-auto"  >
+                                <span class="input-group-text">-</span>
+                                <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                <span class="input-group-text">+</span>
+                            </div><br>     
+                            <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
@@ -252,12 +275,15 @@
                         <div class="card-body text-center d-flex flex-column">   
                             <h5 class="card-title" style="background: rgba(0, 0, 0, 0.1);">Nilaga or Bulalo</h5> 
                             <p class="card-text">₱70.00</p>
-                            <div class="input-group">
-                               <label class="input-group-text" id="Qty">Quantity</label>
-                               <input type="number" class="form-control text-center" placeholder="1"  min="0">
-                            </div><br>
-                            <button class="btn mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
                         </div> 
+                        <div class="card-footer d-flex flex-column justify-content-between">
+                            <div class="input-group mb-3 align-center  mt-auto"  >
+                                <span class="input-group-text">-</span>
+                                <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                <span class="input-group-text">+</span>
+                            </div><br>     
+                            <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -363,37 +389,41 @@
                                             <div class="col">
                                                 <div class="card h-100">
                                                     <img src="img/pineapple.png" style="border-radius: 1rem;">
-                                                    <div class="card-body ">
-                                                        <p class="card-title fw-bold text-center">Pineapple</p>
-                                                        <div class="input-group">
-                                                            <label class="input-group-text" id="Qty">Quantity</label>
-                                                            <input type="text" class="form-control text-center" placeholder="0">
-                                                         </div><br>
-                                                    </div>
+                                                    
+                                                    <p class="card-title fw-bold text-center">Pineapple</p>
+                                                    <div class="card-body d-flex flex-column justify-content-between">
+                                                        <div class="input-group mb-3 align-center  mt-auto">
+                                                            <span class="input-group-text">-</span>
+                                                            <input type="text" id="fruitBasketQty" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                            <span class="input-group-text">+</span>
+                                                        </div> 
+                                                    </div><br>
                                                 </div>
                                             </div>
                                             <div class="col">
                                                 <div class="card h-100">
                                                     <img src="img/avocado.png" style="border-radius: 1rem;">
-                                                    <div class="card-body">
-                                                        <p class="card-title fw-bold text-center">Avocado</p>
-                                                        <div class="input-group">
-                                                            <label class="input-group-text" id="Qty">Quantity</label>
-                                                            <input type="text" class="form-control text-center" placeholder="0">
-                                                         </div><br>
-                                                    </div>
+                                                    <p class="card-title fw-bold text-center">Avocado</p>
+                                                    <div class="card-body d-flex flex-column justify-content-between">
+                                                        <div class="input-group mb-3 align-center  mt-auto">
+                                                            <span class="input-group-text">-</span>
+                                                            <input type="text" id="fruitBasketQty" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                            <span class="input-group-text">+</span>
+                                                        </div> 
+                                                    </div><br>
                                                 </div>
                                             </div>
                                             <div class="col">
                                                 <div class="card h-100">
                                                     <img src="img/apple.png" style="border-radius: 1rem;">
-                                                    <div class="card-body">
-                                                        <p class="card-title fw-bold text-center">Apple</p>
-                                                        <div class="input-group">
-                                                            <label class="input-group-text" id="Qty">Quantity</label>
-                                                            <input type="text" class="form-control text-center" placeholder="0">
-                                                         </div><br>
-                                                    </div>
+                                                    <p class="card-title fw-bold text-center">Apple</p>
+                                                    <div class="card-body d-flex flex-column justify-content-between">
+                                                        <div class="input-group mb-3 align-center  mt-auto">
+                                                            <span class="input-group-text">-</span>
+                                                            <input type="text" id="fruitBasketQty" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                            <span class="input-group-text">+</span>
+                                                        </div> 
+                                                    </div><br>
                                                 </div>
                                             </div>
                                         </div>
@@ -401,37 +431,40 @@
                                             <div class="col">
                                                 <div class="card h-100">
                                                     <img src="img/lemon.png" style="border-radius: 1rem;">
-                                                    <div class="card-body">
-                                                        <p class="card-title fw-bold text-center">Lemon</p>
-                                                        <div class="input-group">
-                                                            <label class="input-group-text" id="Qty">Quantity</label>
-                                                            <input type="text" class="form-control text-center" placeholder="0">
-                                                         </div><br>
-                                                    </div>
+                                                    <p class="card-title fw-bold text-center">Lemon</p>
+                                                    <div class="card-body d-flex flex-column justify-content-between">
+                                                        <div class="input-group mb-3 align-center  mt-auto">
+                                                            <span class="input-group-text">-</span>
+                                                            <input type="text" id="fruitBasketQty" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                            <span class="input-group-text">+</span>
+                                                        </div> 
+                                                    </div><br>
                                                 </div>
                                             </div>
                                             <div class="col">
                                                 <div class="card h-100">
                                                     <img src="img/banana.png" style="border-radius: 1rem;">
-                                                    <div class="card-body">
-                                                        <p class="card-title fw-bold text-center">Banana</p>
-                                                        <div class="input-group">
-                                                            <label class="input-group-text" id="Qty">Quantity</label>
-                                                            <input type="text" class="form-control text-center" placeholder="0">
-                                                         </div><br>
-                                                    </div>
+                                                    <p class="card-title fw-bold text-center">Banana</p>
+                                                    <div class="card-body d-flex flex-column justify-content-between">
+                                                        <div class="input-group mb-3 align-center  mt-auto">
+                                                            <span class="input-group-text">-</span>
+                                                            <input type="text" id="fruitBasketQty" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                            <span class="input-group-text">+</span>
+                                                        </div> 
+                                                    </div><br>
                                                 </div>
                                             </div>
                                             <div class="col">
                                                 <div class="card h-100">
                                                     <img src="img/dragonFruit.png" style="border-radius: 1rem;">
-                                                    <div class="card-body">
-                                                        <p class="card-title fw-bold text-center">Dragon Fruit</p>
-                                                        <div class="input-group">
-                                                            <label class="input-group-text" id="Qty">Quantity</label>
-                                                            <input type="text" class="form-control text-center" placeholder="0">
-                                                         </div><br>
-                                                    </div>
+                                                    <p class="card-title fw-bold text-center">Dragon Fruit</p>
+                                                    <div class="card-body d-flex flex-column justify-content-between">
+                                                        <div class="input-group mb-3 align-center  mt-auto">
+                                                            <span class="input-group-text">-</span>
+                                                            <input type="text" id="fruitBasketQty" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                            <span class="input-group-text">+</span>
+                                                        </div> 
+                                                    </div><br>
                                                 </div>
                                             </div>
                                         </div>
@@ -439,37 +472,40 @@
                                             <div class="col">
                                                 <div class="card h-100">
                                                     <img src="img/rambutan.png" style="border-radius: 1rem;">
-                                                    <div class="card-body">
-                                                        <p class="card-title fw-bold text-center">Rambutan</p>
-                                                        <div class="input-group">
-                                                            <label class="input-group-text" id="Qty">Quantity</label>
-                                                            <input type="text" class="form-control text-center" placeholder="0">
-                                                         </div><br>
-                                                    </div>
+                                                    <p class="card-title fw-bold text-center">Rambutan</p>
+                                                    <div class="card-body d-flex flex-column justify-content-between">
+                                                        <div class="input-group mb-3 align-center  mt-auto">
+                                                            <span class="input-group-text">-</span>
+                                                            <input type="text" id="fruitBasketQty" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                            <span class="input-group-text">+</span>
+                                                        </div> 
+                                                    </div><br>
                                                 </div>
                                             </div>
                                             <div class="col">
                                                 <div class="card h-100">
                                                     <img src="img/grapes.png" style="border-radius: 1rem;">
-                                                    <div class="card-body">
-                                                        <p class="card-title fw-bold text-center">Grapes</p>
-                                                        <div class="input-group">
-                                                            <label class="input-group-text" id="Qty">Quantity</label>
-                                                            <input type="text" class="form-control text-center" placeholder="0">
-                                                         </div><br>
-                                                    </div>
+                                                    <p class="card-title fw-bold text-center">Grapes</p>
+                                                    <div class="card-body d-flex flex-column justify-content-between">
+                                                        <div class="input-group mb-3 align-center  mt-auto">
+                                                            <span class="input-group-text">-</span>
+                                                            <input type="text" id="fruitBasketQty" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                            <span class="input-group-text">+</span>
+                                                        </div> 
+                                                    </div><br>
                                                 </div>
                                             </div>
                                             <div class="col">
                                                 <div class="card h-100">
                                                     <img src="img/mango.png" style="border-radius: 1rem;">
-                                                    <div class="card-body">
-                                                        <p class="card-title fw-bold text-center">Mango</p>
-                                                        <div class="input-group">
-                                                            <label class="input-group-text" id="Qty">Quantity</label>
-                                                            <input type="text" class="form-control text-center" placeholder="0">
-                                                         </div><br>
-                                                    </div>
+                                                    <p class="card-title fw-bold text-center">Mango</p>
+                                                    <div class="card-body d-flex flex-column justify-content-between">
+                                                        <div class="input-group mb-3 align-center  mt-auto">
+                                                            <span class="input-group-text">-</span>
+                                                            <input type="text" id="fruitBasketQty" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                            <span class="input-group-text">+</span>
+                                                        </div> 
+                                                    </div><br>
                                                 </div>
                                             </div>
                                         </div>
@@ -477,37 +513,40 @@
                                             <div class="col">
                                                 <div class="card h-100">
                                                     <img src="img/pear.png" style="border-radius: 1rem;">
-                                                    <div class="card-body">
-                                                        <p class="card-title fw-bold text-center">Pear</p>
-                                                        <div class="input-group">
-                                                            <label class="input-group-text" id="Qty">Quantity</label>
-                                                            <input type="text" class="form-control text-center" placeholder="0">
-                                                         </div><br>
-                                                    </div>
+                                                    <p class="card-title fw-bold text-center">Pear</p>
+                                                    <div class="card-body d-flex flex-column justify-content-between">
+                                                        <div class="input-group mb-3 align-center  mt-auto">
+                                                            <span class="input-group-text">-</span>
+                                                            <input type="text" id="fruitBasketQty" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                            <span class="input-group-text">+</span>
+                                                        </div> 
+                                                    </div><br>
                                                 </div>
                                             </div>
                                             <div class="col">
                                                 <div class="card h-100">
                                                     <img src="img/papaya.png" style="border-radius: 1rem;">
-                                                    <div class="card-body">
-                                                        <p class="card-title fw-bold text-center">Papaya</p>
-                                                        <div class="input-group">
-                                                            <label class="input-group-text" id="Qty">Quantity</label>
-                                                            <input type="text" class="form-control text-center" placeholder="0">
-                                                         </div><br>
-                                                    </div>
+                                                    <p class="card-title fw-bold text-center">Papaya</p>
+                                                    <div class="card-body d-flex flex-column justify-content-between">
+                                                        <div class="input-group mb-3 align-center  mt-auto">
+                                                            <span class="input-group-text">-</span>
+                                                            <input type="text" id="fruitBasketQty" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                            <span class="input-group-text">+</span>
+                                                        </div> 
+                                                    </div><br>
                                                 </div>
                                             </div>
                                             <div class="col">
                                                 <div class="card h-100">
                                                     <img src="img/orange.png" style="border-radius: 1rem;">
-                                                    <div class="card-body">
-                                                        <p class="card-title fw-bold text-center">Orange</p>
-                                                        <div class="input-group">
-                                                            <label class="input-group-text" id="Qty">Quantity</label>
-                                                            <input type="text" class="form-control text-center" placeholder="0">
-                                                         </div><br>
-                                                    </div>
+                                                    <p class="card-title fw-bold text-center">Orange</p>
+                                                    <div class="card-body d-flex flex-column justify-content-between">
+                                                        <div class="input-group mb-3 align-center  mt-auto">
+                                                            <span class="input-group-text">-</span>
+                                                            <input type="text" id="fruitBasketQty" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                            <span class="input-group-text">+</span>
+                                                        </div> 
+                                                    </div><br>
                                                 </div>
                                             </div>
                                         </div>
@@ -559,7 +598,7 @@
                 <div class="modal-footer">
                     <a href="Cart.html" style="text-decoration:none;"><button class="btn"
                             type="submit" style="background-color:#A2DBB7; border-radius:5px; box-shadow:5px 5px grey;">
-                            <i class="bi bi-cart4"></i>Add to cart 
+                            <i class="bi bi-cart4"></i> &nbsp;  Add to Cart 
                     </button>
                     </a>
                     <button class="btn"
@@ -599,11 +638,14 @@
                                                         <div class="card-body d-flex flex-column">                    
                                                             <h5 class="card-title">Ampalaya Salad</h5>
                                                             <p class="card-text">Includes a large ampalaya, tomato and red onion which is good for 2-3 persons</p>
-                                                            <div class="input-group">
-                                                                <label class="input-group-text" id="Qty">Quantity</label>
-                                                                <input type="text" class="form-control text-center" placeholder="1">
-                                                            </div><br>
-                                                            <button class="btn mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                                        </div> 
+                                                        <div class="card-footer d-flex flex-column justify-content-between">
+                                                            <div class="input-group mb-3 align-center  mt-auto"  >
+                                                                <span class="input-group-text">-</span>
+                                                                <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                                <span class="input-group-text">+</span>
+                                                            </div><br>     
+                                                            <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -613,11 +655,14 @@
                                                         <div class="card-body d-flex flex-column">                    
                                                             <h5 class="card-title">Cucumber Salad</h5>
                                                             <p class="card-text">Includes cucumber, tomato and red onion which is good for 2-3 persons</p>
-                                                            <div class="input-group">
-                                                                <label class="input-group-text" id="Qty">Quantity</label>
-                                                                <input type="text" class="form-control text-center" placeholder="1">
-                                                            </div><br>
-                                                            <button class="btn mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                                        </div> 
+                                                        <div class="card-footer d-flex flex-column justify-content-between">
+                                                            <div class="input-group mb-3 align-center  mt-auto"  >
+                                                                <span class="input-group-text">-</span>
+                                                                <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                                <span class="input-group-text">+</span>
+                                                            </div><br>     
+                                                            <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -627,11 +672,14 @@
                                                         <div class="card-body d-flex flex-column">                    
                                                             <h5 class="card-title">Ensaladang Talong</h5>
                                                             <p class="card-text">Includes eggplants, tomatoes, red onions which is good for 2-3 persons</p>
-                                                            <div class="input-group">
-                                                                <label class="input-group-text" id="Qty">Quantity</label>
-                                                                <input type="text" class="form-control text-center" placeholder="1">
-                                                            </div><br>
-                                                            <button class="btn mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                                        </div> 
+                                                        <div class="card-footer d-flex flex-column justify-content-between">
+                                                            <div class="input-group mb-3 align-center  mt-auto"  >
+                                                                <span class="input-group-text">-</span>
+                                                                <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                                <span class="input-group-text">+</span>
+                                                            </div><br>     
+                                                            <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -641,11 +689,14 @@
                                                         <div class="card-body d-flex flex-column">                    
                                                             <h5 class="card-title">Green Salad</h5>
                                                             <p class="card-text">Includes red onion, tomatoes, Avocado, cucumber, and lettuce which is good for 2-3 persons</p>
-                                                            <div class="input-group">
-                                                                <label class="input-group-text" id="Qty">Quantity</label>
-                                                                <input type="text" class="form-control text-center" placeholder="1">
-                                                            </div><br>
-                                                            <button class="btn mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                                        </div> 
+                                                        <div class="card-footer d-flex flex-column justify-content-between">
+                                                            <div class="input-group mb-3 align-center  mt-auto"  >
+                                                                <span class="input-group-text">-</span>
+                                                                <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                                <span class="input-group-text">+</span>
+                                                            </div><br>     
+                                                            <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -660,11 +711,14 @@
                                                         <div class="card-body d-flex flex-column">                    
                                                             <h5 class="card-title">Lato (Seaweed) Salad</h5>
                                                             <p class="card-text">Includes lato, red onion and tomato which is good for 2-3 persons</p>
-                                                            <div class="input-group">
-                                                                <label class="input-group-text" id="Qty">Quantity</label>
-                                                                <input type="text" class="form-control text-center" placeholder="1">
-                                                            </div><br>
-                                                            <button class="btn mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                                        </div> 
+                                                        <div class="card-footer d-flex flex-column justify-content-between">
+                                                            <div class="input-group mb-3 align-center  mt-auto"  >
+                                                                <span class="input-group-text">-</span>
+                                                                <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                                <span class="input-group-text">+</span>
+                                                            </div><br>     
+                                                            <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -674,11 +728,14 @@
                                                         <div class="card-body d-flex flex-column">                    
                                                             <h5 class="card-title">Mango Tomato Salad</h5>
                                                             <p class="card-text">Includes large green mango, tomatoes, and red onion which is good for 2-3 persons</p>
-                                                            <div class="input-group">
-                                                                <label class="input-group-text" id="Qty">Quantity</label>
-                                                                <input type="text" class="form-control text-center" placeholder="1">
-                                                            </div><br>
-                                                            <button class="btn mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                                        </div> 
+                                                        <div class="card-footer d-flex flex-column justify-content-between">
+                                                            <div class="input-group mb-3 align-center  mt-auto"  >
+                                                                <span class="input-group-text">-</span>
+                                                                <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                                <span class="input-group-text">+</span>
+                                                            </div><br>     
+                                                            <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -688,11 +745,14 @@
                                                         <div class="card-body d-flex flex-column">                    
                                                             <h5 class="card-title">Kamote Tops (Talbos) Salad</h5>
                                                             <p class="card-text">Includes kamote tops, tomatoes, and red onion which is good for 2-3 persons</p>
-                                                            <div class="input-group">
-                                                                <label class="input-group-text" id="Qty">Quantity</label>
-                                                                <input type="text" class="form-control text-center" placeholder="1">
-                                                            </div><br>
-                                                            <button class="btn mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                                        </div> 
+                                                        <div class="card-footer d-flex flex-column justify-content-between">
+                                                            <div class="input-group mb-3 align-center  mt-auto"  >
+                                                                <span class="input-group-text">-</span>
+                                                                <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                                <span class="input-group-text">+</span>
+                                                            </div><br>     
+                                                            <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -718,11 +778,14 @@
                         <div class="card-body text-center d-flex flex-column">                    
                             <h5 class="card-title">Set A</h5>
                             <p class="card-text">Consists of randomly available herbs and spices of 6 variety</p>
-                            <div class="input-group">
-                                <label class="input-group-text" id="Qty">Quantity</label>
-                                <input type="number" class="form-control text-center" placeholder="1" min="0">
-                             </div><br>
-                             <button class="btn mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                        </div> 
+                        <div class="card-footer d-flex flex-column justify-content-between">
+                            <div class="input-group mb-3 align-center  mt-auto"  >
+                                <span class="input-group-text">-</span>
+                                <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                <span class="input-group-text">+</span>
+                            </div><br>     
+                            <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -732,11 +795,14 @@
                         <div class="card-body text-center d-flex flex-column">                    
                             <h5 class="card-title">Set B</h5>
                             <p class="card-text">Boxed set of garlic flakes, Paprika and ground pepper.</p>
-                            <div class="input-group">
-                                <label class="input-group-text" id="Qty">Quantity</label>
-                                <input type="number" class="form-control text-center" placeholder="1" min="0">
-                             </div><br>
-                             <button class="btn mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                        </div> 
+                        <div class="card-footer d-flex flex-column justify-content-between">
+                            <div class="input-group mb-3 align-center  mt-auto"  >
+                                <span class="input-group-text">-</span>
+                                <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                <span class="input-group-text">+</span>
+                            </div><br>     
+                            <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -746,11 +812,14 @@
                         <div class="card-body text-center d-flex flex-column">                    
                             <h5 class="card-title">Set C</h5>
                             <p class="card-text">Perfect Duo of Salt and pepper</p>
-                            <div class="input-group">
-                                <label class="input-group-text" id="Qty">Quantity</label>
-                                <input type="number" class="form-control text-center" placeholder="1" min="0">
-                             </div><br>
-                             <button class="btn mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                        </div> 
+                        <div class="card-footer d-flex flex-column justify-content-between">
+                            <div class="input-group mb-3 align-center  mt-auto"  >
+                                <span class="input-group-text">-</span>
+                                <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                <span class="input-group-text">+</span>
+                            </div><br>     
+                            <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                         </div>
                     </div>
                 </div>

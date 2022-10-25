@@ -12,10 +12,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
+        <link rel="stylesheet" href="stylesheet.css">
     <style>
-        body {
-            font-family:'Poppins', sans-serif;
-        }
         .inner{
             overflow: hidden;
         }
@@ -51,7 +49,7 @@
                             <div class="collapse navbar-collapse" id="navbarMark">
                                 <ul class="navbar-nav text-uppercase">
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="Products.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#073418;">Farm Produce</a>
+                                        <a class="nav-link active dropdown-toggle" href="Products.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#073418;">Farm Produce</a>
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                             <li><a class="dropdown-item" href="Fruits.html">Fruits</a></li>
                                             <li><a class="dropdown-item" href="Veggies.html">Vegetables</a></li>
@@ -69,14 +67,14 @@
                                         <a class="nav-link" href="Login.html"  style="color:#073418">My Account</a>
                                     </li>
                                 </ul>
-                                <div class="float-right px-2">
-                                    <a class="nav-link" href="Cart.html"  style="color:#073418">
-                                    <i class="bi bi-cart4" style="font-size:30px;"></i></a>
-                                </div>
                                 <form class="d-flex ms-auto" role="search">
+                                    <div class="px-2" style="float:right;">
+                                    <a class="nav-link" href="Cart.html"  style="color:#073418">
+                                        <i class="bi bi-cart4" style="font-size:30px;"></i></a>
+                                    </div>
                                     <input type="text" class="form-control" placeholder="Search" aria-label="search">
                                     <button type="submit" class="btn btn-outline" style="background-color: #073418; color:#A2DBB7;">Search</button>
-                                </form>                            
+                                </form>                           
                             </div>
         </div>
     </div>
@@ -164,12 +162,13 @@
                                 <div class="mb-2">
                                     <span class="fw-bold text-center"><strong></strong></span>
                                 </div>
-                                <div class="card-footer text-center">
-                                    <div class="input-group">
-                                        <label class="input-group-text">QTY</label>
-                                        <input type="number" class="form-control" min="0" placeholder="0">
+                                <div class="card-footer d-flex flex-column justify-content-between">
+                                    <div class="input-group mb-3 align-center  mt-auto" style="width:130px">
+                                        <span class="input-group-text">-</span>
+                                        <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <span class="input-group-text">+</span>
                                     </div><br>     
-                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -185,12 +184,13 @@
                                 <div class="mb-2">
                                     <span class="fw-bold text-center"><strong></strong></span>
                                 </div>
-                                <div class="card-footer text-center">
-                                    <div class="input-group">
-                                        <label class="input-group-text">QTY</label>
-                                        <input type="number" class="form-control" min="0" placeholder="0">
+                                <div class="card-footer d-flex flex-column justify-content-between">
+                                    <div class="input-group mb-3 align-center  mt-auto" style="width:130px">
+                                        <span class="input-group-text">-</span>
+                                        <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <span class="input-group-text">+</span>
                                     </div><br>     
-                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -206,12 +206,13 @@
                                 <div class="mb-2">
                                     <span class="fw-bold text-center"><strong></strong></span>
                                 </div>
-                                <div class="card-footer text-center">
-                                    <div class="input-group">
-                                        <label class="input-group-text">QTY</label>
-                                        <input type="number" class="form-control" min="0" placeholder="0">
+                                <div class="card-footer d-flex flex-column justify-content-between">
+                                    <div class="input-group mb-3 align-center  mt-auto" style="width:130px">
+                                        <span class="input-group-text">-</span>
+                                        <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <span class="input-group-text">+</span>
                                     </div><br>     
-                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -227,12 +228,13 @@
                                 <div class="mb-2">
                                     <span class="fw-bold text-center"><strong></strong></span>
                                 </div>
-                                <div class="card-footer text-center">
-                                    <div class="input-group">
-                                        <label class="input-group-text">QTY</label>
-                                        <input type="number" class="form-control" min="0" placeholder="0">
+                                <div class="card-footer d-flex flex-column justify-content-between">
+                                    <div class="input-group mb-3 align-center  mt-auto" style="width:130px">
+                                        <span class="input-group-text">-</span>
+                                        <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <span class="input-group-text">+</span>
                                     </div><br>     
-                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -260,12 +262,13 @@
                                 <div class="mb-2">
                                     <span class="fw-bold text-center"><strong></strong></span>
                                 </div>
-                                <div class="card-footer text-center">
-                                    <div class="input-group">
-                                        <label class="input-group-text">QTY</label>
-                                        <input type="number" class="form-control" min="0" placeholder="0">
+                                <div class="card-footer d-flex flex-column justify-content-between">
+                                    <div class="input-group mb-3 align-center  mt-auto" style="width:130px">
+                                        <span class="input-group-text">-</span>
+                                        <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <span class="input-group-text">+</span>
                                     </div><br>     
-                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -281,12 +284,13 @@
                                 <div class="mb-2">
                                     <span class="fw-bold text-center"><strong></strong></span>
                                 </div>
-                                <div class="card-footer text-center">
-                                    <div class="input-group">
-                                        <label class="input-group-text">QTY</label>
-                                        <input type="number" class="form-control" min="0" placeholder="0">
+                                <div class="card-footer d-flex flex-column justify-content-between">
+                                    <div class="input-group mb-3 align-center  mt-auto" style="width:130px">
+                                        <span class="input-group-text">-</span>
+                                        <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <span class="input-group-text">+</span>
                                     </div><br>     
-                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -302,12 +306,13 @@
                                 <div class="mb-2">
                                     <span class="fw-bold text-center"><strong></strong></span>
                                 </div>
-                                <div class="card-footer text-center">
-                                    <div class="input-group">
-                                        <label class="input-group-text">QTY</label>
-                                        <input type="number" class="form-control" min="0" placeholder="0">
+                                <div class="card-footer d-flex flex-column justify-content-between">
+                                    <div class="input-group mb-3 align-center  mt-auto" style="width:130px">
+                                        <span class="input-group-text">-</span>
+                                        <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <span class="input-group-text">+</span>
                                     </div><br>     
-                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -323,12 +328,13 @@
                                 <div class="mb-2">
                                     <span class="fw-bold text-center"><strong></strong></span>
                                 </div>
-                                <div class="card-footer text-center">
-                                    <div class="input-group">
-                                        <label class="input-group-text">QTY</label>
-                                        <input type="number" class="form-control" min="0" placeholder="0">
+                                <div class="card-footer d-flex flex-column justify-content-between">
+                                    <div class="input-group mb-3 align-center  mt-auto" style="width:130px">
+                                        <span class="input-group-text">-</span>
+                                        <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <span class="input-group-text">+</span>
                                     </div><br>     
-                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -356,12 +362,13 @@
                                 <div class="mb-2">
                                     <span class="fw-bold text-center"><strong></strong></span>
                                 </div>
-                                <div class="card-footer text-center">
-                                    <div class="input-group">
-                                        <label class="input-group-text">QTY</label>
-                                        <input type="number" class="form-control" min="0" placeholder="0">
+                                <div class="card-footer d-flex flex-column justify-content-between">
+                                    <div class="input-group mb-3 align-center  mt-auto" style="width:130px">
+                                        <span class="input-group-text">-</span>
+                                        <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <span class="input-group-text">+</span>
                                     </div><br>     
-                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -377,12 +384,13 @@
                                 <div class="mb-2">
                                     <span class="fw-bold text-center"><strong></strong></span>
                                 </div>
-                                <div class="card-footer text-center">
-                                    <div class="input-group">
-                                        <label class="input-group-text">QTY</label>
-                                        <input type="number" class="form-control" min="0" placeholder="0">
+                                <div class="card-footer d-flex flex-column justify-content-between">
+                                    <div class="input-group mb-3 align-center  mt-auto" style="width:130px">
+                                        <span class="input-group-text">-</span>
+                                        <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <span class="input-group-text">+</span>
                                     </div><br>     
-                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -398,12 +406,13 @@
                                 <div class="mb-2">
                                     <span class="fw-bold text-center"><strong></strong></span>
                                 </div>
-                                <div class="card-footer text-center">
-                                    <div class="input-group">
-                                        <label class="input-group-text">QTY</label>
-                                        <input type="number" class="form-control" min="0" placeholder="0">
+                                <div class="card-footer d-flex flex-column justify-content-between">
+                                    <div class="input-group mb-3 align-center  mt-auto" style="width:130px">
+                                        <span class="input-group-text">-</span>
+                                        <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <span class="input-group-text">+</span>
                                     </div><br>     
-                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -419,12 +428,13 @@
                                 <div class="mb-2">
                                     <span class="fw-bold text-center"><strong></strong></span>
                                 </div>
-                                <div class="card-footer text-center">
-                                    <div class="input-group">
-                                        <label class="input-group-text">QTY</label>
-                                        <input type="number" class="form-control" min="0" placeholder="0">
+                                <div class="card-footer d-flex flex-column justify-content-between">
+                                    <div class="input-group mb-3 align-center  mt-auto" style="width:130px">
+                                        <span class="input-group-text">-</span>
+                                        <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <span class="input-group-text">+</span>
                                     </div><br>     
-                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>Add to Cart</button>
+                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                                 </div>
                             </div>
                         </div>

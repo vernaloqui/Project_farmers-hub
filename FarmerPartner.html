@@ -11,6 +11,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link href="stylesheet.css" rel="stylesheet">
 
     <style>
         body {
@@ -73,11 +74,11 @@
                                         <a class="nav-link" href="Login.html"  style="color:#073418">My Account</a>
                                     </li>
                                 </ul>
-                                <div class="float-right px-2">
-                                    <a class="nav-link" href="Cart.html"  style="color:#073418">
-                                    <i class="bi bi-cart4" style="font-size:30px;"></i></a>
-                                </div>
                                 <form class="d-flex ms-auto" role="search">
+                                    <div class="px-2" style="float:right;">
+                                    <a class="nav-link" href="Cart.html"  style="color:#073418">
+                                        <i class="bi bi-cart4" style="font-size:30px;"></i></a>
+                                    </div>
                                     <input type="text" class="form-control" placeholder="Search" aria-label="search">
                                     <button type="submit" class="btn btn-outline" style="background-color: #073418; color:#A2DBB7;">Search</button>
                                 </form>                            
@@ -122,8 +123,6 @@
                             <div class="input-group" mb-3>
                                 <label for="password" class="input-group-text">Password:</label>
                                 <input type="password" class="form-control" id="password">
-                            </div><br>
-                            <div class="input-group" mb-3>
                                 <label for="password" class="input-group-text">Confirm Password:</label>
                                 <input type="password" class="form-control" id="confirmpassword">
                             </div><br>
@@ -159,23 +158,15 @@
                             <div class="input-group" mb-3>
                                 <label for="date" class="input-group-text">Date of Birth:</label>
                                 <input type="date" class="form-control" id="dob">
+                                <label for="phoneNum" class="input-group-text">Cellphone number:</label>
+                                <input type="tel" class="form-control" id="phoneNum" placeholder="09XXXXXXXXX" maxlength="11" minlength="11">
                             </div><br>
                             <div class="input-group" mb-3>
                                 <span class="input-group-text">Upload ID card:</span>
                                 <input type="file" class="form-control" id="idCard">
                             </div>
                                 <p style="font-size:12px;">Max of 5MB with jpg, jpeg, pdf, png file types only</p>
-                            <div class="input-group" mb-3>
-                                <label for="phoneNum" class="input-group-text">Cellphone number:</label>
-                                <input type="tel" class="form-control" id="phoneNum" placeholder="09XXXXXXXXX" maxlength="11" minlength="11">
-                            </div><br>
-                            <div class="input-group" mb-3>
-                                <label for="gender" class="input-group-text">Gender:</label>
-                                <select name="gender" id="gender" class="form-control">
-                                    <option value="male">MALE</option>
-                                    <option value="female">FEMALE</option>
-                                </select>
-                            </div><br>
+                            
                             <div class="border-top">
                                 <p class="fw-bold" style="font-size:15px;">Address</p>
                             </div>
@@ -186,16 +177,16 @@
                                     <input type="text" class="form-control" id="Address2" placeholder="Address Line 2"> 
                             </div><br>
                             <div class="input-group" mb-3>
-                                <label for="Barangay" class="input-group-text">Barangay:</label>
-                                <input type="text" class="form-control" id="barangay" placeholder="Barangay">
-                                <label for="Municipality" class="input-group-text">Municipality:</label>
-                                <input type="text" class="form-control" id="town" placeholder="Municipality">
-                            </div><br>
-                            <div class="input-group" mb-3>
                                 <label for="province" class="input-group-text">Province:</label>
                                 <input type="text" class="form-control" id="province" placeholder="Province">
                                 <label for="zipCode" class="input-group-text">Postal Code:</label>
                                 <input type="text" class="form-control" id="zipCode" placeholder="Postal Code">
+                            </div><br>
+                            <div class="input-group" mb-3>
+                                <label for="Barangay" class="input-group-text">Barangay:</label>
+                                <input type="text" class="form-control" id="barangay" placeholder="Barangay">
+                                <label for="Municipality" class="input-group-text">Municipality:</label>
+                                <input type="text" class="form-control" id="town" placeholder="Municipality">
                             </div><br>
                         </div>
                 </div>
@@ -219,6 +210,23 @@
                     data-bs-parent="#RegisterAccount">
                         
                         <div class="accordion-body text-justify">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Payment" id="card">
+                                <label class="form-check-label" for="card">Card
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Payment" id="Gcash">
+                                <label class="form-check-label" for="Gcash">Gcash
+                                </label>
+                            </div>
+                            
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Payment" id="maya">
+                                <label class="form-check-label" for="maya">Maya
+                                </label>
+                            </div>
+                            <!--To be used for JS once option is chosen:
                             <p class="fw-bold" style="font-size:15px;">Credit card details</p>
                             <br>
                             <div class="input-group" mb-3>
@@ -232,7 +240,7 @@
                             <div class="input-group" mb-3>
                                 <label for="expDate" class="input-group-text">Expires on:</label>
                                 <input type="month" class="form-control" id="expDate">
-                            </div><br>
+                            </div><br>-->
                         </div>
                 </div>
             </div>
@@ -292,7 +300,8 @@
             <label class="form-check-label" for="privacy">I agree with the <a href="">Privacy Policy</a>.</label>
         </div>
         <br>
-        <button type="submit" class="btn text-capitalize" style="background-color:#A2DBB7; border-radius:5px; box-shadow:5px 5px grey;">Register Account</button>
+        <button type="submit" class="btn text-capitalize" style="background-color:#A2DBB7; border-radius:5px; box-shadow:5px 5px grey;">Register Account</button><br><br>
+        <a href="Login.html"><button type="button" class="btn btn-link text-muted" style="text-decoration:none;">Already have an account? Log in here.</button></a>
     </form>
 </section>  
 
