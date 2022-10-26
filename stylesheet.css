@@ -98,3 +98,51 @@
  }
 }
 /*Contact Form*/
+/*radio buttons*/
+input[type='radio']:after {
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: white;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #073418;
+}
+
+input[type='radio']:checked:after {
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #A2DBB7;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+.pagination > li > a
+{
+    background-color: white;
+    color: #073418;
+}
+
+.pagination  li  a:focus,
+.pagination  li  a:hover
+{
+    color: #5a5a5a;
+    background-color: #eee;
+    border-color: #ddd;
+}
+
+.pagination .page-item .page-link.active
+{
+    color: white;
+    background-color: #A2DBB7;
+    border: solid 1px #A2DBB7;
+}
