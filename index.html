@@ -163,10 +163,47 @@
         <p class="fw-lighter">Keep up with promotions, and new items, among other things. Right to your inbox.</p>
     <div class="input-group" mb-3>
         <input type="email" name="email" id="email" class="form-control" placeholder="Email address">
-        <button type="submit" class="btn text-capitalize btn-sm" style="background-color:#A2DBB7;">Subscribe</button>
+        <button type="submit" class="btn text-capitalize btn-sm" style="background-color:#A2DBB7;" data-bs-toggle="modal" 
+        data-bs-target="#confirmSub">Subscribe</button>
     </div>
 </div>
+<!--Modal-->
+<div class="modal fade" id="confirmSub" tabindex="-1">
+    <div class="modal-dialog"> <!--dialog box-->
+        <div class="modal-content">
+        <!--start of modal header-->
+        <div class="modal-header">
+            <h5 class="modal-title text-center" id="modalSubTitle">
+                You'll hear from us soon.</h5>
+                <button class="btn-close" 
+                        type="button"
+                        data-bs-dismiss="modal"
+                        aria-label="close">
+                </button>  <!--X button sa dialog box-->
+        </div>
+        <!--End of modal header-->
 
+        <!--start of modal body-->
+        <div class="modal-body">
+            <p class="fst-italic">Thanks for subscribing to our newsletter! Be fit by eating fresh.</p>
+        </div>
+         <!--End of modal body-->
+         <!--start of modal footer-->
+         <div class="modal-footer">
+            <button class="btn"
+                    type="submit" style="background-color:#A2DBB7; border-radius:5px; box-shadow:5px 5px grey;">
+                    OK
+            </button>
+            <button class="btn"
+                    type="button" style="background-color:#A2DBB7; border-radius:5px; box-shadow:5px 5px grey;">
+                    Cancel
+            </button>
+        </div>
+         <!--End of modal footer-->
+        </div>
+    </div>
+</div>
+<!--End of Modal-->
 <br>
 <br>
 
