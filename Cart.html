@@ -90,31 +90,84 @@
 
 <!--Start of Shopping Cart section-->
 
-    <div class="container-fluid" style="background-color: rgba(0, 0, 0, 0.2);">
-        <p class="display-6 text-center text-uppercase" style="color: #073418">Shopping Cart</p>
+<div class="container-fluid">
+    <p class="display-6 text-center text-uppercase" style="color: #073418; background-color: rgba(0, 0, 0, 0.2);">Shopping Cart</p>
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Product</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Subtotal</th>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <img src="assets/img/sauna package.png" style="width:100px; height:50px;" class="align-self-center">
+                </td>
+                <td>Sauna Package gift card</td>
+                <td>₱500.00</td>
+                <td>
+                    <input type="number" class="text-center" placeholder="2" style="width:35px;"></td>
+                <td>₱1000.00</td>
+                <td><button class="btn rounded-0"><i class="bi bi-trash3-fill" style="color:#073418;"></i></button></td>
+              </tr>
+              <tr>
+                <td colspan="6" class="text-end"><button class="btn btn-sm shadow text-uppercase disabled" style="background-color:#A2DBB7; font-family:'Poppins', sans serif;">Update cart</button></td>
+              </tr>
+            </tbody>
+        </table>
+        <br><br>
     </div>
-    <br><br>
-<section class="container mt-2">
     
-    <div class="container border shadow-sm p-1">
+    <!-- <div class="container border shadow-sm p-1">
         <p class="text-center fw-bold">Your cart is empty! Add some items to checkout.</p>
-    </div><br>
-    <div class="text-end">
-        <label for="date">Select date of Delivery:</label>
-        <input type="date" id="Deldate" class="border shadow-sm p-1" style="border-color: #073418;">
-    </div><br><br>
-    <div class="row">
-        <div class="col">
-            <label>Special Instructions to the Seller:</label><br>
-            <textarea class="border shadow-sm p-1" rows="6" cols="75" style="resize:none"></textarea>
+
+    </div><br> -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <!--Summary table-->
+                <table class="table table-bordered table-hover table-striped">
+                    <thead>
+                        <tr class="text-center">
+                            <th colspan="2">Cart Totals</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                Subtotal
+                            </th>
+                            <td>₱500.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                Total
+                            </th>
+                            <th>₱1000.00</th>
+                        </tr>
+                            <tr class="text-end">
+                            <td colspan="2"><a href="CheckOut.html" role="button" class="btn btn-sm shadow text-uppercase" style="background-color:#A2DBB7; font-family:'Poppins', sans serif;">Proceed to checkout</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <div class="col text-end">
-            <p class="h4 fw-bolder">Php 0.00</p>
+    </div><br>
+    <div class="container-fluid">
+        <label>Special Instructions to the Seller:</label><br>
+        <textarea class="border shadow-sm p-1" rows="6" cols="75" style="resize:none"></textarea>
+    </div>
+    
+            <!-- <p class="h4 fw-bolder">Php 0.00</p>
                 <p>Shipping calculated at checkout
             </p><br>
-            <button class="btn" data-bs-toggle="modal" data-bs-target="#confirmCO" style="border-radius:5px; box-shadow:5px 5px grey; background-color: #A2DBB7;">Check Out</button>          
-        </div>
-    </div>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#confirmCO" style="border-radius:5px; box-shadow:5px 5px grey; background-color: #A2DBB7;">Check Out</button>           -->
 
     <br>
     <br>
