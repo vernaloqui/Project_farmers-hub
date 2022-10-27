@@ -26,4 +26,4 @@ function forgotPassword(){
     }
 }
 
-//
+//Municipality Selection function for registration
