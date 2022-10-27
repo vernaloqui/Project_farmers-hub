@@ -96,8 +96,8 @@
     <br>
     <form class="logIn container border border-secondary rounded p-4">
         <div class="mb-3">
-            <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email" placeholder="example@gmail.com">
+            <label for="logInEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="logInEmail" placeholder="example@gmail.com">
         </div>
         <div class="mb-3">
             <label for="password" class="form-label">Password</label>
@@ -132,21 +132,28 @@
 
         <!--start of modal body-->
         <div class="modal-body">
-            <p class="fst-italic">Input your email address so we can send you a link to reset your password.</p>
-            <div class="input-group" mb-3>
-                <span class="input-group-text" id="EmailUser">Email address:</span>
-                <input type="email" name="email" id="email" class="form-control">
+            <div id="body">
+                <p class="fst-italic">Input your email address so we can send you a link to reset your password.</p>
+                <div class="input-group" mb-3>
+                    <span class="input-group-text" id="EmailUser" placeholder="example@gmail.com">Email address:</span>
+                    <input type="email" name="email" id="email" class="form-control">
+                </div>
+                <p id="inputAlert"></p>
             </div>
+                <p id="emailSent"></p>
+            
         </div>
          <!--End of modal body-->
          <!--start of modal footer-->
-         <div class="modal-footer">
+         <div class="modal-footer" id="Modalfooter">
             <button class="btn"
-                    type="submit" style="background-color:#A2DBB7; border-radius:5px; box-shadow:5px 5px grey;">
+                    type="submit" style="background-color:#A2DBB7; border-radius:5px; box-shadow:5px 5px grey;" onclick="forgotPassword();">
                     OK
             </button>
             <button class="btn"
-                    type="button" style="background-color:#A2DBB7; border-radius:5px; box-shadow:5px 5px grey;">
+                    type="button" style="background-color:#A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"
+                    data-bs-dismiss="modal"
+                    aria-label="close">
                     Cancel
             </button>
         </div>
@@ -215,5 +222,6 @@
 <!-- Footer -->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script src="main.js"></script>
 </body>
 </html>
