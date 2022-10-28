@@ -128,7 +128,7 @@
                             </div>
         </div>
     </div>
-<!--end of nav bar>-->
+<!--end of nav bar onclick="chopQTY.value = decQuantity(chopQTYpakbetQTY)">-->
 <br>
 <div class="container-fluid" style="background-color: rgba(0, 0, 0, 0.2);">
     <p class="display-6 text-center text-uppercase" style="color: #073418">Our Best-sellers</p>
@@ -166,9 +166,9 @@
                         </div>
                         <div class="card-footer d-flex flex-column justify-content-between">
                             <div class="input-group mb-3 align-center  mt-auto"  >
-                                <span class="input-group-text">-</span>
-                                <input type="number" id="inputQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                <span class="input-group-text">+</span>
+                                <span class="input-group-text" onclick="pakbetQTY.value = decQuantity(pakbetQTY)">-</span>
+                                <input type="number" id="pakbetQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                <span class="input-group-text" onclick="pakbetQTY.value = incQuantity(pakbetQTY)">+</span>
                             </div><br>     
                             <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                         </div> 
@@ -183,9 +183,9 @@
                         </div> 
                         <div class="card-footer d-flex flex-column justify-content-between">
                             <div class="input-group mb-3 align-center  mt-auto"  >
-                                <span class="input-group-text">-</span>
-                                <input type="number" id="inputQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                <span class="input-group-text">+</span>
+                                <span class="input-group-text" onclick="chopQTY.value = decQuantity(chopQTY)">-</span>
+                                <input type="number" id="chopQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                <span class="input-group-text" onclick="chopQTY.value = incQuantity(chopQTY)">+</span>
                             </div><br>     
                             <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                         </div>
@@ -200,9 +200,9 @@
                         </div> 
                         <div class="card-footer d-flex flex-column justify-content-between">
                             <div class="input-group mb-3 align-center  mt-auto"  >
-                                <span class="input-group-text">-</span>
-                                <input type="number" id="inputQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                <span class="input-group-text">+</span>
+                                <span class="input-group-text" onclick="sGabiQTY.value = decQuantity(sGabiQTY)">-</span>
+                                <input type="number" id="sGabiQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                <span class="input-group-text" onclick="sGabiQTY.value = incQuantity(sGabiQTY)">+</span>
                             </div><br>     
                             <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                         </div>
@@ -217,9 +217,9 @@
                         </div> 
                         <div class="card-footer d-flex flex-column justify-content-between">
                             <div class="input-group mb-3 align-center  mt-auto"  >
-                                <span class="input-group-text">-</span>
-                                <input type="number" id="inputQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                <span class="input-group-text">+</span>
+                                <span class="input-group-text"onclick="sigangQTY.value = incQuantity(sigangQTY)">-</span>
+                                <input type="number" id="sigangQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                <span class="input-group-text" onclick="sigangQTY.value = incQuantity(sigangQTY)">+</span>
                             </div><br>     
                             <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                         </div>
@@ -238,9 +238,9 @@
                         </div> 
                         <div class="card-footer d-flex flex-column justify-content-between">
                             <div class="input-group mb-3 align-center  mt-auto"  >
-                                <span class="input-group-text">-</span>
-                                <input type="number" id="inputQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                <span class="input-group-text">+</span>
+                                <span class="input-group-text" onclick="kareQTY.value = decQuantity(kareQTY)">-</span>
+                                <input type="number" id="kareQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                <span class="input-group-text" onclick="chopQTY.value = incQuantity(kareQTY)">+</span>
                             </div><br>     
                             <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                         </div>
@@ -255,9 +255,9 @@
                         </div> 
                         <div class="card-footer d-flex flex-column justify-content-between">
                             <div class="input-group mb-3 align-center  mt-auto"  >
-                                <span class="input-group-text">-</span>
-                                <input type="number" id="inputQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                <span class="input-group-text">+</span>
+                                <span class="input-group-text" onclick="munggoQTY.value = decQuantity(munggoQTY)">-</span>
+                                <input type="number" id="munggoQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                <span class="input-group-text" onclick="munggoQTY.value = incQuantity(munggoQTY)">+</span>
                             </div><br>     
                             <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                         </div>
@@ -272,9 +272,9 @@
                         </div> 
                         <div class="card-footer d-flex flex-column justify-content-between">
                             <div class="input-group mb-3 align-center  mt-auto"  >
-                                <span class="input-group-text">-</span>
-                                <input type="number" id="inputQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                <span class="input-group-text">+</span>
+                                <span class="input-group-text" onclick="miswaQTY.value = decQuantity(miswaQTY)">-</span>
+                                <input type="number" id="miswaQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                <span class="input-group-text" onclick="miswaQTY.value = incQuantity(miswaQTY)">+</span>
                             </div><br>     
                             <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                         </div>
@@ -289,9 +289,9 @@
                         </div> 
                         <div class="card-footer d-flex flex-column justify-content-between">
                             <div class="input-group mb-3 align-center  mt-auto"  >
-                                <span class="input-group-text">-</span>
-                                <input type="number" id="inputQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                <span class="input-group-text">+</span>
+                                <span class="input-group-text" onclick="lagaQTY.value = decQuantity(lagaQTY)">-</span>
+                                <input type="number" id="lagaQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                <span class="input-group-text" onclick="lagaQTY.value = incQuantity(lagaQTY)">+</span>
                             </div><br>     
                             <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                         </div>
@@ -404,9 +404,9 @@
                                                     <p class="card-title fw-bold text-center">Pineapple</p>
                                                     <div class="card-body d-flex flex-column justify-content-between">
                                                         <div class="input-group mb-3 align-center  mt-auto">
-                                                            <span class="input-group-text">-</span>
-                                                            <input type="number" id="fruitBasketQty"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                                            <span class="input-group-text">+</span>
+                                                            <span class="input-group-text" onclick="pineappleQty.value = decQuantity(pineappleQty)">-</span>
+                                                            <input type="number" id="pineappleQty"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                            <span class="input-group-text" onclick="pineappleQty.value = incQuantity(pineappleQty)">+</span>
                                                         </div> 
                                                     </div><br>
                                                 </div>
@@ -417,9 +417,9 @@
                                                     <p class="card-title fw-bold text-center">Avocado</p>
                                                     <div class="card-body d-flex flex-column justify-content-between">
                                                         <div class="input-group mb-3 align-center  mt-auto">
-                                                            <span class="input-group-text">-</span>
-                                                            <input type="number" id="fruitBasketQty"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                                            <span class="input-group-text">+</span>
+                                                            <span class="input-group-text" onclick="avoQty.value = decQuantity(avoQty)">-</span>
+                                                            <input type="number" id="avoQty"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                            <span class="input-group-text" onclick="avoQty.value = incQuantity(avoQty)">+</span>
                                                         </div> 
                                                     </div><br>
                                                 </div>
@@ -430,9 +430,9 @@
                                                     <p class="card-title fw-bold text-center">Apple</p>
                                                     <div class="card-body d-flex flex-column justify-content-between">
                                                         <div class="input-group mb-3 align-center  mt-auto">
-                                                            <span class="input-group-text">-</span>
-                                                            <input type="number" id="fruitBasketQty"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                                            <span class="input-group-text">+</span>
+                                                            <span class="input-group-text" onclick="appleQty.value = decQuantity(appleQty)">-</span>
+                                                            <input type="number" id="appleQty"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                            <span class="input-group-text" onclick="appleQty.value = incQuantity(appleQty)">+</span>
                                                         </div> 
                                                     </div><br>
                                                 </div>
@@ -445,9 +445,9 @@
                                                     <p class="card-title fw-bold text-center">Lemon</p>
                                                     <div class="card-body d-flex flex-column justify-content-between">
                                                         <div class="input-group mb-3 align-center  mt-auto">
-                                                            <span class="input-group-text">-</span>
-                                                            <input type="number" id="fruitBasketQty"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                                            <span class="input-group-text">+</span>
+                                                            <span class="input-group-text" onclick="lemonQty.value = decQuantity(lemonQty)">-</span>
+                                                            <input type="number" id="lemonQty"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                            <span class="input-group-text" onclick="lemonQty.value = incQuantity(lemonQty)">+</span>
                                                         </div> 
                                                     </div><br>
                                                 </div>
@@ -458,9 +458,9 @@
                                                     <p class="card-title fw-bold text-center">Banana</p>
                                                     <div class="card-body d-flex flex-column justify-content-between">
                                                         <div class="input-group mb-3 align-center  mt-auto">
-                                                            <span class="input-group-text">-</span>
-                                                            <input type="number" id="fruitBasketQty"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                                            <span class="input-group-text">+</span>
+                                                            <span class="input-group-text" onclick="bananaQty.value = decQuantity(bananaQty)">-</span>
+                                                            <input type="number" id="bananaQty"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                            <span class="input-group-text" onclick="bananaQty.value = incQuantity(bananaQty)">+</span>
                                                         </div> 
                                                     </div><br>
                                                 </div>
@@ -471,9 +471,9 @@
                                                     <p class="card-title fw-bold text-center">Dragon Fruit</p>
                                                     <div class="card-body d-flex flex-column justify-content-between">
                                                         <div class="input-group mb-3 align-center  mt-auto">
-                                                            <span class="input-group-text">-</span>
-                                                            <input type="number" id="fruitBasketQty"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                                            <span class="input-group-text">+</span>
+                                                            <span class="input-group-text" onclick="dragonQty.value = decQuantity(dragonQty)">-</span>
+                                                            <input type="number" id="dragonQty"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                            <span class="input-group-text" onclick="dragonQty.value = incQuantity(dragonQty)">+</span>
                                                         </div> 
                                                     </div><br>
                                                 </div>
@@ -486,9 +486,9 @@
                                                     <p class="card-title fw-bold text-center">Rambutan</p>
                                                     <div class="card-body d-flex flex-column justify-content-between">
                                                         <div class="input-group mb-3 align-center  mt-auto">
-                                                            <span class="input-group-text">-</span>
-                                                            <input type="number" id="fruitBasketQty"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                                            <span class="input-group-text">+</span>
+                                                            <span class="input-group-text" onclick="rambutanQty.value = decQuantity(rambutanQty)">-</span>
+                                                            <input type="number" id="rambutanQty"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                            <span class="input-group-text" onclick="rambutanQty.value = incQuantity(rambutanQty)">+</span>
                                                         </div> 
                                                     </div><br>
                                                 </div>
@@ -499,9 +499,9 @@
                                                     <p class="card-title fw-bold text-center">Grapes</p>
                                                     <div class="card-body d-flex flex-column justify-content-between">
                                                         <div class="input-group mb-3 align-center  mt-auto">
-                                                            <span class="input-group-text">-</span>
-                                                            <input type="number" id="fruitBasketQty"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                                            <span class="input-group-text">+</span>
+                                                            <span class="input-group-text" onclick="grapesQty.value = decQuantity(grapesQty)">-</span>
+                                                            <input type="number" id="grapesQty"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                            <span class="input-group-text" onclick="grapesQty.value = incQuantity(grapesQty)">+</span>
                                                         </div> 
                                                     </div><br>
                                                 </div>
@@ -512,9 +512,9 @@
                                                     <p class="card-title fw-bold text-center">Mango</p>
                                                     <div class="card-body d-flex flex-column justify-content-between">
                                                         <div class="input-group mb-3 align-center  mt-auto">
-                                                            <span class="input-group-text">-</span>
-                                                            <input type="number" id="fruitBasketQty"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                                            <span class="input-group-text">+</span>
+                                                            <span class="input-group-text" onclick="mangoQty.value = decQuantity(mangoQty)">-</span>
+                                                            <input type="number" id="mangoQty"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                            <span class="input-group-text" onclick="mangoQty.value = incQuantity(mangoQty)">+</span>
                                                         </div> 
                                                     </div><br>
                                                 </div>
@@ -527,9 +527,9 @@
                                                     <p class="card-title fw-bold text-center">Pear</p>
                                                     <div class="card-body d-flex flex-column justify-content-between">
                                                         <div class="input-group mb-3 align-center  mt-auto">
-                                                            <span class="input-group-text">-</span>
-                                                            <input type="number" id="fruitBasketQty"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                                            <span class="input-group-text">+</span>
+                                                            <span class="input-group-text" onclick="pearQty.value = decQuantity(pearQty)">-</span>
+                                                            <input type="number" id="pearQty"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                            <span class="input-group-text" onclick="pearQty.value = incQuantity(pearQty)">+</span>
                                                         </div> 
                                                     </div><br>
                                                 </div>
@@ -540,9 +540,9 @@
                                                     <p class="card-title fw-bold text-center">Papaya</p>
                                                     <div class="card-body d-flex flex-column justify-content-between">
                                                         <div class="input-group mb-3 align-center  mt-auto">
-                                                            <span class="input-group-text">-</span>
-                                                            <input type="number" id="fruitBasketQty"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                                            <span class="input-group-text">+</span>
+                                                            <span class="input-group-text" onclick="papayaQty.value = decQuantity(papayaQty)">-</span>
+                                                            <input type="number" id="papayaQty"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                            <span class="input-group-text" onclick="papayaQty.value = incQuantity(papayaQty)">+</span>
                                                         </div> 
                                                     </div><br>
                                                 </div>
@@ -553,9 +553,9 @@
                                                     <p class="card-title fw-bold text-center">Orange</p>
                                                     <div class="card-body d-flex flex-column justify-content-between">
                                                         <div class="input-group mb-3 align-center  mt-auto">
-                                                            <span class="input-group-text">-</span>
-                                                            <input type="number" id="fruitBasketQty"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                                            <span class="input-group-text">+</span>
+                                                            <span class="input-group-text" onclick="orangeQty.value = decQuantity(orangeQty)">-</span>
+                                                            <input type="number" id="orangeQty"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                            <span class="input-group-text" onclick="orangeQty.value = incQuantity(orangeQty)">+</span>
                                                         </div> 
                                                     </div><br>
                                                 </div>
@@ -652,9 +652,9 @@
                                                         </div> 
                                                         <div class="card-footer d-flex flex-column justify-content-between">
                                                             <div class="input-group mb-3 align-center  mt-auto"  >
-                                                                <span class="input-group-text">-</span>
-                                                                <input type="number" id="inputQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                                                <span class="input-group-text">+</span>
+                                                                <span class="input-group-text" onclick="ampSaladQTY.value = decQuantity(ampSaladQTY)">-</span>
+                                                                <input type="number" id="ampSaladQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                                <span class="input-group-text" onclick="ampSaladQTY.value = incQuantity(ampSaladQTY)">+</span>
                                                             </div><br>     
                                                             <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                                                         </div>
@@ -669,9 +669,9 @@
                                                         </div> 
                                                         <div class="card-footer d-flex flex-column justify-content-between">
                                                             <div class="input-group mb-3 align-center  mt-auto"  >
-                                                                <span class="input-group-text">-</span>
-                                                                <input type="number" id="inputQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                                                <span class="input-group-text">+</span>
+                                                                <span class="input-group-text" onclick="cucumSaladQTY.value = decQuantity(cucumSaladQTY)">-</span>
+                                                                <input type="number" id="cucumSaladQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                                <span class="input-group-text" onclick="cucumSaladQTY.value = incQuantity(cucumSaladQTY)">+</span>
                                                             </div><br>     
                                                             <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                                                         </div>
@@ -686,9 +686,9 @@
                                                         </div> 
                                                         <div class="card-footer d-flex flex-column justify-content-between">
                                                             <div class="input-group mb-3 align-center  mt-auto"  >
-                                                                <span class="input-group-text">-</span>
-                                                                <input type="number" id="inputQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                                                <span class="input-group-text">+</span>
+                                                                <span class="input-group-text" onclick="talongSaladQTY.value = decQuantity(talongSaladQTY)">-</span>
+                                                                <input type="number" id="talongSaladQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                                <span class="input-group-text" onclick="talongSaladQTY.value = incQuantity(talongSaladQTY)">+</span>
                                                             </div><br>     
                                                             <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                                                         </div>
@@ -703,9 +703,9 @@
                                                         </div> 
                                                         <div class="card-footer d-flex flex-column justify-content-between">
                                                             <div class="input-group mb-3 align-center  mt-auto"  >
-                                                                <span class="input-group-text">-</span>
-                                                                <input type="number" id="inputQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                                                <span class="input-group-text">+</span>
+                                                                <span class="input-group-text" onclick="greenSaladQTY.value = decQuantity(greenSaladQTY)">-</span>
+                                                                <input type="number" id="greenSaladQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                                <span class="input-group-text" onclick="greenSaladQTY.value = incQuantity(greenSaladQTY)">+</span>
                                                             </div><br>     
                                                             <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                                                         </div>
@@ -725,9 +725,9 @@
                                                         </div> 
                                                         <div class="card-footer d-flex flex-column justify-content-between">
                                                             <div class="input-group mb-3 align-center  mt-auto"  >
-                                                                <span class="input-group-text">-</span>
-                                                                <input type="number" id="inputQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                                                <span class="input-group-text">+</span>
+                                                                <span class="input-group-text" onclick="latoQTY.value = decQuantity(latoQTY)">-</span>
+                                                                <input type="number" id="latoQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                                <span class="input-group-text" onclick="latoQTY.value = incQuantity(latoQTY)">+</span>
                                                             </div><br>     
                                                             <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                                                         </div>
@@ -742,9 +742,9 @@
                                                         </div> 
                                                         <div class="card-footer d-flex flex-column justify-content-between">
                                                             <div class="input-group mb-3 align-center  mt-auto"  >
-                                                                <span class="input-group-text">-</span>
-                                                                <input type="number" id="inputQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                                                <span class="input-group-text">+</span>
+                                                                <span class="input-group-text" onclick="mangoSaladQTY.value = decQuantity(mangoSaladQTY)">-</span>
+                                                                <input type="number" id="mangoSaladQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                                <span class="input-group-text" onclick="mangoSaladQTY.value = incQuantity(mangoSaladQTY)">+</span>
                                                             </div><br>     
                                                             <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                                                         </div>
@@ -759,9 +759,9 @@
                                                         </div> 
                                                         <div class="card-footer d-flex flex-column justify-content-between">
                                                             <div class="input-group mb-3 align-center  mt-auto"  >
-                                                                <span class="input-group-text">-</span>
-                                                                <input type="number" id="inputQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                                                <span class="input-group-text">+</span>
+                                                                <span class="input-group-text" onclick="talbosSaladQTY.value = decQuantity(talbosSaladQTY)">-</span>
+                                                                <input type="number" id="talbosSaladQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                                                <span class="input-group-text" onclick="talbosSaladQTY.value = incQuantity(talbosSaladQTY)">+</span>
                                                             </div><br>     
                                                             <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                                                         </div>
@@ -792,9 +792,9 @@
                         </div> 
                         <div class="card-footer d-flex flex-column justify-content-between">
                             <div class="input-group mb-3 align-center  mt-auto"  >
-                                <span class="input-group-text">-</span>
-                                <input type="number" id="inputQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                <span class="input-group-text">+</span>
+                                <span class="input-group-text" onclick="setAQTY.value = decQuantity(setAQTY)">-</span>
+                                <input type="number" id="setAQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                <span class="input-group-text" onclick="setAQTY.value = incQuantity(setAQTY)">+</span>
                             </div><br>     
                             <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                         </div>
@@ -809,9 +809,9 @@
                         </div> 
                         <div class="card-footer d-flex flex-column justify-content-between">
                             <div class="input-group mb-3 align-center  mt-auto"  >
-                                <span class="input-group-text">-</span>
-                                <input type="number" id="inputQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                <span class="input-group-text">+</span>
+                                <span class="input-group-text" onclick="setBQTY.value = decQuantity(setBQTY)">-</span>
+                                <input type="number" id="setBQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                <span class="input-group-text" onclick="setBQTY.value = incQuantity(setBQTY)">+</span>
                             </div><br>     
                             <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                         </div>
@@ -826,9 +826,9 @@
                         </div> 
                         <div class="card-footer d-flex flex-column justify-content-between">
                             <div class="input-group mb-3 align-center  mt-auto"  >
-                                <span class="input-group-text">-</span>
-                                <input type="number" id="inputQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                <span class="input-group-text">+</span>
+                                <span class="input-group-text" onclick="setCQTY.value = decQuantity(setCQTY)">-</span>
+                                <input type="number" id="setCQTY"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                <span class="input-group-text" onclick="setCQTY.value = incQuantity(setCQTY)">+</span>
                             </div><br>     
                             <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                         </div>
@@ -904,7 +904,9 @@
 <!-- Footer -->
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-</body>
 
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script src="main.js"></script>
 </html>
