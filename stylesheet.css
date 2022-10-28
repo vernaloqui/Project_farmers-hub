@@ -98,51 +98,72 @@
  }
 }
 /*Contact Form*/
-/*radio buttons*/
-input[type='radio']:after {
-  width: 20px;
-  height: 20px;
-  border-radius: 15px;
-  top: -2px;
-  left: -1px;
-  position: relative;
-  background-color: white;
-  content: '';
-  display: inline-block;
-  visibility: visible;
-  border: 2px solid #073418;
+
+
+
+.text-box {
+    color:#fff;
+    position: absolute;
+    bottom: 8%;
+    margin-left: 5%;
 }
 
-input[type='radio']:checked:after {
-  width: 20px;
-  height: 20px;
-  border-radius: 15px;
-  top: -2px;
-  left: -1px;
-  position: relative;
-  background-color: #A2DBB7;
-  content: '';
-  display: inline-block;
-  visibility: visible;
-  border: 2px solid white;
+/* .text-box p{
+    font-size: 50px;
+    font-weight: 600;
+} */
+
+.text-box h2{
+    font-size: 190px;
+    line-height: 160px;
+    margin-left: -10px;
+    color:transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(imglandingPage/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
 }
-.pagination > li > a
-{
-    background-color: white;
-    color: #073418;
+/* 
+@media all and (min-width:992px){
+  h2, .ctAction, .wrapper{font-size:18px;}
+}
+@media all and (max-width:768px){
+  h2, .ctAction, .wrapper{font-size:10px;}
+} */
+
+
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
 }
 
-.pagination  li  a:focus,
-.pagination  li  a:hover
-{
-    color: #5a5a5a;
-    background-color: #eee;
-    border-color: #ddd;
+
+.text-box h3 {
+    font-size: 40px;
+    font-weight: 500;
 }
 
-.pagination .page-item .page-link.active
-{
-    color: white;
-    background-color: #A2DBB7;
-    border: solid 1px #A2DBB7;
+.text-box .row {
+    display: flex;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    margin-top: 50px;
 }
+
+.text-box a {
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: 2px solid #fff;
+    align-items: center;
+}
+
+/* @media all and (min-width:992px){
+  h2, .ctAction, .wrapper{font-size:18px;}
+}
+@media all and (max-width:768px){
+  h2, .ctAction, .wrapper{font-size:10px;}
+} */
