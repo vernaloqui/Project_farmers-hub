@@ -111,3 +111,20 @@ function RegisterAccount(){
         }
     }
 }
+
+//function to increment quantity
+function incQuantity(input){
+    let inputNum = Number(input.value);
+    inputNum += 1;
+    return inputNum;
+    
+}
+//function to decrement quantity
+function decQuantity(qtyInput){
+    let qty = Number(qtyInput.value);
+    if (qty > 0) {
+       qty -= 1;
+    }
+    return qty;
+    
+}
