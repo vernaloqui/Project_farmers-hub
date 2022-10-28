@@ -26,6 +26,17 @@
         .inner:hover img{
             transform: scale(1.5);
         }
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+        -moz-appearance: textfield;
+        }
     </style>
 </head>
 
@@ -162,9 +173,9 @@
                             </div>
                             <div class="card-footer d-flex flex-column justify-content-between">
                                 <div class="input-group mb-3 align-center  mt-auto">
-                                        <span class="input-group-text">-</span>
-                                        <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                        <span class="input-group-text">+</span>
+                                        <span class="input-group-text" onclick="Basil.value = decQuantity(Basil)">-</span>
+                                        <input type="text" id="Basil" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <span class="input-group-text" onclick="Basil.value = incQuantity(Basil)">+</span>
                                 </div><br>     
                                 <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                             </div>
@@ -181,9 +192,9 @@
                             </div>
                             <div class="card-footer d-flex flex-column justify-content-between">
                                 <div class="input-group mb-3 align-center  mt-auto">
-                                        <span class="input-group-text">-</span>
-                                        <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                        <span class="input-group-text">+</span>
+                                        <span class="input-group-text" onclick="Chives.value = decQuantity(Chives)">-</span>
+                                        <input type="text" id="Chives" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <span class="input-group-text" onclick="Chives.value = incQuantity(Chives)">+</span>
                                 </div><br>     
                                 <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                             </div>
@@ -195,14 +206,14 @@
                                 <img src="img/cilantro.png" class="card-img-top">
                             </div>
                             <div class="card-body  text-center">
-                                <p class="h6 fw-bold" class="card-title">Cilantro/p>
+                                <p class="h6 fw-bold" class="card-title">Cilantro</p>
                                 <p class="card-text" style="font-size:15px;">₱45.00 / 50g</p>
                             </div>
                             <div class="card-footer d-flex flex-column justify-content-between">
                                 <div class="input-group mb-3 align-center  mt-auto">
-                                        <span class="input-group-text">-</span>
-                                        <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                        <span class="input-group-text">+</span>
+                                        <span class="input-group-text" onclick="Cilantro.value = decQuantity(Cilantro)">-</span>
+                                        <input type="text" id="Cilantro" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <span class="input-group-text" onclick="Cilantro.value = incQuantity(Cilantro)">+</span>
                                 </div><br>     
                                 <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                             </div>
@@ -219,9 +230,9 @@
                             </div>
                             <div class="card-footer d-flex flex-column justify-content-between">
                                 <div class="input-group mb-3 align-center  mt-auto">
-                                        <span class="input-group-text">-</span>
-                                        <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                        <span class="input-group-text">+</span>
+                                        <span class="input-group-text" onclick="Laurel.value = decQuantity(Laurel)">-</span>
+                                        <input type="text" id="Laurel" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <span class="input-group-text" onclick="Laurel.value = incQuantity(Laurel)">+</span>
                                 </div><br>     
                                 <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                             </div>
@@ -250,9 +261,9 @@
                             </div>
                             <div class="card-footer d-flex flex-column justify-content-between">
                                 <div class="input-group mb-3 align-center  mt-auto">
-                                        <span class="input-group-text">-</span>
-                                        <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                        <span class="input-group-text">+</span>
+                                        <span class="input-group-text" onclick="Himalayan.value = decQuantity(Himalayan)">-</span>
+                                        <input type="text" id="Himalayan" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <span class="input-group-text" onclick="Himalayan.value = incQuantity(Himalayan)">+</span>
                                 </div><br>     
                                 <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                             </div>
@@ -269,9 +280,9 @@
                             </div>
                             <div class="card-footer d-flex flex-column justify-content-between">
                                 <div class="input-group mb-3 align-center  mt-auto">
-                                        <span class="input-group-text">-</span>
-                                        <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                        <span class="input-group-text">+</span>
+                                        <span class="input-group-text" onclick="Mint.value = decQuantity(Mint)">-</span>
+                                        <input type="text" id="Mint" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <span class="input-group-text" onclick="Mint.value = incQuantity(Mint)">+</span>
                                 </div><br>     
                                 <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                             </div>
@@ -288,9 +299,9 @@
                             </div>
                             <div class="card-footer d-flex flex-column justify-content-between">
                                 <div class="input-group mb-3 align-center  mt-auto">
-                                        <span class="input-group-text">-</span>
-                                        <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                        <span class="input-group-text">+</span>
+                                        <span class="input-group-text" onclick="Honey.value = decQuantity(Honey)">-</span>
+                                        <input type="text" id="Honey" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <span class="input-group-text" onclick="Honey.value = incQuantity(Honey)">+</span>
                                 </div><br>     
                                 <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                             </div>
@@ -307,9 +318,9 @@
                             </div>
                             <div class="card-footer d-flex flex-column justify-content-between">
                                 <div class="input-group mb-3 align-center  mt-auto">
-                                        <span class="input-group-text">-</span>
-                                        <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                        <span class="input-group-text">+</span>
+                                        <span class="input-group-text" onclick="SeaSalt.value = decQuantity(SeaSalt)">-</span>
+                                        <input type="text" id="SeaSalt" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <span class="input-group-text" onclick="SeaSalt.value = incQuantity(SeaSalt)">+</span>
                                 </div><br>     
                                 <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                             </div>
@@ -324,7 +335,7 @@
             
         </div>
         <div class="col-lg-9 col-md-9 col-sm-12">
-            <!--Start of 2nd row of Products Gallery-->
+            <!--Start of 3rd row of Products Gallery-->
             <div class="container d-flex">
                 <div class="row g-2">
                     <div class="col-12 col-md-3 col-lg-3">
@@ -338,9 +349,9 @@
                             </div>
                             <div class="card-footer d-flex flex-column justify-content-between">
                                 <div class="input-group mb-3 align-center  mt-auto">
-                                        <span class="input-group-text">-</span>
-                                        <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                        <span class="input-group-text">+</span>
+                                        <span class="input-group-text" onclick="Anise.value = decQuantity(Anise)">-</span>
+                                        <input type="text" id="Anise" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <span class="input-group-text" onclick="Anise.value = incQuantity(Anise)">+</span>
                                 </div><br>     
                                 <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                             </div>
@@ -357,9 +368,9 @@
                             </div>
                             <div class="card-footer d-flex flex-column justify-content-between">
                                 <div class="input-group mb-3 align-center  mt-auto">
-                                        <span class="input-group-text">-</span>
-                                        <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                        <span class="input-group-text">+</span>
+                                        <span class="input-group-text" onclick="Tanglad.value = decQuantity(Tanglad)">-</span>
+                                        <input type="text" id="Tanglad" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <span class="input-group-text" onclick="Tanglad.value = incQuantity(Tanglad)">+</span>
                                 </div><br>     
                                 <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                             </div>
@@ -376,9 +387,9 @@
                             </div>
                             <div class="card-footer d-flex flex-column justify-content-between">
                                 <div class="input-group mb-3 align-center  mt-auto">
-                                        <span class="input-group-text">-</span>
-                                        <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                        <span class="input-group-text">+</span>
+                                        <span class="input-group-text" onclick="Turmeric.value = decQuantity(Turmeric)">-</span>
+                                        <input type="text" id="Turmeric" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <span class="input-group-text" onclick="Turmeric.value = incQuantity(Turmeric)">+</span>
                                 </div><br>     
                                 <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                             </div>
@@ -395,9 +406,9 @@
                             </div>
                             <div class="card-footer d-flex flex-column justify-content-between">
                                 <div class="input-group mb-3 align-center  mt-auto">
-                                        <span class="input-group-text">-</span>
-                                        <input type="text" id="inputQTY" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
-                                        <span class="input-group-text">+</span>
+                                        <span class="input-group-text" onclick="Peppercorn.value = decQuantity(Peppercorn)">-</span>
+                                        <input type="text" id="Peppercorn" disabled class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <span class="input-group-text" onclick="Peppercorn.value = incQuantity(Peppercorn)">+</span>
                                 </div><br>     
                                 <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                             </div>
@@ -469,9 +480,9 @@
 </footer>
 <!-- Footer -->
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script src="main.js"></script>
 </html>
 
 
