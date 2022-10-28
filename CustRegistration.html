@@ -80,8 +80,14 @@
     <p class="fw-bold" style="color:#073418;">Registration Form</p>
 </div>
 
+<div class="container text-center mt-5" id="confirmation" style="display:none;">
+    <p class="display-6" style="color:#073418;">You have successfully created an account.</p>
+    <a href="Login.html"><button type="button" class="btn" style="background-color:#A2DBB7; border-radius:5px; box-shadow:5px 5px grey;">Log in here</button></a>
+    <a href="Veggies.html"><button type="button" class="btn" style="background-color:#A2DBB7; border-radius:5px; box-shadow:5px 5px grey;">Continue Shopping</button></a>
+</div>
+
 <!--Form-->
-<section class="container mt-5">
+<section class="container mt-5" id="formSection">
     
     <form class="container border border-secondary rounded p-4">
         <div class="accordion accordion-flush" id="RegisterAccount">
@@ -103,13 +109,14 @@
                     aria-labelledby="#RegHeading"
                     data-bs-parent="#RegisterAccount">
                         <div class="accordion-body text-justify">
+                            <div id="alertUser"></div>
                             <div class="input-group" mb-3>
                                 <span class="input-group-text" id="EmailUser">Email address:</span>
-                                <input type="email" name="email" id="email" class="form-control">
+                                <input type="email" name="email" id="email" class="form-control" required>
                             </div><br>
                             <div class="input-group" mb-3>
                                 <label for="password" class="input-group-text">Password:</label>
-                                <input type="password" class="form-control" id="password">
+                                <input type="password" class="form-control" id="password" required>
                                 <label for="password" class="input-group-text">Confirm Password:</label>
                                 <input type="password" class="form-control" id="confirmpassword">
                             </div><br>
@@ -136,26 +143,26 @@
                         <div class="accordion-body text-justify">
                             <div class="input-group" mb-3>
                                 <span class="input-group-text" id="fName">First Name:</span>
-                                <input type="text" class="form-control" id="fName">
+                                <input type="text" class="form-control" id="fName" required>
                                 <span class="input-group-text" id="mName">Middle Initial:</span>
                                 <input type="text" class="form-control" id="mName">
                                 <span class="input-group-text" id="lName">Last Name:</span>
-                                <input type="text" class="form-control" id="lName">
+                                <input type="text" class="form-control" id="lName" required>
                             </div><br>
                             <div class="input-group" mb-3>
                                 <label for="date" class="input-group-text">Date of Birth:</label>
-                                <input type="date" class="form-control" id="dob">
+                                <input type="date" class="form-control" id="dob" required>
                                 <label for="phoneNum" class="input-group-text">Cellphone number:</label>
-                                <input type="tel" class="form-control" id="phoneNum" placeholder="09XXXXXXXXX" maxlength="11" minlength="11">
+                                <input type="tel" class="form-control" id="phoneNum" placeholder="09XXXXXXXXX" maxlength="11" minlength="11" required>
                             </div><br>
                             <div class="border-top">
                                 <p class="fw-bold" style="font-size:15px;">Address</p>
                             </div>
                             <div class="input-group" mb-3>
                                 <label for="Housenum" class="input-group-text">House Number:</label>
-                                    <input type="text" class="form-control" id="Address1" placeholder="Address Line 1">
+                                    <input type="text" class="form-control" id="Address1" placeholder="Address Line 1" required>
                                     <label for="Street" class="input-group-text">Street:</label>
-                                    <input type="text" class="form-control" id="Address2" placeholder="Address Line 2"> 
+                                    <input type="text" class="form-control" id="Address2" placeholder="Address Line 2" required> 
                             </div><br>
                             <div class="input-group" mb-3>
                                 <label for="province" class="input-group-text">Province:</label>
@@ -250,9 +257,9 @@
                                     
                                 </select>
                                 <label for="zipCode" class="input-group-text">Postal Code:</label>
-                                <select class="form-control" id="zipCode" name="zipCode">
-                                    
-                                </select>
+                                <!-- <select class="form-control" id="zipCode" name="zipCode" required> -->
+                                <input type="text" name="zipCode" id="zipCode"> 
+                                <!-- </select> -->
                             </div><br>
                         </div>
                 </div>
@@ -268,7 +275,7 @@
             <label class="form-check-label" for="privacy">I agree with the <a href="">Privacy Policy</a>.</label>
         </div>
         <br>
-        <button type="submit" class="btn text-capitalize" style="background-color:#A2DBB7; border-radius:5px; box-shadow:5px 5px grey;">Register Account</button><br><br>
+        <button type="submit" class="btn text-capitalize" style="background-color:#A2DBB7; border-radius:5px; box-shadow:5px 5px grey;" onclick="RegisterAccount();">Register Account</button><br><br>
         <a href="Login.html"><button type="button" class="btn btn-link text-muted" style="text-decoration:none;">Already have an account? Log in here.</button></a>
     </form>
 </section>   

@@ -75,5 +75,39 @@ function showBarangaySelection(){
 //Register Account Button function to check pw and input fields
 
 function RegisterAccount(){
-    
+    let emailNew = document.getElementById("email").value;
+    let pw1 = document.getElementById("password").value;
+    let pw2 = document.getElementById("confirmpassword").value;
+    let firstName = document.getElementById("fName").value;
+    let lastName = document.getElementById("lName").value;
+    let Bdate = document.getElementById("dob").value;
+    let CPnum = document.getElementById("phoneNum").value;
+    let HouseNum = document.getElementById("Address1").value;
+    let Street = document.getElementById("Address2").value;
+    let province = document.getElementById("province").value;
+    let city = document.getElementById("Municipality").value;
+    let brgy = document.getElementById("Barangay").value;
+    let zip = document.getElementById("zipCode").value;
+    let tandC = document.getElementById("tandC");
+    let privy = document.getElementById("privacy");
+
+    if (emailNew == "" || pw1 == "" || pw2 == "" || firstName == "" || lastName =="" || Bdate == "" || CPnum =="" || HouseNum == "" || Street == "" || province == "" || city == "" || brgy == "" || zip == "" || tandC.checked == false || privy.checked == false){
+        document.getElementById("alertUser").innerHTML = "Please make sure to complete the details.";
+    }
+    else {
+        if(pw1 == pw2){
+            let sectionDisplay = document.getElementById("formSection");
+            let confirmationDisplay = document.getElementById("confirmation");
+
+            sectionDisplay.style.display = "none";
+            confirmationDisplay.style.display = "block";    
+        }
+        else {
+            let alertUser = document.getElementById("alertUser");
+            alertUser.innerHTML = "Please make sure the passwords matched.";
+            alertUser.style.color = "red";
+            alertUser.style.fontStyle = "italic";
+            alertUser.style.fontSize = "12px";
+        }
+    }
 }
