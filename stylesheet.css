@@ -108,6 +108,24 @@
     margin-left: 5%;
 }
 
+/* .text-box h2{
+    font-size: 190px;
+    line-height: 160px;
+    margin-left: -10px;
+    color:transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(imglandingPage/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+} */
+
 .text-box h2 {
   background-image: linear-gradient(
     -225deg,
