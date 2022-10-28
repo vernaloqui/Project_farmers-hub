@@ -111,3 +111,5 @@ function RegisterAccount(){
         }
     }
 }
+
+//function to increment quantity
