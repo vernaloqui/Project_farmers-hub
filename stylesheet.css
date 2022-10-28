@@ -99,7 +99,7 @@
 }
 /*Contact Form*/
 
-
+/* start of Farmer's hub CSS */
 
 .text-box {
     color:#fff;
@@ -108,37 +108,32 @@
     margin-left: 5%;
 }
 
-/* .text-box p{
-    font-size: 50px;
-    font-weight: 600;
-} */
-
-.text-box h2{
-    font-size: 190px;
-    line-height: 160px;
-    margin-left: -10px;
-    color:transparent;
-    -webkit-text-stroke: 1px #fff;
-    background: url(imglandingPage/back.png);
-    -webkit-background-clip: text;
-    background-position: 0 0;
-    animation: back 20s linear infinite;
-}
-/* 
-@media all and (min-width:992px){
-  h2, .ctAction, .wrapper{font-size:18px;}
-}
-@media all and (max-width:768px){
-  h2, .ctAction, .wrapper{font-size:10px;}
-} */
-
-
-@keyframes back{
-    100%{
-        background-position: 2000px 0;
-    }
+.text-box h2 {
+  background-image: linear-gradient(
+    -225deg,
+    #073418 0%,
+    #22C55E 29%,
+    #A2DBB7 67%,
+    #F8FEFA 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 200px;
 }
 
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
 
 .text-box h3 {
     font-size: 40px;
@@ -161,9 +156,71 @@
     align-items: center;
 }
 
-/* @media all and (min-width:992px){
-  h2, .ctAction, .wrapper{font-size:18px;}
+@media all and (max-width:992px){
+  .text-box > h2 {
+      font-size: 75px;
+  }
+  .text-box > h3 {
+      font-size: 15px;
+  }
 }
 @media all and (max-width:768px){
-  h2, .ctAction, .wrapper{font-size:10px;}
-} */
+  .text-box > h2 {
+      font-size: 75px;
+  }
+  .text-box > h3 {
+      font-size: 15px;
+  }
+}
+/* end of Farmer's hub CSS */
+
+/*radio buttons*/
+input[type='radio']:after {
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: white;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #073418;
+}
+
+input[type='radio']:checked:after {
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #A2DBB7;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+/* pagination change colors */
+.pagination > li > a
+{
+    background-color: white;
+    color: #073418;
+}
+
+.pagination  li  a:focus,
+.pagination  li  a:hover
+{
+    color: #5a5a5a;
+    background-color: #eee;
+    border-color: #ddd;
+}
+
+.pagination .page-item .page-link.active
+{
+    color: white;
+    background-color: #A2DBB7;
+    border: solid 1px #A2DBB7;
+}
+
