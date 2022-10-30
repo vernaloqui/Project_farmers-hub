@@ -7,6 +7,16 @@
   color:#073418;
   border: 3px solid #A2DBB7;
 }
+/*Cart Counter*/
+.searchCart .cartNav .cartCounter {
+  position: absolute;
+  border-radius: 50%;
+  background-color:#A2DBB7;
+  margin-left: 20px;
+  padding: 5px;
+  font-size: 10px;
+  font-weight: bold;
+}
 /*Accordion*/
 .accordion-button:not(.collapsed) {
   color: black;

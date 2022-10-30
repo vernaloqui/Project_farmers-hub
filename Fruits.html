@@ -78,8 +78,9 @@
                                         <a class="nav-link" href="Login.html"  style="color:#073418">My Account</a>
                                     </li>
                                 </ul>
-                                <form class="d-flex ms-auto" role="search">
-                                    <div class="px-2" style="float:right;">
+                                <form class="searchCart d-flex ms-auto" role="search">
+                                    <div class="cartNav px-2 justify-content-center me-3" style="float:right;">
+                                    <div class="cartCounter">0</div>
                                     <a class="nav-link" href="Cart.html"  style="color:#073418">
                                         <i class="bi bi-cart4" style="font-size:30px;"></i></a>
                                     </div>
@@ -181,13 +182,13 @@
                                         <input type="text" id="Atis"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
                                         <span class="input-group-text" onclick="Atis.value = incQuantity(Atis)">+</span>
                                     </div><br>     
-                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
+                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;" onclick="addToCart();"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-md-3 col-lg-3">
-                        <div class="card shadow mb-2">
+                        <div class="card itemCardshadow mb-2">
                             <div class="inner">
                                 <img src="img/avocado.png" class="card-img-top">
                             </div>
