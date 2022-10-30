@@ -96,13 +96,13 @@
     <br>
 
 <div class="mb-3">
-<form class="logIn container border border-secondary rounded p-4" name="form1" action="#">
+<form class="logIn container border border-secondary rounded p-4" name="ValidForm" action="#">
 
-<div onload='document.form1.text1.focus()'>
+<div onload='document.form.text.focus()'>
 <div class="mail">
 
 <label for="uname" class="form-label">Email address</label>
-<input type="text" name='text1' class="form-control" placeholder="example@gmail.com">
+<input type="text" name='ValidText' class="form-control" placeholder="example@gmail.com">
 </div>
 <br>
 
@@ -118,7 +118,7 @@
 <br>
 
 <button type="button" style="background-color:#A2DBB7; border-radius:5px; 
-box-shadow:5px 5px grey;" onclick="confirm_gmail(document.form1.text1)">Login</button>
+box-shadow:5px 5px grey;" onclick="confirm_gmail(document.ValidForm.ValidText)">Login</button>
 
 <button type="button" class="btn btn-link text-muted" 
 style="text-decoration:none; margin-left: 80%;" 
@@ -147,26 +147,27 @@ data-bs-toggle="modal" data-bs-target="#forgotPw">Forgot password</button>
         </div>
         <!--End of modal header-->
 
+
         <!--start of modal body-->
+        <form name="ValidFormModal"> 
         <div class="modal-body">
             <p class="fst-italic">Input your email address so we can send you a link to reset your password.</p>
             <div class="input-group" mb-3>
                 <span class="input-group-text" id="modalEmailUser">Email address:</span>
-                <input type="email" name="email" id="modalemail" class="form-control">
+                <input type="email" name="ValidForgetPass" id="modalemail" class="form-control">
             </div>
         </div>
          <!--End of modal body-->
          <!--start of modal footer-->
          <div class="modal-footer">
-            <button class="btn"
-                    type="submit" style="background-color:#A2DBB7; border-radius:5px; box-shadow:5px 5px grey;">
+            <button class="btn" onclick="confirm_gmail_modal(document.ValidFormModal.ValidForgetPass);"
+                    type="button" style="background-color:#A2DBB7; border-radius:5px; box-shadow:5px 5px grey;">
                     OK
             </button>
-            <button class="btn"
-                    type="button" style="background-color:#A2DBB7; border-radius:5px; box-shadow:5px 5px grey;">
-                    Cancel
-            </button>
+
         </div>
+    </form>
+
          <!--End of modal footer-->
         </div>
     </div>
