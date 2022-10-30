@@ -14,12 +14,6 @@
 
         <link rel="stylesheet" href="stylesheet.css">
     <style>
-        @media all and (min-width:992px){
-            h4, .ctAction, .wrapper{font-size:18px;}
-        }
-        @media all and (max-width:768px){
-            h4, .ctAction, .wrapper{font-size:10px;}
-        }
         .card, .Newsletter{
             padding: 15px;
             border-radius: 1rem;
@@ -39,75 +33,69 @@
 
 <body class="d-flex flex-column min-vh-100" style="background: linear-gradient(-120deg,white 50%, RGBA(162, 219, 183, 0.4) 50%);">
 
-    <!--Navigation Bar-->
+    <!-- Navigation Bar -->
     <div class="container-fluid" style="background-color:#F8FEFA;">
         <div class="navbar navbar-expand-md">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="img/logo.png" class="rounded-circle border border-2" style="width:75px;">
-                    </a>
-                    <button class="navbar-toggler"
-                                    type="button" 
-                                    data-bs-toggle="collapse" 
-                                    data-bs-target="#navbarMark" 
-                                    aria-controls="navbarMark" 
-                                    aria-expanded="false" 
-                                    aria-label="Toggle Navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                            <div class="collapse navbar-collapse" id="navbarMark">
-                                <ul class="navbar-nav text-uppercase">
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="Products.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#073418;">Farm Produce</a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                            <li><a class="dropdown-item" href="Fruits.html">Fruits</a></li>
-                                            <li><a class="dropdown-item" href="Veggies.html">Vegetables</a></li>
-                                            <li><a class="dropdown-item" href="SHerbs.html">Spices and Herbs</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="BestSellers.html"  style="color:#073418;">Best Sellers</a>
-                                    </li>
-                                    
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="OnSale.html"  style="color:#073418;">On Sale</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="Login.html"  style="color:#073418">My Account</a>
-                                    </li>
-                                </ul>
-                                <form class="searchCart d-flex ms-auto" role="search">
-                                    <div class="cartNav px-2 justify-content-center me-3" style="float:right;">
-                                        <div class="cartCounter">0</div>
-                                        <a class="nav-link" href="Cart.html"  style="color:#073418">
-                                            <i class="bi bi-cart4" style="font-size:30px;"></i></a>
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="Search" aria-label="search">
-                                    <button type="submit" class="btn btn-outline" style="background-color: #073418; color:#A2DBB7;">Search</button>
-                                </form>                             
-                            </div>
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" class="rounded-circle border border-2" style="width:75px;">
+            </a>
+            <button class="navbar-toggler"
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#navbarMark" 
+                    aria-controls="navbarMark" 
+                    aria-expanded="false" 
+                    aria-label="Toggle Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMark">
+                <ul class="navbar-nav text-uppercase">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="Products.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#073418;">Farm Produce</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="Fruits.html">Fruits</a></li>
+                            <li><a class="dropdown-item" href="Veggies.html">Vegetables</a></li>
+                            <li><a class="dropdown-item" href="SHerbs.html">Spices and Herbs</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="BestSellers.html"  style="color:#073418;">Best Sellers</a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link" href="OnSale.html"  style="color:#073418;">On Sale</a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link" href="Login.html"  style="color:#073418">My Account</a>
+                    </li>
+                  </ul>
+                  <form class="searchCart d-flex ms-auto" role="search">
+                     <div class="cartNav px-2 justify-content-center me-3" style="float:right;">
+                         <div class="cartCounter">0</div>
+                            <a class="nav-link" href="Cart.html"  style="color:#073418">
+                            <i class="bi bi-cart4" style="font-size:30px;"></i></a>                         
+                     </div>
+                     <input type="text" class="form-control" placeholder="Search" aria-label="search">
+                     <button type="submit" class="btn btn-outline" style="background-color: #073418; color:#A2DBB7;">Search</button>
+                 </form>                             
+            </div>
         </div>
     </div>
-<!--end of nav bar>-->
+
 
 <br><br>
 <div class="container-fluid d-flex m-auto p-0" style="position: relative;">
-    <img src="img/produce.png" class="d-block w-100 opacity-75">
-    <div class="wrapper text-center d-flex p-3 mx-auto" style="position: absolute;
-                top: 50%;
-                left:25vw;
-                right:25vw;
-                background: rgb(0, 0, 0);
-                background: rgba(0, 0, 0, 0.5);
-                color: #f1f1f1; border-radius:5px;">
-        <center>
-        <h4 class="fw-light">Check out our freshly-picked produce.</h4>
-        <a href="Veggies.html" class="p-1 ctAction" style="text-decoration:none; color:#073418; background-color:#A2DBB7; border-radius:5px;"> Shop Now </a>
-        </center>
+    <img src="img/produce.png" class="d-block w-100" style="opacity: 0.8">
+    <div class="text-box" style="position: absolute;">
+        <h2>Farmer's Hub</h2>
+        <h3>A moment on the lips, a lifetime on the hips. </h3>
     </div>
 </div>
-<br>
+
+
 
 <br>
+
+<br>   
 <br>
 <div class="container d-sm-block text-center">
     <h3>Featured Categories</h3>
@@ -118,7 +106,6 @@
                 <img src="img/Ulam.png" class="card-img img-thumbnail">                       
                 <div class="card-body d-flex flex-column" style="background: rgba(0, 0, 0, 0.1);">                  
                     <h5 class="card-title">Ulam Bundles</h5>
-                    <!--<p class="card-text">The Ulam Bundle has all the fresh vegetables, leafy greens and rekados (ginger, tomato, onion, garlic) you need for one ulam, to serve your family or friends. Sulit and convenient.</p>-->
                     <a href="BestSellers.html#UlamBundles" class="btn mt-auto" style="background-color:#A2DBB7">Shop Now</a>
                 </div>
             </div>
@@ -158,53 +145,22 @@
 <br>
 <br>
 <br>
-    
+
+ <form name="ValidFormSubs"> 
+<br>
+<br>
+<br>
+<br> 
+
 <div class="Newsletter border border-2 mx-5">
         <h3>Newsletter</h3>
         <p class="fw-lighter">Keep up with promotions, and new items, among other things. Right to your inbox.</p>
     <div class="input-group" mb-3>
-        <input type="email" name="email" id="email" class="form-control" placeholder="Email address">
-        <button type="submit" class="btn text-capitalize btn-sm" style="background-color:#A2DBB7;" data-bs-toggle="modal" 
-        data-bs-target="#confirmSub">Subscribe</button>
+        <input type="email" name="ValidSubscribe" id="email" class="form-control" placeholder="Email address"/>
+        <button type="button" class="btn text-capitalize btn-sm" onclick="confirmGmailSubs(document.ValidFormSubs.ValidSubscribe);" style="background-color:#A2DBB7;">Subscribe</button>
     </div>
 </div>
-<!--Modal-->
-<div class="modal fade" id="confirmSub" tabindex="-1">
-    <div class="modal-dialog"> <!--dialog box-->
-        <div class="modal-content">
-        <!--start of modal header-->
-        <div class="modal-header">
-            <h5 class="modal-title text-center" id="modalSubTitle">
-                You'll hear from us soon.</h5>
-                <button class="btn-close" 
-                        type="button"
-                        data-bs-dismiss="modal"
-                        aria-label="close">
-                </button>  <!--X button sa dialog box-->
-        </div>
-        <!--End of modal header-->
-
-        <!--start of modal body-->
-        <div class="modal-body">
-            <p class="fst-italic">Thanks for subscribing to our newsletter! Be fit by eating fresh.</p>
-        </div>
-         <!--End of modal body-->
-         <!--start of modal footer-->
-         <div class="modal-footer">
-            <button class="btn"
-                    type="submit" style="background-color:#A2DBB7; border-radius:5px; box-shadow:5px 5px grey;">
-                    OK
-            </button>
-            <button class="btn"
-                    type="button" style="background-color:#A2DBB7; border-radius:5px; box-shadow:5px 5px grey;">
-                    Cancel
-            </button>
-        </div>
-         <!--End of modal footer-->
-        </div>
-    </div>
-</div>
-<!--End of Modal-->
+</form>
 <br>
 <br>
 
@@ -266,12 +222,13 @@
 </footer>
 <!-- Footer -->
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script src = "main.js"></script>
+<script src = "mockdata.js"></script>
 
 </html>
 
 
 
-<!-- deleted -->
-<!-- <h4 class="fw-light">Healthy living doesn't have to be costly. Check out our freshly-picked produce.</h4> -->
