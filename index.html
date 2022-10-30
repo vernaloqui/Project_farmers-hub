@@ -145,19 +145,22 @@
 <br>
 <br>
 <br>
+
+ <form name="ValidFormSubs"> 
 <br>
 <br>
 <br>
-<br>
+<br> 
+
 <div class="Newsletter border border-2 mx-5">
         <h3>Newsletter</h3>
         <p class="fw-lighter">Keep up with promotions, and new items, among other things. Right to your inbox.</p>
     <div class="input-group" mb-3>
-        <input type="email" name="email" id="email" class="form-control" placeholder="Email address">
-        <button type="submit" class="btn text-capitalize btn-sm" style="background-color:#A2DBB7;">Subscribe</button>
+        <input type="email" name="ValidSubscribe" id="email" class="form-control" placeholder="Email address"/>
+        <button type="button" class="btn text-capitalize btn-sm" onclick="confirmGmailSubs(document.ValidFormSubs.ValidSubscribe);" style="background-color:#A2DBB7;">Subscribe</button>
     </div>
 </div>
-
+</form>
 <br>
 <br>
 
@@ -224,6 +227,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 <script src = "main.js"></script>
 <script src = "mockdata.js"></script>
+
 </html>
 
 
