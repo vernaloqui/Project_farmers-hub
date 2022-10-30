@@ -170,16 +170,17 @@
                                 <img src="img/durian.png" class="card-img-top">
                             </div>
                             <div class="card-body  text-center">
-                                <p class="h6 fw-bold" class="card-title">Durian <br>per kg</p>
-                                <p class="card-text" style="font-size:15px;">₱52.00</p>
+                                <p class="h6 fw-bold" class="card-title" id="durian">Durian </p>
+                                <p>per kg</p>
+                                <p class="card-text" style="font-size:15px;" id="durianPrice">₱52.00</p>
                             </div>
                             <div class="card-footer d-flex flex-column justify-content-between">
-                                <div class="input-group mb-3 align-center  mt-auto">
+                                <div class="input-group input-group-sm mb-3 align-center  mt-auto">
                                         <span class="input-group-text" onclick="Durian.value = decQuantity(Durian)">-</span>
-                                        <input type="text" id="Durian"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <input type="text" id="Durian"  class="form-control text-center bg-white" value="1" min="0" placeholder="1">
                                         <span class="input-group-text" onclick="Durian.value = incQuantity(Durian)">+</span>
                                 </div><br>     
-                                <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
+                                <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"onclick="addToCart(durian, Durian.value, durianPrice);"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                             </div>
                         </div>
                     </div>
@@ -189,16 +190,17 @@
                                 <img src="img/guava.png" class="card-img-top">
                             </div>
                             <div class="card-body  text-center">
-                                <p class="h6 fw-bold" class="card-title">Guava <br>per pc</p>
-                                <p class="card-text" style="font-size:15px;">₱29.00</p>
+                                <p class="h6 fw-bold" class="card-title" id="guava">Guava </p>
+                                <p>per pc</p>
+                                <p class="card-text" style="font-size:15px;" id="guavaPrice">₱29.00</p>
                             </div>
                             <div class="card-footer d-flex flex-column justify-content-between">
-                                <div class="input-group mb-3 align-center  mt-auto">
+                                <div class="input-group input-group-sm mb-3 align-center  mt-auto">
                                         <span class="input-group-text" onclick="Guava.value = decQuantity(Guava)">-</span>
-                                        <input type="text" id="Guava"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <input type="text" id="Guava"  class="form-control text-center bg-white" value="1" min="0" placeholder="1">
                                         <span class="input-group-text" onclick="Guava.value = incQuantity(Guava)">+</span>
                                 </div><br>     
-                                <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
+                                <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"onclick="addToCart(guava, Guava.value, guavaPrice);"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                             </div>
                         </div>
                     </div>
@@ -208,16 +210,17 @@
                                 <img src="img/guyabano.png" class="card-img-top">
                             </div>
                             <div class="card-body  text-center">
-                                <p class="h6 fw-bold" class="card-title">Guyabano <br>per pc</p>
-                                <p class="card-text" style="font-size:15px;">₱175.00</p>
+                                <p class="h6 fw-bold" class="card-title" id="guyabano">Guyabano </p>
+                                <p>per pc</p>
+                                <p class="card-text" style="font-size:15px;" id="guyabanoPrice">₱175.00</p>
                             </div>
                             <div class="card-footer d-flex flex-column justify-content-between">
-                                <div class="input-group mb-3 align-center  mt-auto">
+                                <div class="input-group input-group-sm mb-3 align-center  mt-auto">
                                         <span class="input-group-text" onclick="Guyabano.value = decQuantity(Guyabano)">-</span>
-                                        <input type="text" id="Guyabano"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <input type="text" id="Guyabano"  class="form-control text-center bg-white" value="1" min="0" placeholder="1">
                                         <span class="input-group-text" onclick="Guyabano.value = incQuantity(Guyabano)">+</span>
                                 </div><br>     
-                                <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
+                                <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"onclick="addToCart(guyabano, Guyabano.value, guyabanoPrice);"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                             </div>
                         </div>
                     </div>
@@ -227,16 +230,17 @@
                                 <img src="img/Mangosteen.png" class="card-img-top">
                             </div>
                             <div class="card-body  text-center">
-                                <p class="h6 fw-bold" class="card-title">Mangosteen<br>per 500g</p>
-                                <p class="card-text" style="font-size:15px;">₱249.00 </p>
+                                <p class="h6 fw-bold" class="card-title" id="mangosteen">Mangosteen</p>
+                                <p>per 500g</p>
+                                <p class="card-text" style="font-size:15px;" id="mangosteenPrice">₱249.00 </p>
                             </div>
                             <div class="card-footer d-flex flex-column justify-content-between">
-                                <div class="input-group mb-3 align-center  mt-auto">
+                                <div class="input-group input-group-sm mb-3 align-center  mt-auto">
                                         <span class="input-group-text" onclick="Mangosteen.value = decQuantity(Mangosteen)">-</span>
-                                        <input type="text" id="Mangosteen"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <input type="text" id="Mangosteen"  class="form-control text-center bg-white" value="1" min="0" placeholder="1">
                                         <span class="input-group-text" onclick="Mangosteen.value = incQuantity(Mangosteen)">+</span>
                                 </div><br>     
-                                <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
+                                <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"onclick="addToCart(mangosteen, Mangosteen.value, mangosteenPrice);"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                             </div>
                         </div>
                     </div>
@@ -258,16 +262,17 @@
                                 <img src="img/kamias.png" class="card-img-top">
                             </div>
                             <div class="card-body  text-center">
-                                <p class="h6 fw-bold" class="card-title">Kamias <br> per 250 g</p>
-                                <p class="card-text" style="font-size:15px;">₱15.00</p>
+                                <p class="h6 fw-bold" class="card-title" id="kamias">Kamias </p>
+                                <p>per 250 g</p>
+                                <p class="card-text" style="font-size:15px;" id="kamiasPrice">₱15.00</p>
                             </div>
                             <div class="card-footer d-flex flex-column justify-content-between">
-                                <div class="input-group mb-3 align-center  mt-auto">
+                                <div class="input-group input-group-sm mb-3 align-center  mt-auto">
                                         <span class="input-group-text" onclick="Kamias.value = decQuantity(Kamias)">-</span>
-                                        <input type="text" id="Kamias"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <input type="text" id="Kamias"  class="form-control text-center bg-white" value="1" min="0" placeholder="1">
                                         <span class="input-group-text" onclick="Kamias.value = incQuantity(Kamias)">+</span>
                                 </div><br>     
-                                <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
+                                <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"onclick="addToCart(kamias, Kamias.value, kamiasPrice);"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                             </div>
                         </div>
                     </div>
@@ -277,16 +282,17 @@
                                 <img src="img/lanzones.png" class="card-img-top">
                             </div>
                             <div class="card-body  text-center">
-                                <p class="h6 fw-bold" class="card-title">Lanzones <br>per kg</p>
-                                <p class="card-text" style="font-size:15px;">₱35.00</p>
+                                <p class="h6 fw-bold" class="card-title" id="lanzones">Lanzones </p>
+                                <p>per kg</p>
+                                <p class="card-text" style="font-size:15px;" id="lanzonesPrice">₱35.00</p>
                             </div>
                             <div class="card-footer d-flex flex-column justify-content-between">
-                                <div class="input-group mb-3 align-center  mt-auto">
+                                <div class="input-group input-group-sm mb-3 align-center  mt-auto">
                                         <span class="input-group-text" onclick="Lanzones.value = decQuantity(Lanzones)">-</span>
-                                        <input type="text" id="Lanzones"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <input type="text" id="Lanzones"  class="form-control text-center bg-white" value="1" min="0" placeholder="1">
                                         <span class="input-group-text" onclick="Lanzones.value = incQuantity(Lanzones)">+</span>
                                 </div><br>     
-                                <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
+                                <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"onclick="addToCart(lanzones, Lanzones.value, lanzonesPrice);"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                             </div>
                         </div>
                     </div>
@@ -296,16 +302,17 @@
                                 <img src="img/lemon.png" class="card-img-top">
                             </div>
                             <div class="card-body  text-center">
-                                <p class="h6 fw-bold" class="card-title">Lemon<br> per pc</p>
-                                <p class="card-text" style="font-size:15px;">₱20.00</p>
+                                <p class="h6 fw-bold" class="card-title" id="lemon">Lemon</p>
+                                <p>per pc</p>
+                                <p class="card-text" style="font-size:15px;" id="lemonPrice">₱20.00</p>
                             </div>
                             <div class="card-footer d-flex flex-column justify-content-between">
-                                <div class="input-group mb-3 align-center  mt-auto">
+                                <div class="input-group input-group-sm mb-3 align-center  mt-auto">
                                         <span class="input-group-text" onclick="Lemon.value = decQuantity(Lemon)">-</span>
-                                        <input type="text" id="Lemon"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <input type="text" id="Lemon"  class="form-control text-center bg-white" value="1" min="0" placeholder="1">
                                         <span class="input-group-text" onclick="Lemon.value = incQuantity(Lemon)">+</span>
                                 </div><br>     
-                                <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
+                                <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"onclick="addToCart(lemon, Lemon.value, lemonPrice);"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                             </div>
                         </div>
                     </div>
@@ -315,16 +322,17 @@
                                 <img src="img/dayap.png" class="card-img-top">
                             </div>
                             <div class="card-body  text-center">
-                                <p class="h6 fw-bold" class="card-title">Lime/Dayap<br> per pc</p>
-                                <p class="card-text" style="font-size:15px;">₱15.00</p>
+                                <p class="h6 fw-bold" class="card-title" id="lime">Lime/Dayap</p>
+                                <p>per pc</p>
+                                <p class="card-text" style="font-size:15px;" id="limePrice">₱15.00</p>
                             </div>
                             <div class="card-footer d-flex flex-column justify-content-between">
-                                <div class="input-group mb-3 align-center  mt-auto">
+                                <div class="input-group input-group-sm mb-3 align-center  mt-auto">
                                         <span class="input-group-text" onclick="Lime.value = decQuantity(Lime)">-</span>
-                                        <input type="text" id="Lime"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <input type="text" id="Lime"  class="form-control text-center bg-white" value="1" min="0" placeholder="1">
                                         <span class="input-group-text" onclick="Lime.value = incQuantity(Lime)">+</span>
                                 </div><br>     
-                                <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
+                                <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"onclick="addToCart(lime, Lime.value, limePrice);"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                             </div>
                         </div>
                     </div>
@@ -346,16 +354,17 @@
                                 <img src="img/GreenMango.png" class="card-img-top">
                             </div>
                             <div class="card-body  text-center">
-                                <p class="h6 fw-bold" class="card-title">Mango (Kalabaw)<br> per kg</p>
-                                <p class="card-text" style="font-size:15px;">₱50.00</p>
+                                <p class="h6 fw-bold" class="card-title" id="kalabaw">Mango (Kalabaw)</p>
+                                <p>per kg</p>
+                                <p class="card-text" style="font-size:15px;" id="kalabawPrice">₱50.00</p>
                             </div>
                             <div class="card-footer d-flex flex-column justify-content-between">
-                                <div class="input-group mb-3 align-center  mt-auto">
+                                <div class="input-group input-group-sm mb-3 align-center  mt-auto">
                                         <span class="input-group-text" onclick="Kalabaw.value = decQuantity(Kalabaw)">-</span>
-                                        <input type="text" id="Kalabaw"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <input type="text" id="Kalabaw"  class="form-control text-center bg-white" value="1" min="0" placeholder="1">
                                         <span class="input-group-text" onclick="Kalabaw.value = incQuantity(Kalabaw)">+</span>
                                 </div><br>     
-                                <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
+                                <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"onclick="addToCart(kalabaw, Kalabaw.value, kalabawPrice);"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                             </div>
                         </div>
                     </div>
@@ -365,16 +374,17 @@
                                 <img src="img/mangga.png" class="card-img-top">
                             </div>
                             <div class="card-body  text-center">
-                                <p class="h6 fw-bold" class="card-title">Mango Ripe Large<br>per kg</p>
-                                <p class="card-text" style="font-size:15px;">₱55.00</p>
+                                <p class="h6 fw-bold" class="card-title" id="mangoRipeL">Mango Ripe Large</p>
+                                <p>per kg</p>
+                                <p class="card-text" style="font-size:15px;" id="mangoRipeLPrice">₱55.00</p>
                             </div>
                             <div class="card-footer d-flex flex-column justify-content-between">
-                                <div class="input-group mb-3 align-center  mt-auto">
+                                <div class="input-group input-group-sm mb-3 align-center  mt-auto">
                                         <span class="input-group-text" onclick="MangoRipeL.value = decQuantity(MangoRipeL)">-</span>
-                                        <input type="text" id="MangoRipeL"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <input type="text" id="MangoRipeL"  class="form-control text-center bg-white" value="1" min="0" placeholder="1">
                                         <span class="input-group-text" onclick="MangoRipeL.value = incQuantity(MangoRipeL)">+</span>
                                 </div><br>     
-                                <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
+                                <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"onclick="addToCart(mangoRipeL, MangoRipeL.value, mangoRipeLPrice);"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                             </div>
                         </div>
                     </div>
@@ -384,16 +394,17 @@
                                 <img src="img/Mangosmall.png" class="card-img-top">
                             </div>
                             <div class="card-body  text-center">
-                                <p class="h6 fw-bold" class="card-title">Mango Ripe small <br> per pc</p>
-                                <p class="card-text" style="font-size:15px;">₱45.00</p>
+                                <p class="h6 fw-bold" class="card-title" id="mangoRipeS">Mango Ripe small </p>
+                                <p>per pc</p>
+                                <p class="card-text" style="font-size:15px;" id="mangoRipeSPrice">₱45.00</p>
                             </div>
                             <div class="card-footer d-flex flex-column justify-content-between">
-                                <div class="input-group mb-3 align-center  mt-auto">
+                                <div class="input-group input-group-sm mb-3 align-center  mt-auto">
                                         <span class="input-group-text" onclick="MangoRipeS.value = decQuantity(MangoRipeS)">-</span>
-                                        <input type="text" id="MangoRipeS"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                        <input type="text" id="MangoRipeS"  class="form-control text-center bg-white" value="1" min="0" placeholder="1">
                                         <span class="input-group-text" onclick="MangoRipeS.value = incQuantity(MangoRipeS)">+</span>
                                 </div><br>     
-                                <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
+                                <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"onclick="addToCart(avocado, MangoRipeS.value, mangoRipeSPrice);"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                             </div>
                         </div>
                     </div>
@@ -404,16 +415,17 @@
                                     <img src="img/Indian.png" class="card-img-top">
                                 </div>
                                 <div class="card-body  text-center">
-                                    <p class="h6 fw-bold" class="card-title">Indian mango (g)<br> per kg</p>
-                                    <p class="card-text" style="font-size:15px;">₱50</p>
+                                    <p class="h6 fw-bold" class="card-title" id="indian">Indian mango (g)</p>
+                                <p>per kg</p>
+                                    <p class="card-text" style="font-size:15px;" id="indianPrice">₱50</p>
                                 </div>
                                 <div class="card-footer d-flex flex-column justify-content-between">
-                                    <div class="input-group mb-3 align-center  mt-auto">
+                                    <div class="input-group input-group-sm mb-3 align-center  mt-auto">
                                             <span class="input-group-text" onclick="Indian.value = decQuantity(Indian)">-</span>
-                                            <input type="text" id="Indian"  class="form-control text-center bg-white" value="1" min="0" placeholder="0">
+                                            <input type="text" id="Indian"  class="form-control text-center bg-white" value="1" min="0" placeholder="1">
                                             <span class="input-group-text" onclick="Indian.value = incQuantity(Indian)">+</span>
                                     </div><br>     
-                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
+                                    <button class="btn btn-sm" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"onclick="addToCart(indian, Indian.value, indianPrice);"><i class="bi bi-cart4" style="font-size:20px;"></i> &nbsp;  Add to Cart</button>
                                 </div>
                             </div>
                         </div>

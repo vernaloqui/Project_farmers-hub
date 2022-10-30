@@ -1,3 +1,9 @@
+//VAR
+let items ={
+    cart: []
+};
+let counter;
+
 //Forgot password modal for OK button
 function forgotPassword(){
     let emailInput = document.getElementById("email").value;
@@ -128,5 +134,52 @@ function decQuantity(qtyInput){
     return qty;
     
 }
+//add to cart button function
+function addToCart(addedItem, addedQuantity, addedPrice){
+    
+    let subtotal;
+    addedItem = addedItem.innerText;
+    addedPrice = addedPrice.innerText;
+    addedQuantity = Number(addedQuantity);
+    
+    subtotal = computeSubtotal(addedPrice, addedQuantity);
 
+    //push the variables into the object items
+    items.cart.push({item: addedItem, quantity: addedQuantity, price: addedPrice, subtotal: subtotal});
 
+    //store the quantity and item name in local storage
+    localStorage.setItem("items", JSON.stringify(items));
+
+    //update the cart counter when an item is added
+    cartCounter();
+    
+}
+
+//compute the subtotal (price times quantity) and return its value
+function computeSubtotal(addedPrice, addedQuantity) {
+    //remove the ₱ from the text and transform the price string into a number ;
+    numPrice = addedPrice.replace(/(\₱)/, "");
+    numPrice = Number(numPrice);
+
+    subtotalAmount = numPrice * addedQuantity;
+
+    subtotal = `₱${subtotalAmount}.00`;
+
+    return subtotal;
+}
+
+//update the cart counter when an item is added
+function cartCounter(){
+    let current = 0;
+    if (items.cart == "") {
+        counter.innerText = 0;
+    }
+    else {
+        items.cart.forEach(function(updateCounter){
+            current += updateCounter.quantity;
+        });
+        counter = document.querySelector(".cartCounter");
+    
+        counter.innerText = current;
+    }
+}
