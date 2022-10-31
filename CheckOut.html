@@ -154,27 +154,36 @@
                 id="PayBody"
                 aria-labelledby="#PayHeading"
                 data-bs-parent="#CheckOut">
-                    <div class="accordion-body text-start">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="Payment" id="cod">
-                            <label class="form-check-label" for="cod">Cash on Delivery
-                            </label>
+                    <div class="accordion-body text-start d-flex">
+                        <!--put form in div-->
+                        <div id="paymentOptions">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Payment" id="cod">
+                                <label class="form-check-label" for="cod">Cash on Delivery
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Payment" id="card">
+                                <label class="form-check-label" for="card">Card
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Payment" id="Gcash">
+                                <label class="form-check-label" for="Gcash">Gcash
+                                </label>
+                            </div>
+                            
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Payment" id="maya">
+                                <label class="form-check-label" for="maya">Maya
+                                </label>
+                            </div>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="Payment" id="card">
-                            <label class="form-check-label" for="card">Card
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="Payment" id="Gcash">
-                            <label class="form-check-label" for="Gcash">Gcash
-                            </label>
-                        </div>
-                        
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="Payment" id="maya">
-                            <label class="form-check-label" for="maya">Maya
-                            </label>
+                            <div class="vr mx-5"></div>
+                            <!--created div for payment method selection-->
+                            <div id="paymentMethodData">
+                                aaa
+                            </div>
                         </div>
                     </div>
             </div>
