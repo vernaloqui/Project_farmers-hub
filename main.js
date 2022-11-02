@@ -3,6 +3,29 @@ let items ={
     cart: []
 };
 let counter;
+//scroll to top button function
+function backToTop(){
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    topFunction();
+}
+function scrollFunction() {
+    let backTop = document.getElementById("scrollUp");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backTop.style.display = "block";
+    } else {
+        backTop.style.display = "none";
+    }
+}
+
+    // When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+
 
 //Forgot password modal for OK button
 function forgotPassword(){
@@ -182,4 +205,37 @@ function cartCounter(){
     
         counter.innerText = current;
     }
+}
+
+
+//function to change price display of onsale items upon chosing the quantity
+function updateOnsalePrice(){
+    let product = document.getElementsByID("bellpepperSale"); 
+    let salePrice = document.getElementsByID("bellpepperSaleprice").innerText;
+    alert(product);
+    alert(salePrice);
+    // ;
+    // for (const radioButton of radioButtons) {
+    //     if (radioButton.checked) {
+    //         selectedKilo = radioButton.value;
+    //         break;
+    //     }
+    // }
+    // alert(selectedKilo);
+    // switch (selectedKilo.innerText) {
+    //     case 'on': 
+    //         document.getElementById("bellpepperSaleprice").innerHTML = '₱100.00'; 
+    //         break;
+    //     case '5kgs': 
+    //         document.getElementById("bellpepperSaleprice").innerHTML = '₱200.00'; 
+    //         break;
+    //     case '8kgs': 
+    //         document.getElementById("bellpepperSaleprice").innerHTML = '₱300.00'; 
+    //         break;
+    // }
+    // items.cart.push({item: product, quantity: selectedKilo.innerText, price: salePrice});
+
+    // localStorage.setItem("items", JSON.stringify(items));
+
+    // cartCounter();
 }
