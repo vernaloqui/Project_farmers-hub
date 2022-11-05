@@ -31,13 +31,13 @@ function smallBasketQty() {
   let sbaQty = document.getElementById("bananaQty").value;
   let sdrQty = document.getElementById("dragonQty").value;
   let sraQty = document.getElementById("rambutanQty").value;
-  let sgrQty = document.getElementById("grapesQty").value;
+  let sgrQty = document.getElementById("grapesQty").value; //missed letter g @sgrQTY
   let smaQty = document.getElementById("mangoQty").value;
   let speQty = document.getElementById("pearQty").value;
   let spaQty = document.getElementById("papayaQty").value;
   let sorQty = document.getElementById("orangeQty").value;
 
-  let stQty = Number(spiQty) + Number(savQty) + Number(sapQty) + Number(sleQty) + Number(sbaQty) + Number(sdrQty) + Number(sraQty) + Number(srQty) + Number(smaQty) + Number(speQty) + Number(spaQty) + Number(sorQty);
+  let stQty = Number(spiQty) + Number(savQty) + Number(sapQty) + Number(sleQty) + Number(sbaQty) + Number(sdrQty) + Number(sraQty) + Number(sgrQty) + Number(smaQty) + Number(speQty) + Number(spaQty) + Number(sorQty);
 
   if (stQty < 7) {
     alert("Minimum basket quantity needed is 7 PCs to checkout.");
