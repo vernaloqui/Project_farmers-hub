@@ -32,74 +32,57 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                             <div class="collapse navbar-collapse" id="navbarMark">
-                                <ul class="navbar-nav text-capitalize">
-                                    
-                                    <li class="nav-item">
-                                        <a class="nav-link" href=""  style="color:#073418">Be a Farmer Partner</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href=""  style="color:#073418">Seller Center</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="AboutUs.html"  style="color:#073418">About Us</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="Help.html"  style="color:#073418">Help</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="px-2">
-                                <a class="nav-link" href="Cart.html"  style="color:#073418">
-                                <i class="bi bi-cart4" style="font-size:30px;"></i></a>
-                            </div>
-                            <form class="d-flex ms-auto" role="search">
-                                <input type="text" class="form-control" placeholder="Search" aria-label="search">
-                                <button type="submit" class="btn btn-outline" style="background-color: #073418; color:#A2DBB7;">Search</button>
-                            </form>
-            
-        </div>
-    </div>
-
-    <!--Navigation Bar-->
-    <div class="container-fluid" style="background-color:#F8FEFA;">
-        <div class="navbar navbar-expand-md">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="img/logo.png" class="rounded-circle border border-2" style="width:75px;">
-                    </a>
-                    <button class="navbar-toggler"
-                                    type="button" 
-                                    data-bs-toggle="collapse" 
-                                    data-bs-target="#navbarMark" 
-                                    aria-controls="navbarMark" 
-                                    aria-expanded="false" 
-                                    aria-label="Toggle Navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                            <div class="collapse navbar-collapse" id="navbarMark">
                                 <ul class="navbar-nav text-uppercase">
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#073418;">Farm Produce</a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                            <li><a class="dropdown-item" href="">Fruits</a></li>
-                                            <li><a class="dropdown-item" href="">Vegetables</a></li>
-                                            <li><a class="dropdown-item" href="">Spices and Herbs</a></li>
-                                        </ul>
-                                    </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#"  style="color:#073418;">Best Sellers</a>
+                                        <a class="nav-link active" href="combined.html"  style="color:#073418;">Farm Produce</a>
                                     </li>
-                                    
                                     <li class="nav-item">
                                         <a class="nav-link" href="OnSale.html"  style="color:#073418;">On Sale</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="Login.html"  style="color:#073418">My Account</a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="AboutUs.html" style="color:#073418;">About us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="help.html"  style="color:#073418">Help</a>
+                                    </li>
                                 </ul>
                             </div>
-        </div>
-    </div>
-<!--end of nav bars>-->
+                            <form class="searchCart d-flex ms-auto" role="search">
+                                <input type="text" class="form-control" placeholder="Search" aria-label="search">
+                                <button type="submit" class="btn btn-outline" style="background-color: #073418; color:#A2DBB7;">Search</button>
+                            </form>  
+                                                
+                            <div class="cartNav px-2 justify-content-center me-3" style="float:right;">
+                                <div class="cartCounter"></div>
+                                    <a class="nav-link"   style="color:#073418" onclick="toggleCart(id);">
+                                    <i class="bi bi-cart4" style="font-size:30px;"></i></a>
+                                <!--Start of Shopping Cart section-->
+                                <div class="shoppingCartContainer" id="cartBox">
+                                    <table class="table table-hover table-striped" id="cartContents">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" >Product</th>
+                                                <th scope="col" >Price</th>
+                                                <th scope="col" class="text-center">Quantity</th>
+                                                <th scope="col" >Subtotal</th>
+                                                <th scope="col" class="text-center"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="cartContentsBody"></tbody>
+                                    </table>
+                                    <p class="total-container" id="total-price"></p>
+                                    <button type="submit" class="btn btn-sm text-uppercase" style="background-color: #073418; color:#A2DBB7;">Checkout</button>
+                                    <button class="btn btn-sm shadow text-uppercase" style="background-color: #073418; color:#A2DBB7;" onclick="clearCart(id);">Remove all</button>
+                                    <p id="cartEmpty" style="display:none;">Your cart is empty.</p>                        
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                            
+                        <!--end of nav bar>-->
     <br>
     <!--Nav Tabs-->
     <div class="container">
@@ -262,49 +245,53 @@
 <br>
 <footer class="container-fluid text-center text-dark" style="background-color:#A2DBB7;">   
 <hr>
-    <div class="row">
-        <!--Paragraph-->
-        <div class="col d-flex justify-content-center">
-            <p class="h5">
-                "A moment on the lips, a lifetime on the hips. Always eat what's right. If you want to run for long, avoid junk food...
-           <br> <br>
-               Be Fit by Eating Fresh."
-           </p> 
-        </div>
-        <!--Icons-->
-        <div class="col d-block justify-content-center">
-            <p class="text-dark text-uppercase fw-bold">Follow us </p>
-            <a href="#" i class="bi bi-facebook me-4"></i></a><br>
-            <a href="#" i class="bi bi-instagram me-4"></i></a><br>
-            <a href="#" i class="bi bi-messenger me-4"></i></a><br>
-        </div>
+<div class="row">
+    <!--Paragraph-->
+    <div class="col d-flex justify-content-center">
+        <p class="h5">
+            "A moment on the lips, a lifetime on the hips. Always eat what's right. If you want to run for long, avoid junk food...
+       <br> <br>
+           Be Fit by Eating Fresh."
+       </p> 
     </div>
+    <!--Icons-->
+    <div class="col justify-content-center">
+        <div><p class="text-dark text-uppercase fw-bold">Follow us </p></div>
+        <p><a href="#" i class="bi bi-facebook mx-4" style="color:#A2DBB7;"></i></a>
+        <a href="#" i class="bi bi-instagram mx-4" style="color:#A2DBB7;"></i></a>
+        <a href="#" i class="bi bi-twitter mx-4" style="color:#A2DBB7;"></i></a></p>
+    </div>
+</div>
 <br>
-   <div class="row text-center p-3 d-flex justify-content-center" style="background-color: rgba(0, 0, 0, 0.2);">
-        <div class="col-md-2">
-           <h6 class="text-uppercase fw-bold">
-               <a href="#" class="text-white">About us</a>
-           </h6>
-        </div>
+<div class="row text-center p-3 d-flex justify-content-center" style="background-color: #A2DBB7;">
+    
+    <div class="col-md-2">
+        <h6 class="text-uppercase fw-bold">
+            <a href="FarmerPartner.html" style="color:#073418;">Be a Farmer Partner</a>
+        </h6>
+     </div>
 
-        <div class="col-md-2">
-           <h6 class="text-uppercase fw-bold">
-               <a href="#" class="text-white">  © 2020 Copyright</a>
-           </h6>
-        </div>
+    <div class="col-md-2">
+       <h6 class="text-uppercase fw-bold">
+           <a href="#" style="color:#073418;">  © 2020 Copyright</a>
+       </h6>
+    </div>
 
-         <div class="col-md-2">
-           <h6 class="text-uppercase fw-bold">
-               <a href="#" class="text-white">Contact</a>
-           </h6>
-         </div>
-   </div>
+    <div class="col-md-2">
+       <h6 class="text-uppercase fw-bold">
+           <a href="SellerCenter.html" style="color:#073418;">Seller Center</a>
+       </h6>
+     </div>
+</div>
 </section>
 
 </footer>
 <!-- Footer -->
 
+</body>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-  </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+<script src="cart.js"></script>
+<script src="bestSellerConfirmBasket.js"></script>
 </html>

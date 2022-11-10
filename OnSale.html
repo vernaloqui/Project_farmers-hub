@@ -84,37 +84,56 @@
                     </button>
                             <div class="collapse navbar-collapse" id="navbarMark">
                                 <ul class="navbar-nav text-uppercase">
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="Products.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#073418;">Farm Produce</a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                            <li><a class="dropdown-item" href="Fruits.html">Fruits</a></li>
-                                            <li><a class="dropdown-item" href="Veggies.html">Vegetables</a></li>
-                                            <li><a class="dropdown-item" href="SHerbs.html">Spices and Herbs</a></li>
-                                        </ul>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="combined.html"  style="color:#073418;">Farm Produce</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="BestSellers.html"  style="color:#073418;">Best Sellers</a>
-                                    </li>
-                                    
-                                    <li class="nav-item">
-                                        <a class="nav-link active" href="OnSale.html"  style="color:#073418;">On Sale</a>
+                                        <a class="nav-link" href="OnSale.html"  style="color:#073418;">On Sale</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="Login.html"  style="color:#073418">My Account</a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="AboutUs.html" style="color:#073418;">About us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="help.html"  style="color:#073418">Help</a>
+                                    </li>
                                 </ul>
-                                <form class="d-flex ms-auto" role="search">
-                                    <div class="px-2" style="float:right;">
-                                    <a class="nav-link" href="Cart.html"  style="color:#073418">
-                                        <i class="bi bi-cart4" style="font-size:30px;"></i></a>
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="Search" aria-label="search">
-                                    <button type="submit" class="btn btn-outline" style="background-color: #073418; color:#A2DBB7;">Search</button>
-                                </form>                             
                             </div>
-        </div>
-    </div>
-<!--end of nav bar>-->
+                            <form class="searchCart d-flex ms-auto" role="search">
+                                <input type="text" class="form-control" placeholder="Search" aria-label="search">
+                                <button type="submit" class="btn btn-outline" style="background-color: #073418; color:#A2DBB7;">Search</button>
+                            </form>  
+                                                
+                            <div class="cartNav px-2 justify-content-center me-3" style="float:right;">
+                                <div class="cartCounter"></div>
+                                    <a class="nav-link"   style="color:#073418" onclick="toggleCart(id);">
+                                    <i class="bi bi-cart4" style="font-size:30px;"></i></a>
+                                <!--Start of Shopping Cart section-->
+                                <div class="shoppingCartContainer" id="cartBox">
+                                    <table class="table table-hover table-striped" id="cartContents">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" >Product</th>
+                                                <th scope="col" >Price</th>
+                                                <th scope="col" class="text-center">Quantity</th>
+                                                <th scope="col" >Subtotal</th>
+                                                <th scope="col" class="text-center"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="cartContentsBody"></tbody>
+                                    </table>
+                                    <p class="total-container" id="total-price"></p>
+                                    <button type="submit" class="btn btn-sm text-uppercase" style="background-color: #073418; color:#A2DBB7;">Checkout</button>
+                                    <button class="btn btn-sm shadow text-uppercase" style="background-color: #073418; color:#A2DBB7;" onclick="clearCart(id);">Remove all</button>
+                                    <p id="cartEmpty" style="display:none;">Your cart is empty.</p>                        
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                            
+                        <!--end of nav bar>-->
 <br>
 <div class="container-fluid mt-2">
     <!--start of Nav Tabs-->
@@ -145,20 +164,21 @@
                          <div class="col-12 col-md-6 col-lg-3 p-3 ">
                              <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                  <img class="card-img img-thumbnail" src="img/6.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                 <div class="card-body d-flex flex-column text-center">
-                                     <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">BellPeper</h4>
+                                 <div class="card-body  d-flex flex-column text-center">
+                                     <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);" id="bellpepperSale">BellPeper</h4>
                                      <p class="card-text"> “Souce of Vitamin C” </p>
-                                     <p>Php 100.00 - 300.00</p>
-                                     <div class="input-group mb-3 align-items-center mt-auto">
-                                         <div class="input-group-text" style="font-size:small;">
-                                            <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
+                                     <p id="bellpepperSaleprice">₱ 100.00 - 300.00</p>
+                                    <select class="text-center" id="quantity"  name="quantity" style="background-color:#A2DBB7;">
+                                        <option id="1k" selected>1 kg</option>
+                                        <option id="5k">5 kgs</option>
+                                        <option id="8k">8 kgs</option>
+                                    </select>
+                                            <!-- <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
                                             <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="5k"> &nbsp; 5 kgs &nbsp;<br>
-                                            <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp;
-                                         </div>
-                                     </div>
+                                            <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp; -->
                                 </div>
                                 <div class="card-footer d-flex flex-column justify-content-between">
-                                    <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
+                                    <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;" onclick="updateOnsalePrice();"></i>&nbsp; Add to Cart</button>
                                 </div> 
                              </div>
                          </div>
@@ -166,17 +186,15 @@
                          <div class="col-12 col-md-6 col-lg-3 p-3 ">
                              <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                  <img class="card-img img-thumbnail" src="img/7.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                 <div class="card-body">
+                                 <div class="card-body  d-flex flex-column text-center">
                                      <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1); font-size:large;">Broccoli, CauliFlower</h4>
                                      <p class="card-text"> “Rich in antioxidants” </p>
-                                     <p>Php 600.00 - 800.00</p>
-                                    <div class="input-group mb-3 align-items-center">
-                                        <div class="input-group-text" style="font-size:small;">
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="5k"> &nbsp; 5 kgs &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp;
-                                        </div>
-                                    </div>
+                                     <p>₱ 600.00 - 800.00</p>
+                                    <select class="text-center" style="background-color:#A2DBB7;">
+                                        <option id="1k" selected>1 kg</option>
+                                        <option id="5k">5 kgs</option>
+                                        <option id="8k">8 kgs</option>
+                                    </select>
                                 </div>
                                 <div class="card-footer d-flex flex-column justify-content-between">
                                     <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -187,17 +205,15 @@
                          <div class="col-12 col-md-6 col-lg-3 p-3 ">
                              <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                  <img class="card-img img-thumbnail" src="img/8.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                 <div class="card-body">
+                                 <div class="card-body  d-flex flex-column text-center">
                                      <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Lettuce</h4>
                                      <p class="card-text"> “The source of vitamin K” </p>
-                                     <p>Php 200.00 - 400.00</p>
-                                    <div class="input-group mb-3 align-items-center">
-                                        <div class="input-group-text" style="font-size:small;">
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="5k"> &nbsp; 5 kgs &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp;
-                                        </div>
-                                    </div>
+                                     <p>₱ 200.00 - 400.00</p>
+                                    <select class="text-center" style="background-color:#A2DBB7;">
+                                            <option id="1k" selected>1 kg</option>
+                                            <option id="5k">5 kgs</option>
+                                            <option id="8k">8 kgs</option>
+                                        </select>
                                 </div>
                                 <div class="card-footer d-flex flex-column justify-content-between">
                                     <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -207,17 +223,15 @@
                          <div class="col-12 col-md-6 col-lg-3 p-3 ">
                              <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                  <img class="card-img img-thumbnail" src="img/9.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                 <div class="card-body">
+                                 <div class="card-body  d-flex flex-column text-center">
                                      <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Repolyo</h4>
                                      <p class="card-text"> “Lowered blood sugar levels” </p>
-                                     <p>Php 200.00 - 400.00</p>
-                                    <div class="input-group mb-3 align-items-center">
-                                        <div class="input-group-text" style="font-size:small;">
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="5k"> &nbsp; 5 kgs &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp;
-                                        </div>
-                                    </div>
+                                     <p>₱ 200.00 - 400.00</p>
+                                    <select class="text-center" style="background-color:#A2DBB7;">
+                                            <option id="1k" selected>1 kg</option>
+                                            <option id="5k">5 kgs</option>
+                                            <option id="8k">8 kgs</option>
+                                        </select>
                                 </div>
                                 <div class="card-footer d-flex flex-column justify-content-between">
                                     <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -230,17 +244,15 @@
                          <div class="col-12 col-md-6 col-lg-3 p-3">
                              <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                  <img class="card-img img-thumbnail" src="img/10.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                 <div class="card-body">
+                                 <div class="card-body  d-flex flex-column text-center">
                                      <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Carrots</h4>
                                      <p class="card-text"> “Loaded with vitamin A ” </p>
-                                     <p>Php 100.00 - 300.00</p>
-                                    <div class="input-group mb-3 align-items-center">
-                                        <div class="input-group-text" style="font-size:small;">
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="5k"> &nbsp; 5 kgs &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp;
-                                        </div>
-                                    </div>
+                                     <p>₱ 100.00 - 300.00</p>
+                                    <select class="text-center" style="background-color:#A2DBB7;">
+                                            <option id="1k" selected>1 kg</option>
+                                            <option id="5k">5 kgs</option>
+                                            <option id="8k">8 kgs</option>
+                                        </select>
                                 </div>
                                 <div class="card-footer d-flex flex-column justify-content-between">
                                     <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -251,17 +263,15 @@
                          <div class="col-12 col-md-6 col-lg-3 p-3">
                              <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                  <img class="card-img img-thumbnail" src="img/11.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                 <div class="card-body">
+                                 <div class="card-body  d-flex flex-column text-center">
                                      <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Potatoes</h4>
                                      <p class="card-text"> “They're rich in vitamin C” </p>
-                                     <p>Php 500.00 - 600.00</p>
-                                    <div class="input-group mb-3 align-items-center">
-                                        <div class="input-group-text" style="font-size:small;">
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="5k"> &nbsp; 5 kgs &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp;
-                                        </div>
-                                    </div>
+                                     <p>₱ 500.00 - 600.00</p>
+                                    <select class="text-center" style="background-color:#A2DBB7;">
+                                            <option id="1k" selected>1 kg</option>
+                                            <option id="5k">5 kgs</option>
+                                            <option id="8k">8 kgs</option>
+                                        </select>
                                 </div>
                                 <div class="card-footer d-flex flex-column justify-content-between">
                                     <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -272,17 +282,15 @@
                          <div class="col-12 col-md-6 col-lg-3 p-3">
                              <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                  <img class="card-img img-thumbnail" src="img/12.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                 <div class="card-body">
+                                 <div class="card-body  d-flex flex-column text-center">
                                      <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Pechay</h4>
                                      <p class="card-text"> “Boosts immune system” </p>
-                                     <p>Php 100.00 - 300.00</p>
-                                    <div class="input-group mb-3 align-items-center">
-                                        <div class="input-group-text" style="font-size:small;">
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="5k"> &nbsp; 5 kgs &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp;
-                                        </div>
-                                    </div>
+                                     <p>₱ 100.00 - 300.00</p>
+                                    <select class="text-center" style="background-color:#A2DBB7;">
+                                            <option id="1k" selected>1 kg</option>
+                                            <option id="5k">5 kgs</option>
+                                            <option id="8k">8 kgs</option>
+                                        </select>
                                 </div>
                                 <div class="card-footer d-flex flex-column justify-content-between">
                                     <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -292,17 +300,15 @@
                          <div class="col-12 col-md-6 col-lg-3 p-3">
                              <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                  <img class="card-img img-thumbnail" src="img/beans.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                <div class="card-body">
+                                <div class="card-body  d-flex flex-column text-center">
                                      <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Baguio Beans</h4>
                                      <p class="card-text"> “High in vitamin K” </p>
-                                     <p>Php 300.00 - 800.00</p>
-                                    <div class="input-group mb-3 align-items-center">
-                                        <div class="input-group-text" style="font-size:small;">
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="5k"> &nbsp; 5 kgs &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp;
-                                        </div>
-                                    </div>
+                                     <p>₱ 300.00 - 800.00</p>
+                                    <select class="text-center" style="background-color:#A2DBB7;">
+                                            <option id="1k" selected>1 kg</option>
+                                            <option id="5k">5 kgs</option>
+                                            <option id="8k">8 kgs</option>
+                                        </select>
                                 </div>
                                 <div class="card-footer d-flex flex-column justify-content-between">
                                     <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -312,17 +318,15 @@
                          <div class="col-12 col-md-6 col-lg-3 p-3">
                              <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                  <img class="card-img img-thumbnail" src="img/luya.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                <div class="card-body">
+                                <div class="card-body  d-flex flex-column text-center">
                                      <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Luya</h4>
                                      <p class="card-text"> “Reduces muscle pain” </p>
-                                     <p>Php 130.00 - 300.00</p>
-                                    <div class="input-group mb-3 align-items-center">
-                                        <div class="input-group-text" style="font-size:small;">
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="5k"> &nbsp; 5 kgs &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp;
-                                        </div>
-                                    </div>
+                                     <p>₱ 130.00 - 300.00</p>
+                                    <select class="text-center" style="background-color:#A2DBB7;">
+                                            <option id="1k" selected>1 kg</option>
+                                            <option id="5k">5 kgs</option>
+                                            <option id="8k">8 kgs</option>
+                                        </select>
                                 </div>
                                 <div class="card-footer d-flex flex-column justify-content-between">
                                     <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -333,17 +337,15 @@
                          <div class="col-12 col-md-6 col-lg-3 p-3">
                              <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                  <img class="card-img img-thumbnail" src="img/kam.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                 <div class="card-body">
+                                 <div class="card-body  d-flex flex-column text-center">
                                      <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Kamatis</h4>
                                      <p class="card-text"> “Good source of potassium” </p>
-                                     <p>Php 150.00 - 300.00</p>
-                                    <div class="input-group mb-3 align-items-center">
-                                        <div class="input-group-text" style="font-size:small;">
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="5k"> &nbsp; 5 kgs &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp;
-                                        </div>
-                                    </div>
+                                     <p>₱ 150.00 - 300.00</p>
+                                    <select class="text-center" style="background-color:#A2DBB7;">
+                                            <option id="1k" selected>1 kg</option>
+                                            <option id="5k">5 kgs</option>
+                                            <option id="8k">8 kgs</option>
+                                        </select>
                                 </div>
                                 <div class="card-footer d-flex flex-column justify-content-between">
                                     <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -354,17 +356,15 @@
                          <div class="col-12 col-md-6 col-lg-3 p-3">
                              <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                  <img class="card-img img-thumbnail" src="img/sib.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                 <div class="card-body">
+                                 <div class="card-body  d-flex flex-column text-center">
                                      <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Sibuyas</h4>
                                      <p class="card-text"> “Reduced risk of cancer” </p>
-                                     <p>Php 120.00 - 300.00</p>
-                                    <div class="input-group mb-3 align-items-center">
-                                        <div class="input-group-text" style="font-size:small;">
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="5k"> &nbsp; 5 kgs &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp;
-                                        </div>
-                                    </div>
+                                     <p>₱ 120.00 - 300.00</p>
+                                    <select class="text-center" style="background-color:#A2DBB7;">
+                                            <option id="1k" selected>1 kg</option>
+                                            <option id="5k">5 kgs</option>
+                                            <option id="8k">8 kgs</option>
+                                        </select>
                                 </div>
                                 <div class="card-footer d-flex flex-column justify-content-between">
                                     <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -375,17 +375,15 @@
                          <div class="col-12 col-md-6 col-lg-3 p-3">
                              <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                  <img class="card-img img-thumbnail" src="img/bawang.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                 <div class="card-body">
+                                 <div class="card-body  d-flex flex-column text-center">
                                      <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Bawang</h4>
                                      <p class="card-text"> “Contains antioxidants” </p>
-                                     <p>Php 150.00 - 300.00</p>
-                                    <div class="input-group mb-3 align-items-center">
-                                        <div class="input-group-text" style="font-size:small;">
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="5k"> &nbsp; 5 kgs &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp;
-                                        </div>
-                                    </div>
+                                     <p>₱ 150.00 - 300.00</p>
+                                    <select class="text-center" style="background-color:#A2DBB7;">
+                                            <option id="1k" selected>1 kg</option>
+                                            <option id="5k">5 kgs</option>
+                                            <option id="8k">8 kgs</option>
+                                        </select>
                                 </div>
                                 <div class="card-footer d-flex flex-column justify-content-between">
                                     <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -395,17 +393,15 @@
                          <div class="col-12 col-md-6 col-lg-3 p-3">
                              <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                  <img class="card-img img-thumbnail" src="img/okra.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                 <div class="card-body">
+                                 <div class="card-body  d-flex flex-column text-center">
                                      <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Okra</h4>
                                      <p class="card-text"> “Rich in magnesium, fiber.” </p>
-                                     <p>Php 150.00 - 400.00</p>
-                                    <div class="input-group mb-3 align-items-center">
-                                        <div class="input-group-text" style="font-size:small;">
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="5k"> &nbsp; 5 kgs &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp;
-                                        </div>
-                                    </div>
+                                     <p>₱ 150.00 - 400.00</p>
+                                    <select class="text-center" style="background-color:#A2DBB7;">
+                                            <option id="1k" selected>1 kg</option>
+                                            <option id="5k">5 kgs</option>
+                                            <option id="8k">8 kgs</option>
+                                        </select>
                                 </div>
                                 <div class="card-footer d-flex flex-column justify-content-between">
                                     <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -416,17 +412,15 @@
                          <div class="col-12 col-md-6 col-lg-3 p-3">
                              <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                  <img class="card-img img-thumbnail" src="img/tat.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                 <div class="card-body">
+                                 <div class="card-body  d-flex flex-column text-center">
                                      <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Talong</h4>
                                      <p class="card-text"> "Source of vitamins A and C” </p>
-                                     <p>Php 230.00 - 500.00</p>
-                                    <div class="input-group mb-3 align-items-center">
-                                        <div class="input-group-text" style="font-size:small;">
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="5k"> &nbsp; 5 kgs &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp;
-                                        </div>
-                                    </div>
+                                     <p>₱ 230.00 - 500.00</p>
+                                    <select class="text-center" style="background-color:#A2DBB7;">
+                                            <option id="1k" selected>1 kg</option>
+                                            <option id="5k">5 kgs</option>
+                                            <option id="8k">8 kgs</option>
+                                        </select>
                                 </div>
                                 <div class="card-footer d-flex flex-column justify-content-between">
                                     <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -437,17 +431,15 @@
                          <div class="col-12 col-md-6 col-lg-3 p-3">
                              <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                  <img class="card-img img-thumbnail" src="img/rad.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                 <div class="card-body">
+                                 <div class="card-body  d-flex flex-column text-center">
                                      <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Labanos</h4>
                                      <p class="card-text"> “Rich in calcium, potassium” </p>
-                                     <p>Php 150.00 - 500.00</p>
-                                    <div class="input-group mb-3 align-items-center">
-                                        <div class="input-group-text" style="font-size:small;">
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="5k"> &nbsp; 5 kgs &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp;
-                                        </div>
-                                    </div>
+                                     <p>₱ 150.00 - 500.00</p>
+                                    <select class="text-center" style="background-color:#A2DBB7;">
+                                            <option id="1k" selected>1 kg</option>
+                                            <option id="5k">5 kgs</option>
+                                            <option id="8k">8 kgs</option>
+                                        </select>
                                 </div>
                                 <div class="card-footer d-flex flex-column justify-content-between">
                                     <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -458,17 +450,15 @@
                          <div class="col-12 col-md-6 col-lg-3 p-3">
                              <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                  <img class="card-img img-thumbnail" src="img/sit.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                 <div class="card-body">
+                                 <div class="card-body  d-flex flex-column text-center">
                                      <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Sitaw</h4>
                                      <p class="card-text"> “Reduces heart diseases” </p>
-                                     <p>Php 220.00 - 600.00</p>
-                                    <div class="input-group mb-3 align-items-center">
-                                        <div class="input-group-text" style="font-size:small;">
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="5k"> &nbsp; 5 kgs &nbsp;<br>
-                                           <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp;
-                                        </div>
-                                    </div>
+                                     <p>₱ 220.00 - 600.00</p>
+                                    <select class="text-center" style="background-color:#A2DBB7;">
+                                            <option id="1k" selected>1 kg</option>
+                                            <option id="5k">5 kgs</option>
+                                            <option id="8k">8 kgs</option>
+                                        </select>
                                 </div>
                                 <div class="card-footer d-flex flex-column justify-content-between">
                                     <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -497,17 +487,15 @@
                             <div class="col-12 col-md-6 col-lg-3 p-3">
                                 <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                     <img class="card-img img-thumbnail rounded-circle" src="img/teen.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                    <div class="card-body">
+                                    <div class="card-body  d-flex flex-column text-center">
                                         <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Mangosteen</h4>
                                         <p class="card-text"> “Help lower blood sugar” </p>
-                                        <p>Php 200.00 - 500.00</p>
-                                        <div class="input-group mb-3 align-items-center">
-                                            <div class="input-group-text" style="font-size:small;">
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="5k"> &nbsp; 5 kgs &nbsp;<br>
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp;
-                                            </div>
-                                        </div>
+                                        <p>₱ 200.00 - 500.00</p>
+                                        <select class="text-center" style="background-color:#A2DBB7;">
+                                            <option id="1k" selected>1 kg</option>
+                                            <option id="5k">5 kgs</option>
+                                            <option id="8k">8 kgs</option>
+                                        </select>
                                     </div>
                                     <div class="card-footer d-flex flex-column justify-content-between">
                                         <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -518,17 +506,15 @@
                             <div class="col-12 col-md-6 col-lg-3 p-3 ">
                                 <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                     <img class="card-img img-thumbnail rounded-circle" src="img/13.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                    <div class="card-body">
+                                    <div class="card-body  d-flex flex-column text-center">
                                         <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Strawberry</h4>
                                         <p class="card-text"> “The heart-healthy fruits” </p>
-                                        <p>Php 120.00 - 800.00</p>
-                                        <div class="input-group mb-3 align-items-center">
-                                            <div class="input-group-text" style="font-size:small;">
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="5k"> &nbsp; 5 kgs &nbsp;<br>
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp;
-                                            </div>
-                                        </div>
+                                        <p>₱ 120.00 - 800.00</p>
+                                        <select class="text-center" style="background-color:#A2DBB7;">
+                                            <option id="1k" selected>1 kg</option>
+                                            <option id="5k">5 kgs</option>
+                                            <option id="8k">8 kgs</option>
+                                        </select>
                                     </div>
                                     <div class="card-footer d-flex flex-column justify-content-between">
                                         <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -539,17 +525,15 @@
                             <div class="col-12 col-md-6 col-lg-3 p-3 ">
                                 <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                     <img class="card-img img-thumbnail rounded-circle" src="img/gra.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                    <div class="card-body">
+                                    <div class="card-body  d-flex flex-column text-center">
                                         <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Grapes</h4>
                                         <p class="card-text"> “A source of potassium” </p>
-                                        <p>Php 150.00 - 500.00</p>
-                                        <div class="input-group mb-3 align-items-center">
-                                            <div class="input-group-text" style="font-size:small;">
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="5k"> &nbsp; 5 kgs &nbsp;<br>
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp;
-                                            </div>
-                                        </div>
+                                        <p>₱ 150.00 - 500.00</p>
+                                        <select class="text-center" style="background-color:#A2DBB7;">
+                                            <option id="1k" selected>1 kg</option>
+                                            <option id="5k">5 kgs</option>
+                                            <option id="8k">8 kgs</option>
+                                        </select>
                                     </div>
                                     <div class="card-footer d-flex flex-column justify-content-between">
                                         <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -559,17 +543,15 @@
                             <div class="col-12 col-md-6 col-lg-3 p-3 ">
                                 <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                     <img class="card-img img-thumbnail rounded-circle" src="img/man.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                    <div class="card-body">
+                                    <div class="card-body  d-flex flex-column text-center">
                                         <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Manggo</h4>
                                         <p class="card-text"> "Rich in vitamins A and C” </p>
-                                        <p>Php 250.00 - 500.00</p>
-                                        <div class="input-group mb-3 align-items-center">
-                                            <div class="input-group-text" style="font-size:small;">
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="5k"> &nbsp; 5 kgs &nbsp;<br>
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp;
-                                            </div>
-                                        </div>
+                                        <p>₱ 250.00 - 500.00</p>
+                                        <select class="text-center" style="background-color:#A2DBB7;">
+                                            <option id="1k" selected>1 kg</option>
+                                            <option id="5k">5 kgs</option>
+                                            <option id="8k">8 kgs</option>
+                                        </select>
                                     </div>
                                     <div class="card-footer d-flex flex-column justify-content-between">
                                         <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -582,17 +564,15 @@
                             <div class="col-12 col-md-6 col-lg-3 p-3">
                                 <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                     <img class="card-img img-thumbnail rounded-circle" src="img/dandan.png" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                    <div class="card-body">
+                                    <div class="card-body  d-flex flex-column text-center">
                                         <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Dalandan</h4>
                                         <p class="card-text"> “It aids in wound healing” </p>
-                                        <p>Php 120.00 - 400.00</p>
-                                        <div class="input-group mb-3 align-items-center">
-                                            <div class="input-group-text" style="font-size:small;">
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="5k"> &nbsp; 5 kgs &nbsp;<br>
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp;
-                                            </div>
-                                        </div>
+                                        <p>₱ 120.00 - 400.00</p>
+                                        <select class="text-center" style="background-color:#A2DBB7;">
+                                            <option id="1k" selected>1 kg</option>
+                                            <option id="5k">5 kgs</option>
+                                            <option id="8k">8 kgs</option>
+                                        </select>
                                     </div>
                                     <div class="card-footer d-flex flex-column justify-content-between">
                                         <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -603,17 +583,15 @@
                             <div class="col-12 col-md-6 col-lg-3 p-3">
                                 <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                     <img class="card-img img-thumbnail rounded-circle" src="img/lem.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                    <div class="card-body">
+                                    <div class="card-body  d-flex flex-column text-center">
                                         <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Lemon</h4>
                                         <p class="card-text"> “May support weight loss.” </p>
-                                        <p>Php 150.00 - 450.00</p>
-                                        <div class="input-group mb-3 align-items-center">
-                                            <div class="input-group-text" style="font-size:small;">
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="5k"> &nbsp; 5 kgs &nbsp;<br>
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp;
-                                            </div>
-                                        </div>
+                                        <p>₱ 150.00 - 450.00</p>
+                                        <select class="text-center" style="background-color:#A2DBB7;">
+                                            <option id="1k" selected>1 kg</option>
+                                            <option id="5k">5 kgs</option>
+                                            <option id="8k">8 kgs</option>
+                                        </select>
                                     </div>
                                     <div class="card-footer d-flex flex-column justify-content-between">
                                         <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -624,17 +602,15 @@
                             <div class="col-12 col-md-6 col-lg-3 p-3">
                                 <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                     <img class="card-img img-thumbnail rounded-circle" src="img/ora.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                    <div class="card-body">
+                                    <div class="card-body  d-flex flex-column text-center">
                                         <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Orange</h4>
                                         <p class="card-text"> “High in vitamin C, folate.” </p>
-                                        <p>Php 120.00 - 350.00</p>
-                                        <div class="input-group mb-3 align-items-center">
-                                            <div class="input-group-text" style="font-size:small;">
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="5k"> &nbsp; 5 kgs &nbsp;<br>
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp;
-                                            </div>
-                                        </div>
+                                        <p>₱ 120.00 - 350.00</p>
+                                        <select class="text-center" style="background-color:#A2DBB7;">
+                                            <option id="1k" selected>1 kg</option>
+                                            <option id="5k">5 kgs</option>
+                                            <option id="8k">8 kgs</option>
+                                        </select>
                                     </div>
                                     <div class="card-footer d-flex flex-column justify-content-between">
                                         <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -644,17 +620,15 @@
                             <div class="col-12 col-md-6 col-lg-3 p-3">
                                 <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                     <img class="card-img img-thumbnail rounded-circle" src="img/per.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                    <div class="card-body">
+                                    <div class="card-body  d-flex flex-column text-center">
                                         <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Persimon</h4>
                                         <p class="card-text"> “Source of provitamin A” </p>
-                                        <p>Php 150.00 - 400.00</p>
-                                        <div class="input-group mb-3 align-items-center">
-                                            <div class="input-group-text" style="font-size:small;">
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="5k"> &nbsp; 5 kgs &nbsp;<br>
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp;
-                                            </div>
-                                        </div>
+                                        <p>₱ 150.00 - 400.00</p>
+                                        <select class="text-center" style="background-color:#A2DBB7;">
+                                            <option id="1k" selected>1 kg</option>
+                                            <option id="5k">5 kgs</option>
+                                            <option id="8k">8 kgs</option>
+                                        </select>
                                     </div>
                                     <div class="card-footer d-flex flex-column justify-content-between">
                                         <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -664,17 +638,15 @@
                             <div class="col-12 col-md-6 col-lg-3 p-3">
                                 <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                     <img class="card-img img-thumbnail rounded-circle" src="img/ban.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                    <div class="card-body">
+                                    <div class="card-body  d-flex flex-column text-center">
                                         <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Banana</h4>
                                         <p class="card-text"> “Sources of vitamin B6” </p>
-                                        <p>Php 120.00 - 500.00</p>
-                                        <div class="input-group mb-3 align-items-center">
-                                            <div class="input-group-text" style="font-size:small;">
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="5k"> &nbsp; 5 kgs &nbsp;<br>
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp;
-                                            </div>
-                                        </div>
+                                        <p>₱ 120.00 - 500.00</p>
+                                        <select class="text-center" style="background-color:#A2DBB7;">
+                                            <option id="1k" selected>1 kg</option>
+                                            <option id="5k">5 kgs</option>
+                                            <option id="8k">8 kgs</option>
+                                        </select>
                                     </div>
                                     <div class="card-footer d-flex flex-column justify-content-between">
                                         <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -685,17 +657,15 @@
                             <div class="col-12 col-md-6 col-lg-3 p-3">
                                 <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                     <img class="card-img img-thumbnail rounded-circle" src="img/ram.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                    <div class="card-body">
+                                    <div class="card-body  d-flex flex-column text-center">
                                         <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Rambutan</h4>
                                         <p class="card-text"> “Rich in vitamins C and B3.” </p>
-                                        <p>Php 180.00 - 600.00</p>
-                                        <div class="input-group mb-3 align-items-center">
-                                            <div class="input-group-text" style="font-size:small;">
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="5k"> &nbsp; 5 kgs &nbsp;<br>
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp;
-                                            </div>
-                                        </div>
+                                        <p>₱ 180.00 - 600.00</p>
+                                        <select class="text-center" style="background-color:#A2DBB7;">
+                                            <option id="1k" selected>1 kg</option>
+                                            <option id="5k">5 kgs</option>
+                                            <option id="8k">8 kgs</option>
+                                        </select>
                                     </div>
                                     <div class="card-footer d-flex flex-column justify-content-between">
                                         <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -706,17 +676,15 @@
                             <div class="col-12 col-md-6 col-lg-3 p-3">
                                 <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                     <img class="card-img img-thumbnail rounded-circle" src="img/avo.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                    <div class="card-body">
+                                    <div class="card-body  d-flex flex-column text-center">
                                         <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Avocado</h4>
                                         <p class="card-text"> "Rich in vitamins E, K, and B6” </p>
-                                        <p>Php 120.00 - 600.00</p>
-                                        <div class="input-group mb-3 align-items-center">
-                                            <div class="input-group-text" style="font-size:small;">
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="5k"> &nbsp; 5 kgs &nbsp;<br>
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp;
-                                            </div>
-                                        </div>
+                                        <p>₱ 120.00 - 600.00</p>
+                                        <select class="text-center" style="background-color:#A2DBB7;">
+                                            <option id="1k" selected>1 kg</option>
+                                            <option id="5k">5 kgs</option>
+                                            <option id="8k">8 kgs</option>
+                                        </select>
                                     </div>
                                     <div class="card-footer d-flex flex-column justify-content-between">
                                         <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -727,17 +695,15 @@
                             <div class="col-12 col-md-6 col-lg-3 p-3">
                                 <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                     <img class="card-img img-thumbnail rounded-circle" src="img/app.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                    <div class="card-body">
+                                    <div class="card-body  d-flex flex-column text-center">
                                         <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Apple</h4>
                                         <p class="card-text"> “Rich in fiber, antioxidants.” </p>
-                                        <p>Php 100.00 - 300.00</p>
-                                        <div class="input-group mb-3 align-items-center">
-                                            <div class="input-group-text" style="font-size:small;">
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="1k"> &nbsp; 1 kg &nbsp;<br>
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="5k"> &nbsp; 5 kgs &nbsp;<br>
-                                               <input class="form-check-input" type="radio" name="Kilo" aria-label="radio" id="8k"> &nbsp; 8 kgs &nbsp;
-                                            </div>
-                                        </div>
+                                        <p>₱ 100.00 - 300.00</p>
+                                        <select class="text-center" style="background-color:#A2DBB7;">
+                                            <option id="1k" selected>1 kg</option>
+                                            <option id="5k">5 kgs</option>
+                                            <option id="8k">8 kgs</option>
+                                        </select>
                                     </div>
                                     <div class="card-footer d-flex flex-column justify-content-between">
                                         <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -772,11 +738,11 @@
                                             <div class="col-sm-3 p-3">
                                                 <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                                     <img class="card-img img-thumbnail" src="img/herbs set.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                                    <div class="card-body">
+                                                    <div class="card-body  d-flex flex-column text-center">
                                                         <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Herbs and Spices </h4>
                                                         <p class="card-text"> “ Foods taste excellent by adding herbs and spices.” </p>
                                                         <p i class="bi bi-dot"></i> 26 grams</p>
-                                                        <p>Php 400.00</p>
+                                                        <p>₱ 400.00</p>
                                                         <div class="input-group mb-3  align-items-center">
                                                             <div class="input-group-text" style="font-size:small;">
                                                                 <input class="form-check-input" type="checkbox" value="" aria-label="checkbox"> &nbsp; 1 set &nbsp;
@@ -792,17 +758,15 @@
                                             <div class="col-sm-3 p-3">
                                                 <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                                     <img class="card-img img-thumbnail" src="img/honey.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                                    <div class="card-body">
+                                                    <div class="card-body  d-flex flex-column text-center">
                                                         <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Honey</h4>
                                                         <p class="card-text"> “Antibacterial and antifungal properties” </p>
                                                         <p i class="bi bi-dot"></i> 1 liter</p>
-                                                        <p>Php 350.00 - 600.00</p>
-                                                        <div class="input-group mb-3  align-items-center">
-                                                            <div class="input-group-text" style="font-size:small;">
-                                                                <input class="form-check-input" type="radio" name="Bottle" aria-label="radio" id="2Bots"> &nbsp; 2 bottle &nbsp;
-                                                                <input class="form-check-input" type="radio" name="Bottle" aria-label="radio" id="4Bots"> &nbsp; 4 bottle &nbsp;
-                                                            </div>
-                                                        </div>
+                                                        <p>₱ 350.00 - 600.00</p>
+                                                        <select class="text-center" style="background-color:#A2DBB7;">
+                                                            <option id="2Bots" selected>2 bottles</option>
+                                                            <option id="4Bots">4 bottles</option>
+                                                        </select>
                                                     </div>
                                                     <div class="card-footer d-flex flex-column justify-content-between">
                                                         <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -813,17 +777,15 @@
                                             <div class="col-sm-3 p-3">
                                                 <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                                     <img class="card-img img-thumbnail" src="img/cider.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                                    <div class="card-body">
+                                                    <div class="card-body  d-flex flex-column text-center">
                                                         <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Cider Vinegar</h4>
                                                         <p class="card-text"> “Help in chronic health or aid weight loss.” </p>
                                                         <p i class="bi bi-dot"></i> 500 liter</p>
-                                                        <p>Php 450.00 - 800.00</p>
-                                                        <div class="input-group mb-3  align-items-center">
-                                                            <div class="input-group-text" style="font-size:small;">
-                                                                <input class="form-check-input" type="radio" name="Bottle" aria-label="radio" id="2Bots"> &nbsp; 2 bottle &nbsp;
-                                                                <input class="form-check-input" type="radio" name="Bottle" aria-label="radio" id="4Bots"> &nbsp; 4 bottle &nbsp;
-                                                            </div>
-                                                        </div>
+                                                        <p>₱ 450.00 - 800.00</p>
+                                                        <select class="text-center" style="background-color:#A2DBB7;">
+                                                            <option id="2Bots" selected>2 bottles</option>
+                                                            <option id="4Bots">4 bottles</option>
+                                                        </select>
                                                     </div>
                                                     <div class="card-footer d-flex flex-column justify-content-between">
                                                         <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -834,17 +796,15 @@
                                             <div class="col-sm-3 p-3">
                                                 <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                                     <img class="card-img img-thumbnail" src="img/oys.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                                    <div class="card-body">
+                                                    <div class="card-body  d-flex flex-column text-center">
                                                         <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Oyster Sauce</h4>
                                                         <p class="card-text"> “A number of sauces made by cooking oysters” </p>
                                                         <p i class="bi bi-dot"></i> 430 Grams </p>
-                                                        <p>Php 110.00 - 450.00</p>
-                                                        <div class="input-group mb-3  align-items-center">
-                                                            <div class="input-group-text" style="font-size:small;">
-                                                                <input class="form-check-input" type="radio" name="Bottle" aria-label="radio" id="2Bots"> &nbsp; 2 bottle &nbsp;
-                                                                <input class="form-check-input" type="radio" name="Bottle" aria-label="radio" id="4Bots"> &nbsp; 4 bottle &nbsp;
-                                                            </div>
-                                                        </div>
+                                                        <p>₱ 110.00 - 450.00</p>
+                                                        <select class="text-center" style="background-color:#A2DBB7;">
+                                                            <option id="2Bots" selected>2 bottles</option>
+                                                            <option id="4Bots">4 bottles</option>
+                                                        </select>
                                                     </div>
                                                     <div class="card-footer d-flex flex-column justify-content-between">
                                                         <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -861,13 +821,13 @@
                                             <div class="col-sm-3 p-3">
                                                 <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                                     <img class="card-img img-thumbnail" src="img/seeds.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                                    <div class="card-body">
+                                                    <div class="card-body  d-flex flex-column text-center">
                                                         <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);"> Seeds</h4>
                                                         <p class="card-text"> “The most trusted brand” </p>
                                                         <p i class="bi bi-dot"></i> 10 Grams </p>
-                                                        <p>Php 300.00</p>
+                                                        <p>₱ 300.00</p>
                                                         <div class="input-group mb-3  align-items-center">
-                                                            <div class="input-group-text" style="font-size:small;">
+                                                            <div class="input-group-text text-center" style="font-size:small;">
                                                                 <input class="form-check-input" type="checkbox" value="" aria-label="checkbox"> &nbsp; 15 packs &nbsp;
                                                             </div>
                                                         </div>
@@ -881,17 +841,15 @@
                                             <div class="col-sm-3 p-3">
                                                 <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                                     <img class="card-img img-thumbnail" src="img/peper.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                                    <div class="card-body">
+                                                    <div class="card-body  d-flex flex-column text-center">
                                                         <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Whole Black Peper</h4>
                                                         <p class="card-text"> “They're low in calories.” </p>
                                                         <p i class="bi bi-dot"></i> 250 Grams </p>
-                                                        <p>Php 100.00 - 300.00</p>
-                                                        <div class="input-group mb-3  align-items-center">
-                                                            <div class="input-group-text" style="font-size:small;">
-                                                                <input class="form-check-input" type="radio" name="Packs" aria-label="radio" id="2packs"> &nbsp; 2 packs &nbsp;
-                                                                <input class="form-check-input" type="radio" name="Packs" aria-label="radio" id="5packs"> &nbsp; 5 packs &nbsp;
-                                                            </div>
-                                                        </div>
+                                                        <p>₱ 100.00 - 300.00</p>
+                                                        <select class="text-center" style="background-color:#A2DBB7;">
+                                                            <option id="2packs" selected>2 packs</option>
+                                                            <option id="5packs">5 packs</option>
+                                                        </select>
                                                     </div>
                                                     <div class="card-footer d-flex flex-column justify-content-between">
                                                         <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -902,17 +860,15 @@
                                             <div class="col-sm-3 p-3">
                                                 <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                                     <img class="card-img img-thumbnail" src="img/salt.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                                    <div class="card-body">
+                                                    <div class="card-body  d-flex flex-column text-center">
                                                         <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Himalayan Salt</h4>
                                                         <p class="card-text"> “Balances electrolytes" </p>
                                                         <p i class="bi bi-dot"></i> 250 Grams </p>
-                                                        <p>Php 250.00 - 800.00</p>
-                                                        <div class="input-group mb-3  align-items-center">
-                                                            <div class="input-group-text" style="font-size:small;">
-                                                                <input class="form-check-input" type="radio" name="Packs" aria-label="radio" id="3packs"> &nbsp; 3 packs &nbsp;
-                                                                <input class="form-check-input" type="radio" name="Packs" aria-label="radio" id="6packs"> &nbsp; 6 packs &nbsp;
-                                                            </div>
-                                                        </div>
+                                                        <p>₱ 250.00 - 800.00</p>
+                                                        <select class="text-center" style="background-color:#A2DBB7;">
+                                                            <option id="3packs" selected>3 packs</option>
+                                                            <option id="6packs">6 packs</option>
+                                                        </select>
                                                     </div>
                                                     <div class="card-footer d-flex flex-column justify-content-between">
                                                         <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -923,17 +879,15 @@
                                             <div class="col-sm-3 p-3">
                                                 <div class="card p-3 w-100 overflow-auto" style="color: #073418;">
                                                     <img class="card-img img-thumbnail" src="img/sugar.jpg" style="width:100%; border-radius: 5px; box-shadow: 5px 5px #A2DBB7;">
-                                                    <div class="card-body">
+                                                    <div class="card-body  d-flex flex-column text-center">
                                                         <h4 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);">Brown Sugar</h4>
                                                         <p class="card-text"> “Give energy to muscles” </p>
                                                         <p i class="bi bi-dot"></i> 250 Grams </p>
-                                                        <p>Php 250.00 - 600.00</p>
-                                                        <div class="input-group mb-3  align-items-center">
-                                                            <div class="input-group-text" style="font-size:small;">
-                                                                <input class="form-check-input" type="radio" name="Packs" aria-label="radio" id="3packs"> &nbsp; 3 packs &nbsp;
-                                                                <input class="form-check-input" type="radio" name="Packs" aria-label="radio" id="6packs"> &nbsp; 6 packs &nbsp;
-                                                            </div>
-                                                        </div>
+                                                        <p>₱ 250.00 - 600.00</p>
+                                                        <select class="text-center" style="background-color:#A2DBB7;">
+                                                            <option id="3packs" selected>3 packs</option>
+                                                            <option id="6packs">6 packs</option>
+                                                        </select>
                                                     </div>
                                                     <div class="card-footer d-flex flex-column justify-content-between">
                                                         <button class="btn btn-sm mt-auto" style="background-color: #A2DBB7; border-radius:5px; box-shadow:5px 5px grey;"><i class="bi bi-cart4" style="font-size:20px;"></i>&nbsp; Add to Cart</button>
@@ -971,67 +925,60 @@
 <br>
 <br>
 
-
+<!-- scroll to top button -->
+<button onclick="backToTop()" id="scrollUp"><i class="bi bi-arrow-up"></i></button>
 
 <!--start of footer-->
 <br>
 <footer class="container-fluid text-center text-dark" style="background-color:#F8FEFA;">   
 <hr>
-    <div class="row">
-        <!--Paragraph-->
-        <div class="col d-flex justify-content-center">
-            <p class="h5">
-                "A moment on the lips, a lifetime on the hips. Always eat what's right. If you want to run for long, avoid junk food...
-           <br> <br>
-               Be Fit by Eating Fresh."
-           </p> 
-        </div>
-        <!--Icons-->
-        <div class="col justify-content-center">
-            <div><p class="text-dark text-uppercase fw-bold">Follow us </p></div>
-            <p><a href="#" i class="bi bi-facebook mx-4" style="color:#A2DBB7;"></i></a>
-            <a href="#" i class="bi bi-instagram mx-4" style="color:#A2DBB7;"></i></a>
-            <a href="#" i class="bi bi-twitter mx-4" style="color:#A2DBB7;"></i></a></p>
-        </div>
+<div class="row">
+    <!--Paragraph-->
+    <div class="col d-flex justify-content-center">
+        <p class="h5">
+            "A moment on the lips, a lifetime on the hips. Always eat what's right. If you want to run for long, avoid junk food...
+       <br> <br>
+           Be Fit by Eating Fresh."
+       </p> 
     </div>
+    <!--Icons-->
+    <div class="col justify-content-center">
+        <div><p class="text-dark text-uppercase fw-bold">Follow us </p></div>
+        <p><a href="#" i class="bi bi-facebook mx-4" style="color:#A2DBB7;"></i></a>
+        <a href="#" i class="bi bi-instagram mx-4" style="color:#A2DBB7;"></i></a>
+        <a href="#" i class="bi bi-twitter mx-4" style="color:#A2DBB7;"></i></a></p>
+    </div>
+</div>
 <br>
-   <div class="row text-center p-3 d-flex justify-content-center" style="background-color: #A2DBB7;">
-        <div class="col-md-2">
-           <h6 class="text-uppercase fw-bold">
-               <a href="AboutUs.html" style="color:#073418;">About us</a>
-           </h6>
-        </div>
+<div class="row text-center p-3 d-flex justify-content-center" style="background-color: #A2DBB7;">
+    
+    <div class="col-md-2">
+        <h6 class="text-uppercase fw-bold">
+            <a href="FarmerPartner.html" style="color:#073418;">Be a Farmer Partner</a>
+        </h6>
+     </div>
 
-        <div class="col-md-2">
-            <h6 class="text-uppercase fw-bold">
-                <a href="FarmerPartner.html" style="color:#073418;">Be a Farmer Partner</a>
-            </h6>
-         </div>
+    <div class="col-md-2">
+       <h6 class="text-uppercase fw-bold">
+           <a href="#" style="color:#073418;">  © 2020 Copyright</a>
+       </h6>
+    </div>
 
-        <div class="col-md-2">
-           <h6 class="text-uppercase fw-bold">
-               <a href="#" style="color:#073418;">  © 2020 Copyright</a>
-           </h6>
-        </div>
-
-        <div class="col-md-2">
-           <h6 class="text-uppercase fw-bold">
-               <a href="SellerCenter.html" style="color:#073418;">Seller Center</a>
-           </h6>
-         </div>
-
-         <div class="col-md-2">
-            <h6 class="text-uppercase fw-bold">
-                <a href="help.html" style="color:#073418;">Help</a>
-            </h6>
-          </div>
-   </div>
+    <div class="col-md-2">
+       <h6 class="text-uppercase fw-bold">
+           <a href="SellerCenter.html" style="color:#073418;">Seller Center</a>
+       </h6>
+     </div>
+</div>
 </section>
 
 </footer>
 <!-- Footer -->
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+<script src="cart.js"></script>
+<script src="bestSellerConfirmBasket.js"></script>
 </html>
