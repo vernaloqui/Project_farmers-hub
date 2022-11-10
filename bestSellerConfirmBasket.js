@@ -5,24 +5,25 @@ function selectedBasket() {
 
   if (sBasket == true) {
     console.log(sBasket);
-    return "small";
+    return "small basket";
   }
 
   else if (mBasket == true) {
     console.log(mBasket);
-    return "medium";
+    return "medium basket";
   }
  
   else if (lBasket == true) {
     // document.getElementById("sizeFruitBasket").innerHTML = "Large Basket";
     // largeBasketQty();
-    return "large";
+    return "large basket";
   }
 
   else {
     alert("Choose basket!");
   }
 };
+
 
 function countFruits(){
   let piQty = Number(document.getElementById("pineappleQty").value);
@@ -38,6 +39,7 @@ function countFruits(){
   let paQty = Number(document.getElementById("papayaQty").value);
   let orQty = Number(document.getElementById("orangeQty").value);
   let count = [piQty, avQty, apQty, leQty, baQty, drQty, raQty, grQty, maQty, peQty, paQty, orQty];
+
 
   let sum = piQty + avQty + apQty + leQty + baQty + drQty + raQty + grQty + maQty + peQty + paQty + orQty;
 
@@ -76,17 +78,18 @@ function printFruitBasket(){
     let row = table.insertRow();
     var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
-    cell1.textContent = fruits[i];
-    cell2.textContent = countArray[i];
+    cell2.textContent = fruits[i];
+    cell1.textContent = countArray[i];
     }
   }
+
  console.log(document.getElementById("smallPrice").innerText);
   switch (size){
-    case "small":
+    case "small basket":
       if(sum === 7){
         document.getElementById("basketSize").innerHTML = `Your fruits basket size is: <strong>${size}</strong>`;
         button.style.display = "block";
-        button.onclick = function() { addBasketToCart(`${size} basket, 1, ${priceS}`) };
+        button.onclick = function() { addBasketToCart(size, 1, priceS) };
         document.getElementById("price").innerHTML = `<strong>Total: ${priceS}</strong>`;
 
       }  
@@ -97,11 +100,11 @@ function printFruitBasket(){
       }
     break;
 
-    case "medium":
+    case "medium basket":
       if(sum === 10){
         document.getElementById("basketSize").innerHTML = `Your fruits basket size is: <strong>${size}</strong>`;
         button.style.display = "block";
-        button.onclick = function() { addToCart(`${size}, 1, ${priceM}`) };
+        button.onclick = function() {addBasketToCart(size, 1, priceM) };
         document.getElementById("price").innerHTML = `<strong>Total: ${priceM}</strong>`;
 
       }  
@@ -111,11 +114,11 @@ function printFruitBasket(){
       }
     break;
 
-    case "large":
+    case "large basket":
       if(sum === 15){
         document.getElementById("basketSize").innerHTML = `Your fruits basket size is: <strong>${size}</strong>`;
         button.style.display = "block";
-        button.onclick = function() { addToCart(`${size}, 1, ${priceL}`) };
+        button.onclick = function() { addBasketToCart(size, 1, priceL) };
         document.getElementById("price").innerHTML = `<strong>Total: ${priceL}</strong>`;
 
       }  
@@ -126,4 +129,19 @@ function printFruitBasket(){
     break;
   }  
   
+  //get contents of the basket table for storage
+var fruitsArray = [];
+var FruitTable = document.querySelector("#BasketTable");
+var rows = FruitTable.children;
+console.log(rows);
+for (var j = 0; j < rows.length; j++) {
+    var fields = rows[j].children;
+  var rowArray = [];
+  for (var k = 0; k < fields.length; k++) {
+    rowArray.push(fields[k].innerText);
+  }
+  fruitsArray.push(rowArray);
+}
+
+localStorage.setItem("fruitsBasket", JSON.stringify(fruitsArray));
 }

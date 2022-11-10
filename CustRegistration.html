@@ -42,37 +42,55 @@
                     </button>
                             <div class="collapse navbar-collapse" id="navbarMark">
                                 <ul class="navbar-nav text-uppercase">
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="Products.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#073418;">Farm Produce</a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                            <li><a class="dropdown-item" href="Fruits.html">Fruits</a></li>
-                                            <li><a class="dropdown-item" href="Veggies.html">Vegetables</a></li>
-                                            <li><a class="dropdown-item" href="SHerbs.html">Spices and Herbs</a></li>
-                                        </ul>
-                                    </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="BestSellers.html"  style="color:#073418;">Best Sellers</a>
+                                        <a class="nav-link active" href="combined.html"  style="color:#073418;">Farm Produce</a>
                                     </li>
-                                    
                                     <li class="nav-item">
                                         <a class="nav-link" href="OnSale.html"  style="color:#073418;">On Sale</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link active" href="Login.html"  style="color:#073418">My Account</a>
+                                        <a class="nav-link" href="Login.html"  style="color:#073418">My Account</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="AboutUs.html" style="color:#073418;">About us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="help.html"  style="color:#073418">Help</a>
                                     </li>
                                 </ul>
-                                <form class="searchCart d-flex ms-auto" role="search">
-                                    <div class="cartNav px-2 justify-content-center me-3" style="float:right;">
-                                        <div class="cartCounter">0</div>
-                                        <a class="nav-link" href="Cart.html"  style="color:#073418">
-                                            <i class="bi bi-cart4" style="font-size:30px;"></i></a>
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="Search" aria-label="search">
-                                    <button type="submit" class="btn btn-outline" style="background-color: #073418; color:#A2DBB7;">Search</button>
-                                </form>                          
                             </div>
-        </div>
-    </div>
+                            <form class="searchCart d-flex ms-auto" role="search">
+                                <input type="text" class="form-control" placeholder="Search" aria-label="search">
+                                <button type="submit" class="btn btn-outline" style="background-color: #073418; color:#A2DBB7;">Search</button>
+                            </form>  
+                                                
+                            <div class="cartNav px-2 justify-content-center me-3" style="float:right;">
+                                <div class="cartCounter"></div>
+                                    <a class="nav-link"   style="color:#073418" onclick="toggleCart(id);">
+                                    <i class="bi bi-cart4" style="font-size:30px;"></i></a>
+                                <!--Start of Shopping Cart section-->
+                                <div class="shoppingCartContainer" id="cartBox">
+                                    <table class="table table-hover table-striped" id="cartContents">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" >Product</th>
+                                                <th scope="col" >Price</th>
+                                                <th scope="col" class="text-center">Quantity</th>
+                                                <th scope="col" >Subtotal</th>
+                                                <th scope="col" class="text-center"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="cartContentsBody"></tbody>
+                                    </table>
+                                    <p class="total-container" id="total-price"></p>
+                                    <button type="submit" class="btn btn-sm text-uppercase" style="background-color: #073418; color:#A2DBB7;">Checkout</button>
+                                    <button class="btn btn-sm shadow text-uppercase" style="background-color: #073418; color:#A2DBB7;" onclick="clearCart(id);">Remove all</button>
+                                    <p id="cartEmpty" style="display:none;">Your cart is empty.</p>                        
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                            
 <!--end of nav bar>-->
 <br>
 <!--Form Header-->
@@ -143,15 +161,15 @@
                     data-bs-parent="#RegisterAccount">
                         <div class="accordion-body text-justify">
                             <div class="input-group" mb-3>
-                                <span class="input-group-text" id="fName">First Name:</span>
+                                <span class="input-group-text">First Name:</span>
                                 <input type="text" class="form-control" id="fName" required>
-                                <span class="input-group-text" id="mName">Middle Initial:</span>
+                                <span class="input-group-text">Middle Initial:</span>
                                 <input type="text" class="form-control" id="mName">
-                                <span class="input-group-text" id="lName">Last Name:</span>
+                                <span class="input-group-text">Last Name:</span>
                                 <input type="text" class="form-control" id="lName" required>
                             </div><br>
                             <div class="input-group" mb-3>
-                                <label for="date" class="input-group-text">Date of Birth:</label>
+                                <label for="dob" class="input-group-text">Date of Birth:</label>
                                 <input type="date" class="form-control" id="dob" required>
                                 <label for="phoneNum" class="input-group-text">Cellphone number:</label>
                                 <input type="tel" class="form-control" id="phoneNum" placeholder="09XXXXXXXXX" maxlength="11" minlength="11" required>
@@ -160,107 +178,22 @@
                                 <p class="fw-bold" style="font-size:15px;">Address</p>
                             </div>
                             <div class="input-group" mb-3>
-                                <label for="Housenum" class="input-group-text">House Number:</label>
+                                <label for="Address1" class="input-group-text">House Number:</label>
                                     <input type="text" class="form-control" id="Address1" placeholder="Address Line 1" required>
-                                    <label for="Street" class="input-group-text">Street:</label>
+                                    <label for="Address2" class="input-group-text">Street:</label>
                                     <input type="text" class="form-control" id="Address2" placeholder="Address Line 2" required> 
                             </div><br>
                             <div class="input-group" mb-3>
-                                <label for="province" class="input-group-text">Province:</label>
-                                <select class="form-control" name="province" id="province" onchange="showMunicipalitySelection();">
-                                    <option value="Abra">Abra</option>	
-                                    <option value="Agusan del Norte">Agusan del Norte</option>	
-                                    <option value="Agusan del Sur">Agusan del Sur</option>
-                                    <option value="Aklan">Aklan</option>
-                                    <option value="Albay">Albay</option>	
-                                    <option value="Antique">Antique</option>	
-                                    <option value="Apayao">Apayao</option>	
-                                    <option value="Aurora">Aurora</option>	
-                                    <option value="Basilan">Basilan</option>	
-                                    <option value="Bataan">Bataan</option>	
-                                    <option value="Batanes">Batanes</option>	
-                                    <option value="Batangas">Batangas</option>	
-                                    <option value="Benguet">Benguet</option>	
-                                    <option value="Biliran">Biliran</option>	
-                                    <option value="Bohol">Bohol</option>	
-                                    <option value="Bukidnon">Bukidnon</option>	
-                                    <option value="Bulacan">Bulacan</option>	
-                                    <option value="Cagayan">Cagayan</option>	
-                                    <option value="Camarines Norte">Camarines Norte</option>	
-                                    <option value="Camarines Sur">Camarines Sur</option>	
-                                    <option value="Camiguin">Camiguin</option>	
-                                    <option value="Capiz">Capiz</option>	
-                                    <option value="Catanduanes">Catanduanes</option>	
-                                    <option value="Cavite">Cavite</option>	
-                                    <option value="Cebu">Cebu</option>	
-                                    <option value="Cotabato (North)">Cotabato (North)</option>	
-                                    <option value="Davao De Oro">Davao De Oro</option>	
-                                    <option value="Davao del Norte">Davao del Norte</option>	
-                                    <option value="Davao del Sur">Davao del Sur</option>	
-                                    <option value="Davao Occidental">Davao Occidental</option>	
-                                    <option value="Davao Oriental">Davao Oriental</option>	
-                                    <option value="Dinagat Islands">Dinagat Islands</option>	
-                                    <option value="Eastern Samar">Eastern Samar</option>	
-                                    <option value="Guimaras">Guimaras</option>	
-                                    <option value="Ifugao">Ifugao</option>	
-                                    <option value="Ilocos Norte">Ilocos Norte</option>	
-                                    <option value="Ilocos Sur">Ilocos Sur</option>	
-                                    <option value="Iloilo">Iloilo</option>	
-                                    <option value="Isabela">Isabela</option>	
-                                    <option value="Kalinga">Kalinga</option>	
-                                    <option value="La Union">La Union</option>	
-                                    <option value="Laguna">Laguna</option>	
-                                    <option value="Lanao del Norte">Lanao del Norte</option>	
-                                    <option value="Lanao del Sur">Lanao del Sur</option>	<option value="Leyte">Leyte</option>	
-                                    <option value="Maguindanao Del Norte">Maguindanao Del Norte</option>	
-                                    <option value="Maguindanao Del Sur">Maguindanao Del Sur</option>	
-                                    <option value="Marinduque">Marinduque</option>	
-                                    <option value="Masbate">Masbate</option>	
-                                    <option value="Metro Manila">Metro Manila</option>	<option value="Misamis Occidental">Misamis Occidental</option>	
-                                    <option value="Misamis Oriental">Misamis Oriental</option>	
-                                    <option value="Mountain Province">Mountain Province</option>	
-                                    <option value="Negros Occidental">Negros Occidental</option>	
-                                    <option value="Negros Oriental">Negros Oriental</option>	
-                                    <option value="Northern Samar">Northern Samar</option>	<option value="Nueva Ecija">Nueva Ecija</option>	<option value="Nueva Vizcaya">Nueva Vizcaya</option>	<option value="Occidental Mindoro">Occidental Mindoro</option>	
-                                    <option value="Oriental Mindoro">Oriental Mindoro</option>	
-                                    <option value="Palawan">Palawan</option>	
-                                    <option value="Pampanga">Pampanga</option>	
-                                    <option value="Pangasinan">Pangasinan</option>	
-                                    <option value="Quezon Province">Quezon Province</option>	
-                                    <option value="Quirino">Quirino</option>	
-                                    <option value="Rizal">Rizal</option>	
-                                    <option value="Romblon">Romblon</option>	
-                                    <option value="Samar">Samar</option>	
-                                    <option value="Sarangani">Sarangani</option>	
-                                    <option value="Siquijor">Siquijor</option>	
-                                    <option value="Sorsogon">Sorsogon</option>	
-                                    <option value="South Cotabato">South Cotabato</option>	
-                                    <option value="Southern Leyte">Southern Leyte</option>	
-                                    <option value="Sultan Kudarat">Sultan Kudarat</option>	
-                                    <option value ="Sulu">Sulu</option>	
-                                    <option value ="Surigao del Norte">Surigao del Norte</option>	
-                                    <option value="Surigao del Sur">Surigao del Sur</option>	
-                                    <option value="Tarlac">Tarlac</option>	
-                                    <option value="Tawi-Tawi">Tawi-Tawi</option>	
-                                    <option value="Zambales">Zambales</option>	
-                                    <option value="Zamboanga del Norte">Zamboanga del Norte</option>	
-                                    <option value="Zamboanga del Sur">Zamboanga del Sur</option>	
-                                    <option value="Zamboanga Sibugay">Zamboanga Sibugay</option>
-                                </select>
-                                <label for="Municipality" class="input-group-text">Municipality:</label>
-                                <select class="form-control" id="Municipality" name="Municipality" onchange="showBarangaySelection();">
-
-                                </select>
+                                <label for="Barangay" class="input-group-text">Barangay:</label>
+                                <input type="text" class="form-control" id="Barangay">
+                                <label for="municipality" class="input-group-text">Municipality</label>
+                                <input type="text" class="form-control" id="municipality">
                             </div><br>
                             <div class="input-group" mb-3>
-                                <label for="Barangay" class="input-group-text">Barangay:</label>
-                                <select class="form-control" id="Barangay" name="Barangay">
-                                    
-                                </select>
+                                <label for="province" class="input-group-text">Province:</label>
+                                <input type="text" class="form-control" id="province">
                                 <label for="zipCode" class="input-group-text">Postal Code:</label>
-                                <!-- <select class="form-control" id="zipCode" name="zipCode" required> -->
-                                <input type="text" name="zipCode" id="zipCode"> 
-                                <!-- </select> -->
+                                <input type="text" class="form-control" name="zipCode" id="zipCode"> 
                             </div><br>
                         </div>
                 </div>
@@ -276,7 +209,7 @@
             <label class="form-check-label" for="privacy">I agree with the <a href="">Privacy Policy</a>.</label>
         </div>
         <br>
-        <button type="submit" class="btn text-capitalize" style="background-color:#A2DBB7; border-radius:5px; box-shadow:5px 5px grey;" onclick="RegisterAccount();">Register Account</button><br><br>
+        <button type="submit" class="btn text-capitalize" style="background-color:#A2DBB7; border-radius:5px; box-shadow:5px 5px grey;" onclick="addDataToLocalStorage();">Register Account</button><br><br>
         <a href="Login.html"><button type="button" class="btn btn-link text-muted" style="text-decoration:none;">Already have an account? Log in here.</button></a>
     </form>
 </section>   
@@ -339,5 +272,6 @@
 <script src="main.js"></script>
 <script src="cart.js"></script>
 <script src="bestSellerConfirmBasket.js"></script>
+<script src="CustRegistration.js"></script>
 
 </html>

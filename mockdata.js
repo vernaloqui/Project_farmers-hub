@@ -77,7 +77,7 @@ function confirm_gmail(inputText) {
         if(inputText.value.match(format))
         {
             // alert("Valid email address!");
-            window.location.href = "index.html";
+            window.location.href = "Myaccount.html";
             document.ValidForm.ValidText.focus();
         return true;
         } else {

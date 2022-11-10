@@ -3,6 +3,15 @@ let cart = {
 };
 let counter;
 
+// toggle shopping cart visibility
+function toggleCart(){
+    let cartContainer = document.getElementById("cartBox");
+   //  cartContainer.style.display = "block";
+       cartContainer.classList.toggle("active");
+       cartCounter();
+       displayCartItems();
+   }
+
 //save content  inside local storage
 function setLSContent(){
     localStorage.setItem("cart", JSON.stringify(cart));
@@ -31,12 +40,7 @@ function addToCart(addedItem, addedQuantity, addedPrice){
 
     // to avoid user adds the same product twice, check if
     // the product is not in local storage already before adding it
-    // Object.keys(cart).forEach(function(cart) {
-    //     if (cart.item === addedItem) {
-    //       alert("This item is already in your cart.");
-    //       isProductInCart = true;
-    //     }
-    //   });
+   
     for (let i=0; i < cart.length; i++){
       if (cart[i].item == addedItem){
         isProductInCart = true;
@@ -208,12 +212,10 @@ function computeTotal(){
 
 //add to cart button function for the modal
 function addBasketToCart(addedItem, addedQuantity, addedPrice){
-    
+   
     let subtotal;
-    addedItem = addedItem.innerText;
-    addedQuantity = Number(addedQuantity);
-    
-    subtotal = addedPrice * addedQuantity;
+        
+    subtotal = addedPrice;
 
     let isProductInCart = false;
 
@@ -221,12 +223,7 @@ function addBasketToCart(addedItem, addedQuantity, addedPrice){
 
     // to avoid user adds the same product twice, check if
     // the product is not in local storage already before adding it
-    // Object.keys(cart).forEach(function(cart) {
-    //     if (cart.item === addedItem) {
-    //       alert("This item is already in your cart.");
-    //       isProductInCart = true;
-    //     }
-    //   });
+    
     for (let i=0; i < cart.length; i++){
       if (cart[i].item == addedItem){
         isProductInCart = true;
