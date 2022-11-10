@@ -66,20 +66,41 @@ function IndicatorShift(indicator){
             sherbs.style.display = "block";
         break;
     }
+    changeActive(indicator);
 }
 
-function changeActive(){
+function changeActive(indicator){
     let container = document.querySelector('.indicator');
-    let link = container.getElementsByClassName('.nav-link');
-
+    let link = container.children;
+    
     for (let i = 0; i < link.length; i++) {
-        // li[i].children.classList.remove('active');
-        link[i].addEventListener('click', function() {
-            var current = document.getElementsByClassName('active');
-            current[0].className = current[0].className.replace('active', '');
-            this.className += " active";
-            console.log(this.className);
-        });
+        //check which nav-link is active
+        if (link[i].querySelector('.active')){
+            currentActive = link[i].querySelector('.active');
+            activeIndex = i;
+            currentActive.classList.remove('active');
+        
+        }
     }
-    indicator.classList.add('active');
+    //compare current selection with the current active link then change the active one
+    if (indicator != link[activeIndex].querySelector('.nav-link')){
+        
+        switch(indicator){
+            case "Vegetables":
+                link[1].querySelector('.nav-link').classList.add("active");
+            break;
+            case "Fruits":
+                link[2].querySelector('.nav-link').classList.add("active");
+            break;
+            case "Spices and Herbs":
+                link[3].querySelector('.nav-link').classList.add("active");
+            break;
+            case "Best Sellers":
+                link[4].querySelector('.nav-link').classList.add("active");
+            break;
+            default:
+                link[0].querySelector('.nav-link').classList.add("active");
+            break;
+        }
+    }
 }

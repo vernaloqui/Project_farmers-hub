@@ -2,10 +2,64 @@
   font-family:'Poppins', sans-serif;
 }
 /*Nav Bar*/
-.navbar-nav .nav-item .nav-link.active, .indicator .nav-item .nav-link.active{
+.navbar-nav .nav-item .nav-link.active{
   background-color:#A2DBB7;
   color:#073418;
   border: 3px solid #A2DBB7;
+}
+/* farm produce nav links */
+.nav .nav-item .nav-link.active{
+  background-color:#F8FEFA;
+  color:#073418;
+  border: 3px solid #A2DBB7;
+}
+.nav-tabs .nav-link.active{
+  background-color:#A2DBB7;
+  color:#073418;
+  border: 3px solid #A2DBB7;
+}
+.nav-tabs .nav-link{
+  background-color: #fff;
+  color: #A2DBB7;
+  border: 3px solid #A2DBB7;
+}
+.nav-tabs .nav-link:hover{
+  border: 3px solid #073418;
+}
+.nav-tabs {
+  border-bottom: 1px solid #A2DBB7;
+  backdrop-filter: blur (1rem);
+  box-shadow:1.3rem 1.3rem 1.3rem rgba(0,0,0, 0.5);
+  border-top-color: rgba(225, 225, 225, 225, 0.5);
+  border-left-color: rgba(225, 225, 225, 225, 0.5);
+  border-bottom-color: rgba(225, 225, 225, 225, 0.5);
+  border-right-color: rgba(225, 225, 225, 225, 0.5);
+}
+.tab-content{
+  border: 1px solid #A2DBB7;
+  padding: 20px;
+  backdrop-filter: blur (1rem);
+  box-shadow:1.3rem 1.3rem 1.3rem rgba(0,0,0, 0.5);
+  border-top-color: rgba(225, 225, 225, 225, 0.5);
+  border-left-color: rgba(225, 225, 225, 225, 0.5);
+  border-bottom-color: rgba(225, 225, 225, 225, 0.5);
+  border-right-color: rgba(225, 225, 225, 225, 0.5);
+}
+.accordion-button{
+  background-color:rgba(0, 0, 0, 0.2); color:#073418;
+}
+.card{
+  width:18rem;
+  border-radius: 1rem;
+  border: 1px solid #A2DBB7;
+  backdrop-filter: blur (1rem);
+  box-shadow:1.3rem 1.3rem 1.3rem rgba(0,0,0, 0.5);
+  border-top-color: rgba(225, 225, 225, 225, 0.5);
+  border-left-color: rgba(225, 225, 225, 225, 0.5);
+  border-bottom-color: rgba(225, 225, 225, 225, 0.5);
+  border-right-color: rgba(225, 225, 225, 225, 0.5);
+
+  background-color: linear-gradient(to right bottom, rgba(225, 225,225, 0.5), rgba(225,225,225,0.3));
 }
 .card{
   width: 18rem;
@@ -182,24 +236,6 @@
     margin-left: 5%;
 }
 
-/* .text-box h2{
-    font-size: 190px;
-    line-height: 160px;
-    margin-left: -10px;
-    color:transparent;
-    -webkit-text-stroke: 1px #fff;
-    background: url(imglandingPage/back.png);
-    -webkit-background-clip: text;
-    background-position: 0 0;
-    animation: back 20s linear infinite;
-}
-
-@keyframes back{
-    100%{
-        background-position: 2000px 0;
-    }
-} */
-
 .text-box h2 {
   background-image: linear-gradient(
     -225deg,
@@ -315,3 +351,9 @@ input[type='radio']:checked:after {
     border: solid 1px #A2DBB7;
 }
 
+/* logIn form style */
+.logIn{
+  width: 400px;
+  border-color: #A2DBB7;
+  border: 25px;
+}
