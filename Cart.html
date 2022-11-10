@@ -84,17 +84,17 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="Login.html"  style="color:#073418">My Account</a>
                                     </li>
-                                </ul>
-                                <form class="searchCart d-flex ms-auto" role="search">
-                                    <div class="cartNav px-2 justify-content-center me-3" style="float:right;">
-                                    <div class="cartCounter">0</div>
-                                    <a class="nav-link" href="Cart.html"  style="color:#073418">
-                                        <i class="bi bi-cart4" style="font-size:30px;"></i></a>
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="Search" aria-label="search">
-                                    <button type="submit" class="btn btn-outline" style="background-color: #073418; color:#A2DBB7;">Search</button>
-                                </form>                            
+                                </ul>                          
                             </div>
+                            <form class="searchCart d-flex ms-auto" role="search">
+                                <div class="cartNav px-2 justify-content-center me-3" style="float:right;">
+                                <div class="cartCounter">0</div>
+                                <a class="nav-link" href="Cart.html"  style="color:#073418">
+                                    <i class="bi bi-cart4" style="font-size:30px;"></i></a>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Search" aria-label="search">
+                                <button type="submit" class="btn btn-outline" style="background-color: #073418; color:#A2DBB7;">Search</button>
+                            </form>  
         </div>
     </div>
 <!--end of nav bar>-->
@@ -115,10 +115,11 @@
                 <th scope="col" class="text-center">Quantity</th>
                 <th scope="col" >Subtotal</th>
                 <th scope="col" class="text-center"></th>
+                <td scope="col"><button class="btn btn-sm shadow text-uppercase disabled" style="background-color:#A2DBB7; font-family:'Poppins', sans serif;">Remove all</button></td>
             </tr>
             
         </thead>
-        <tbody>
+        <tbody id="cartContentsBody">
             <!-- <tr>
                 <td>
                     <img src="assets/img/sauna package.png" style="width:100px; height:50px;" class="align-self-center">
@@ -134,10 +135,7 @@
                 </td>
                 <td>₱1000.00</td>
                 <td><button class="btn rounded-0"><i class="bi bi-trash3-fill" style="color:#073418;"></i></button></td>
-              </tr>
-              <tr>
-                <td colspan="6" class="text-end"><button class="btn btn-sm shadow text-uppercase disabled" style="background-color:#A2DBB7; font-family:'Poppins', sans serif;">Remove all</button></td>
-              </tr> -->
+              </tr>-->
         </tbody>
         </table>
         <br><br>
@@ -157,7 +155,7 @@
             <div class="col">
                 <br>
                 <!--Summary table-->
-                <table class="table table-bordered table-hover table-striped" id="cartContents">
+                <table class="table table-bordered table-hover table-striped">
                     <thead>
                         <tr class="text-center">
                             <th colspan="2">Cart Totals</th>

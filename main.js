@@ -1,8 +1,12 @@
-//VAR
-let items ={
-    cart: []
-};
-let counter;
+
+// toggle shopping cart visibility
+function toggleCart(){
+ let cartContainer = document.getElementById("cartBox");
+//  cartContainer.style.display = "block";
+    cartContainer.classList.toggle("active");
+    displayCartItems();
+    cartCounter();
+}
 //scroll to top button function
 function backToTop(){
     // When the user scrolls down 20px from the top of the document, show the button
@@ -157,63 +161,13 @@ function decQuantity(qtyInput){
     return qty;
     
 }
-//add to cart button function
-function addToCart(addedItem, addedQuantity, addedPrice){
-    
-    let subtotal;
-    addedItem = addedItem.innerText;
-    addedPrice = addedPrice.innerText;
-    addedQuantity = Number(addedQuantity);
-    
-    subtotal = computeSubtotal(addedPrice, addedQuantity);
 
-    //push the variables into the object items
-    items.cart.push({item: addedItem, quantity: addedQuantity, price: addedPrice, subtotal: subtotal});
-
-    //store the quantity and item name in local storage
-    localStorage.setItem("items", JSON.stringify(items));
-
-    //update the cart counter when an item is added
-    cartCounter();
-    
-}
-
-//compute the subtotal (price times quantity) and return its value
-function computeSubtotal(addedPrice, addedQuantity) {
-    //remove the ₱ from the text and transform the price string into a number ;
-    numPrice = addedPrice.replace(/(\₱)/, "");
-    numPrice = Number(numPrice);
-
-    subtotalAmount = numPrice * addedQuantity;
-
-    subtotal = `₱${subtotalAmount}.00`;
-
-    return subtotal;
-}
-
-//update the cart counter when an item is added
-function cartCounter(){
-    let current = 0;
-    if (items.cart == "") {
-        counter.innerText = 0;
-    }
-    else {
-        items.cart.forEach(function(updateCounter){
-            current += updateCounter.quantity;
-        });
-        counter = document.querySelector(".cartCounter");
-    
-        counter.innerText = current;
-    }
-}
-
-
-//function to change price display of onsale items upon chosing the quantity
-function updateOnsalePrice(){
-    let product = document.getElementsByID("bellpepperSale"); 
-    let salePrice = document.getElementsByID("bellpepperSaleprice").innerText;
-    alert(product);
-    alert(salePrice);
+// //function to change price display of onsale items upon chosing the quantity
+// function updateOnsalePrice(){
+//     let product = document.getElementsByID("bellpepperSale"); 
+//     let salePrice = document.getElementsByID("bellpepperSaleprice").innerText;
+//     alert(product);
+//     alert(salePrice);
     // ;
     // for (const radioButton of radioButtons) {
     //     if (radioButton.checked) {
@@ -238,4 +192,4 @@ function updateOnsalePrice(){
     // localStorage.setItem("items", JSON.stringify(items));
 
     // cartCounter();
-}
+// }
