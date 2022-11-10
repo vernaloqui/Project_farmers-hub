@@ -24,6 +24,7 @@ function selectedBasket() {
   }
 };
 
+
 function countFruits(){
   let piQty = Number(document.getElementById("pineappleQty").value);
   let avQty = Number(document.getElementById("avoQty").value);
@@ -38,6 +39,7 @@ function countFruits(){
   let paQty = Number(document.getElementById("papayaQty").value);
   let orQty = Number(document.getElementById("orangeQty").value);
   let count = [piQty, avQty, apQty, leQty, baQty, drQty, raQty, grQty, maQty, peQty, paQty, orQty];
+
 
   let sum = piQty + avQty + apQty + leQty + baQty + drQty + raQty + grQty + maQty + peQty + paQty + orQty;
 
