@@ -15,15 +15,15 @@ function addDataToLocalStorage() {
   let email = document.getElementById('email').value;
   let password = document.getElementById('password').value;
   let confirmpassword = document.getElementById('confirmpassword').value;
-  let firstName = document.getElementById('firstName').value;
-  let middleName = document.getElementById('middleName').value;
-  let lastName = document.getElementById('lastName').value;
+  let firstName = document.getElementById('fName').value;
+  let middleName = document.getElementById('mName').value;
+  let lastName = document.getElementById('lName').value;
   let dateOfBirth = document.getElementById('dob').value;
   let phoneNumber = document.getElementById('phoneNum').value;
   let address1 = document.getElementById('Address1').value;
   let address2 = document.getElementById('Address2').value;
   let pRovince = document.getElementById('province').value;
-  let mUnicipality = document.getElementById('Municipality').value;
+  let mUnicipality = document.getElementById('municipality').value;
   let bArangay = document.getElementById('Barangay').value;
   let zipCode = document.getElementById('zipCode').value;
   let pRivacy = document.getElementById('privacy').checked;
@@ -32,11 +32,11 @@ function addDataToLocalStorage() {
   let isDataInArray = false;
 
 // <--if one of the required field is null/unchecked, then registration will not proceed:-->
-  if ((email == "") || (password == "") || (confirmpassword) || (firstName == "") || (middleName == "") || (lastName == "") || (dateOfBirth == "") || (phoneNumber == "") || (address1 == "") || (address2 == "") || (pRovince == "") || (mUnicipality == "") || (bArangay == "") || (zipCode == "") || (pRivacy == "false") || (tErms == "false")) {
-    alert("Fill-up required data to register.");
+  // if ((email == "") || (password == "") || (confirmpassword) || (firstName == "") || (middleName == "") || (lastName == "") || (dateOfBirth == "") || (phoneNumber == "") || (address1 == "") || (address2 == "") || (pRovince == "") || (mUnicipality == "") || (bArangay == "") || (zipCode == "") || (pRivacy == "false") || (tErms == "false")) {
+  //   alert("Fill-up required data to register.");
     
-  }
-  else {
+  // }
+  // else {
       registeredUsers = getDataFromLocalStorage();
 
         for (let i=0; i < registeredUsers.length; i++) {
@@ -114,4 +114,4 @@ function addDataToLocalStorage() {
         }
 
       }
-}
+    // }
