@@ -4,18 +4,19 @@ function selectedBasket() {
   let lBasket = document.getElementById("largeBasket").checked;
 
   if (sBasket == true) {
-    document.getElementById("sizeFruitBasket").innerHTML = "Small Basket";
-    smallBasketQty();
+    console.log(sBasket);
+    return "small";
   }
 
   else if (mBasket == true) {
-    document.getElementById("sizeFruitBasket").innerHTML = "Medium Basket";
-    mediumBasketQty();
+    console.log(mBasket);
+    return "medium";
   }
  
   else if (lBasket == true) {
-    document.getElementById("sizeFruitBasket").innerHTML = "Large Basket";
-    largeBasketQty();
+    // document.getElementById("sizeFruitBasket").innerHTML = "Large Basket";
+    // largeBasketQty();
+    return "large";
   }
 
   else {
@@ -23,91 +24,106 @@ function selectedBasket() {
   }
 };
 
-function smallBasketQty() {
-  let spiQty = document.getElementById("pineappleQty").value;
-  let savQty = document.getElementById("avoQty").value;
-  let sapQty = document.getElementById("appleQty").value;
-  let sleQty = document.getElementById("lemonQty").value;
-  let sbaQty = document.getElementById("bananaQty").value;
-  let sdrQty = document.getElementById("dragonQty").value;
-  let sraQty = document.getElementById("rambutanQty").value;
-  let sgrQty = document.getElementById("grapesQty").value;
-  let smaQty = document.getElementById("mangoQty").value;
-  let speQty = document.getElementById("pearQty").value;
-  let spaQty = document.getElementById("papayaQty").value;
-  let sorQty = document.getElementById("orangeQty").value;
+function countFruits(){
+  let piQty = Number(document.getElementById("pineappleQty").value);
+  let avQty = Number(document.getElementById("avoQty").value);
+  let apQty = Number(document.getElementById("appleQty").value);
+  let leQty = Number(document.getElementById("lemonQty").value);
+  let baQty = Number(document.getElementById("bananaQty").value);
+  let drQty = Number(document.getElementById("dragonQty").value);
+  let raQty = Number(document.getElementById("rambutanQty").value);
+  let grQty = Number(document.getElementById("grapesQty").value);
+  let maQty = Number(document.getElementById("mangoQty").value);
+  let peQty = Number(document.getElementById("pearQty").value);
+  let paQty = Number(document.getElementById("papayaQty").value);
+  let orQty = Number(document.getElementById("orangeQty").value);
+  let count = [piQty, avQty, apQty, leQty, baQty, drQty, raQty, grQty, maQty, peQty, paQty, orQty];
 
-  let stQty = Number(spiQty) + Number(savQty) + Number(sapQty) + Number(sleQty) + Number(sbaQty) + Number(sdrQty) + Number(sraQty) + Number(srQty) + Number(smaQty) + Number(speQty) + Number(spaQty) + Number(sorQty);
+  let sum = piQty + avQty + apQty + leQty + baQty + drQty + raQty + grQty + maQty + peQty + paQty + orQty;
 
-  if (stQty < 7) {
-    alert("Minimum basket quantity needed is 7 PCs to checkout.");
-    document.getElementById("quantityFruitBasket").innerHTML = (stQty + " PCS");
-    document.getElementById("modalFruitBasketAddToCart").setAttribute('disabled', true);
+  let fruit = {
+     count,
+     sum 
   }
-
-  else {
-    document.getElementById("modalFruitBasketAddToCart").removeAttribute('disabled');
-    document.getElementById("quantityFruitBasket").innerHTML = (stQty + " PCS");
-    
-  }
-};
-
-function mediumBasketQty() {
-  let mpiQty = document.getElementById("pineappleQty").value;
-  let mavQty = document.getElementById("avoQty").value;
-  let mapQty = document.getElementById("appleQty").value;
-  let mleQty = document.getElementById("lemonQty").value;
-  let mbaQty = document.getElementById("bananaQty").value;
-  let mdrQty = document.getElementById("dragonQty").value;
-  let mraQty = document.getElementById("rambutanQty").value;
-  let mgrQty = document.getElementById("grapesQty").value;
-  let mmaQty = document.getElementById("mangoQty").value;
-  let mpeQty = document.getElementById("pearQty").value;
-  let mpaQty = document.getElementById("papayaQty").value;
-  let morQty = document.getElementById("orangeQty").value;
-  
-  let mtQty = Number(mpiQty) + Number(mavQty) + Number(mapQty) + Number(mleQty) + Number(mbaQty) + Number(mdrQty) + Number(mraQty) + Number(mgrQty) + Number(mmaQty) + Number(mpeQty) + Number(mpaQty) + Number(morQty);
-  
-  if (mtQty < 10) {
-    alert("Minimum basket quantity needed is 10 PCs to checkout.");
-    document.getElementById("quantityFruitBasket").innerHTML = (mtQty + " PCS");
-    document.getElementById("modalFruitBasketAddToCart").setAttribute('disabled', true);
-  }
-  
-  else {
-    document.getElementById("modalFruitBasketAddToCart").removeAttribute('disabled');
-    document.getElementById("quantityFruitBasket").innerHTML = (mtQty + " PCS");
-      
-  }
-  
-};
-
-function largeBasketQty() {
-  let lpiQty = document.getElementById("pineappleQty").value;
-  let lavQty = document.getElementById("avoQty").value;
-  let lapQty = document.getElementById("appleQty").value;
-  let lleQty = document.getElementById("lemonQty").value;
-  let lbaQty = document.getElementById("bananaQty").value;
-  let ldrQty = document.getElementById("dragonQty").value;
-  let lraQty = document.getElementById("rambutanQty").value;
-  let lgrQty = document.getElementById("grapesQty").value;
-  let lmaQty = document.getElementById("mangoQty").value;
-  let lpeQty = document.getElementById("pearQty").value;
-  let lpaQty = document.getElementById("papayaQty").value;
-  let lorQty = document.getElementById("orangeQty").value;
-
-  let ltQty = Number(lpiQty) + Number(lavQty) + Number(lapQty) + Number(lleQty) + Number(lbaQty) + Number(ldrQty) + Number(lraQty) + Number(lgrQty) + Number(lmaQty) + Number(lpeQty) + Number(lpaQty) + Number(lorQty);
-
-  if (ltQty < 15) {
-    alert("Minimum basket quantity needed is 15 PCs to checkout.");
-    document.getElementById("quantityFruitBasket").innerHTML = (ltQty + " PCS");
-    document.getElementById("modalFruitBasketAddToCart").setAttribute('disabled', true);
-  }
-
-  else {
-    document.getElementById("modalFruitBasketAddToCart").removeAttribute('disabled');
-    document.getElementById("quantityFruitBasket").innerHTML = (ltQty + " PCS");
-    
-  }
+  return fruit;
 }
 
+
+
+function printFruitBasket(){
+  
+  let table = document.getElementById("BasketTable");
+  var rowCount = table.rows.length;
+  let size = selectedBasket();
+  let fruits = ["Pineapple", "Avocado", "Apple", "Lemon", "Banana", "Dragonfruit", "Rambutan", "Grapes", "Mango", "Pear", "Papaya", "Orange"];
+  let button = document.getElementById("addCart");
+  let priceS = document.getElementById("smallPrice").innerText;
+  let priceM = document.getElementById("mediumPrice").innerText;
+  let priceL = document.getElementById("largePrice").innerText;
+
+  fruitObject = countFruits();
+
+  countArray = fruitObject.count;
+  sum = fruitObject.sum;
+  // console.log(sum);
+
+  for (var i = rowCount - 1; i > 0; i--) {
+    table.deleteRow(i);
+  }
+  
+  for (let i = 0; i < 12; i++){
+    if (countArray[i] !== 0){
+    let row = table.insertRow();
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    cell1.textContent = fruits[i];
+    cell2.textContent = countArray[i];
+    }
+  }
+ console.log(document.getElementById("smallPrice").innerText);
+  switch (size){
+    case "small":
+      if(sum === 7){
+        document.getElementById("basketSize").innerHTML = `Your fruits basket size is: <strong>${size}</strong>`;
+        button.style.display = "block";
+        button.onclick = function() { addBasketToCart(`${size} basket, 1, ${priceS}`) };
+        document.getElementById("price").innerHTML = `<strong>Total: ${priceS}</strong>`;
+
+      }  
+      else {
+        document.getElementById("basketSize").innerHTML = `Your fruits basket size is: <strong>${size}</strong>. Please select <strong>exactly 7 fruits</strong> in order to proceed.`;
+        button.style.display = "none";
+
+      }
+    break;
+
+    case "medium":
+      if(sum === 10){
+        document.getElementById("basketSize").innerHTML = `Your fruits basket size is: <strong>${size}</strong>`;
+        button.style.display = "block";
+        button.onclick = function() { addToCart(`${size}, 1, ${priceM}`) };
+        document.getElementById("price").innerHTML = `<strong>Total: ${priceM}</strong>`;
+
+      }  
+      else {
+        document.getElementById("basketSize").innerHTML = `Your fruits basket size is: <strong>${size}</strong>. Please select <strong>exactly 10 fruits</strong> in order to proceed.`;
+        button.style.display = "none";
+      }
+    break;
+
+    case "large":
+      if(sum === 15){
+        document.getElementById("basketSize").innerHTML = `Your fruits basket size is: <strong>${size}</strong>`;
+        button.style.display = "block";
+        button.onclick = function() { addToCart(`${size}, 1, ${priceL}`) };
+        document.getElementById("price").innerHTML = `<strong>Total: ${priceL}</strong>`;
+
+      }  
+      else {
+        document.getElementById("basketSize").innerHTML = `Your fruits basket size is: <strong>${size}</strong>. Please select <strong>exactly 15 fruits</strong> in order to proceed.`;
+        button.style.display = "none";
+      }
+    break;
+  }  
+  
+}
