@@ -38,16 +38,18 @@ function RegisterPartner(){
     const partner = {
     
     };
-    
+    let confirmation = document.getElementById("confirmation");
     itemsToSell = [veges, fruits, spices]
     let chosenItems = [];
     let preferredPayment;
 
-    console.log(emailNew);
-    console.log(pw1);
-
     let isDataInArray = false;
 
+    if ((email == "") || (pw1 == "") || (pw2 =="") || (firstName == "") || (midName == "") || (lastName == "") || (Bdate == "") || (CPnum == "") || (HouseNum == "") || (Street == "") || (province == "") || (city == "") || (brgy == "") || (zip == "") || (privy == "false") || (tandC == "false")) {
+        alert("Fill-up required data to register.");
+        
+      }
+    else {
     partner = getDataFromLocalStorage();
 
         for (let i=0; i < partner.length; i++) {
@@ -95,7 +97,11 @@ function RegisterPartner(){
                         Items: chosenItems,
                         Payment: preferredPayment
                     });
-            alert("You have successfully created a farmer partner account.");
-            localStorage.setItem("partner", JSON.stringify(partner));
+            console.log("You have successfully created a farmer partner account.");
+            document.getElementById("confirmation").innerHTML = `
+          <p class="display-6" style="color:#073418;">You have successfully created a farmer partner account.</p>
+          <a href="Login.html"><button type="button" class="btn" style="background-color:#A2DBB7; border-radius:5px; box-shadow:5px 5px grey;">Log in here</button></a>`;
+          setDataToLocalStorage();
         }
+    }
 }
