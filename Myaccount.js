@@ -20,7 +20,7 @@ function add() {
   sessionStorage.setItem("userDOB", JSON.stringify(inputDOB));
   sessionStorage.setItem("userPhoneNum", JSON.stringify(inputPhoneNum));
 
-}
+};
 
 function getPic() {
   let reader = new FileReader();
@@ -29,16 +29,16 @@ function getPic() {
     sessionStorage.setItem("userProfilePic", reader.result);
     showProfilePic();
 })
-reader.readAsDataURL(target.files[0]);
+reader.readAsDataURL(event.target.files[0]); //put back event.
 
-}
+};
 
 function showProfilePic() {
   let profilePic = document.getElementById("profilePic");
   let profilePicURL = sessionStorage.getItem("userProfilePic");
   profilePic.innerHTML = "<img src='" + profilePicURL +"'style='width: 100px;'>";
 
-}
+};
 
 
 //Address Tab Pane
@@ -54,7 +54,7 @@ function applyEditAdd() {
   else {
     alert("Please input data.")
   }
-}
+};
 
 function applyEditAddS() {
   let sAddressEdit = document.getElementById("sAddress");
