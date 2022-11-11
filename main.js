@@ -161,34 +161,3 @@ function toggleCart(){
        
    }
    
-   // //function to change price display of onsale items upon chosing the quantity
-   // function updateOnsalePrice(){
-   //     let product = document.getElementsByID("bellpepperSale"); 
-   //     let salePrice = document.getElementsByID("bellpepperSaleprice").innerText;
-   //     alert(product);
-   //     alert(salePrice);
-       // ;
-       // for (const radioButton of radioButtons) {
-       //     if (radioButton.checked) {
-       //         selectedKilo = radioButton.value;
-       //         break;
-       //     }
-       // }
-       // alert(selectedKilo);
-       // switch (selectedKilo.innerText) {
-       //     case 'on': 
-       //         document.getElementById("bellpepperSaleprice").innerHTML = '₱100.00'; 
-       //         break;
-       //     case '5kgs': 
-       //         document.getElementById("bellpepperSaleprice").innerHTML = '₱200.00'; 
-       //         break;
-       //     case '8kgs': 
-       //         document.getElementById("bellpepperSaleprice").innerHTML = '₱300.00'; 
-       //         break;
-       // }
-       // items.cart.push({item: product, quantity: selectedKilo.innerText, price: salePrice});
-   
-       // localStorage.setItem("items", JSON.stringify(items));
-   
-       // cartCounter();
-   // }

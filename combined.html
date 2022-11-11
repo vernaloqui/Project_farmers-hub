@@ -89,7 +89,7 @@
                                 <li><a href="combined.html#miswa">Miswa</a></li>
                                 <li><a href="combined.html#Munggo">Monggo</a></li>
                             
-                                <li><a href="combined.html#Kare">Kare-Kare</a></li>
+                                <li><a href="combined.html#Kare">Kare Kare</a></li>
                               
                                 <li><a href="combined.html#pineappleQty">Pineapple</a></li>
                                 <li><a href="combined.html#avocado">Avocado</a></li>
@@ -160,7 +160,7 @@
                         
     <div class="cartNav px-2 justify-content-center me-3" style="float:right;">
         <div class="cartCounter"></div>
-            <a class="nav-link"   style="color:#073418" onclick="toggleCart(id);">
+            <a class="nav-link"   style="color:#073418" onclick="toggleCart();">
             <i class="bi bi-cart4" style="font-size:30px;"></i></a>
         <!--Start of Shopping Cart section-->
         <div class="shoppingCartContainer" id="cartBox">
@@ -178,7 +178,7 @@
             </table>
             <p class="total-container" id="total-price"></p>
             <button type="submit" class="btn btn-sm text-uppercase" style="background-color: #073418; color:#A2DBB7;"><a href="CheckOut.html">Checkout</a></button>
-            <button class="btn btn-sm shadow text-uppercase" style="background-color: #073418; color:#A2DBB7;" onclick="clearCart(id);">Remove all</button>
+            <button class="btn btn-sm shadow text-uppercase" style="background-color: #073418; color:#A2DBB7;" onclick="clearCart();">Remove all</button>
             <p id="cartEmpty" style="display:none;">Your cart is empty.</p>                        
         </div>
     </div>
@@ -214,10 +214,10 @@
 </div>
 <br>
        
-<section class="container-fluid border-bottom border-success p-2">
-    <div class="row">
+<!-- <section class="container-fluid border-bottom border-success p-2">
+    <div class="row"> -->
         <!--Location Filter-->
-        <div class="col text-start">
+        <!-- <div class="col text-start">
             <label class="text-uppercase">buy from within</label>
             <select id="sortCategory">
                 <option value="Anywhere">Anywhere</option>
@@ -239,9 +239,9 @@
                 <option value="CAR">CAR</option>
                 <option value="Bangsamoro">Bangsamoro</option>
             </select>
-        </div>
+        </div> -->
         <!--Start of Sort section-->
-        <div class="col text-end mx-3">
+        <!-- <div class="col text-end mx-3">
             <label class="text-uppercase">sort by </label>
             <select id="sortCategory">
                 <option value="Alphabetically ascend">Alphabetically, A-Z</option>
@@ -250,10 +250,10 @@
                 <option value="Price low">Price, low to high</option>
                 <option value="Price high">Price, high to low</option>
             </select>
-        </div>
-        <!--End of Sort section-->
+        </div> -->
+        <!-- End of Sort section
     </div>
-</section>
+</section> -->
     <br>
 
 <!--Start of Products Gallery-->
@@ -1050,7 +1050,7 @@
                         <img src="img/karekare.jpg" class="card-img img-thumbnail">
                     </div> 
                     <div class="card-body">   
-                        <h5 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);" id="Kare">Kare-Kare</h5> 
+                        <h5 class="card-title text-center" style="background: rgba(0, 0, 0, 0.1);" id="Kare">Kare Kare</h5> 
                         <p class="card-text" id="KarePrice">₱50.00</p>
                     </div> 
                     <div class="card-footer d-flex flex-column justify-content-between">
