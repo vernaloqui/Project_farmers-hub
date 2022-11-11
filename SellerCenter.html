@@ -53,9 +53,6 @@
                                         <a class="nav-link active" href="combined.html"  style="color:#073418;">Farm Produce</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="OnSale.html"  style="color:#073418;">On Sale</a>
-                                    </li>
-                                    <li class="nav-item">
                                         <a class="nav-link" href="Login.html"  style="color:#073418">My Account</a>
                                     </li>
                                     <li class="nav-item">
@@ -67,9 +64,90 @@
                                 </ul>
                             </div>
                             <form class="searchCart d-flex ms-auto" role="search">
-                                <input type="text" class="form-control" placeholder="Search" aria-label="search">
-                                <button type="submit" class="btn btn-outline" style="background-color: #073418; color:#A2DBB7;">Search</button>
+                                <input type="text"  onkeyup="SearchBar()"  id="userInput" class="form-control" placeholder="Search" aria-label="search">
+                                <button type="submit" onclick="SearchBar()" class="btn btn-outline" style="background-color: #073418; color:#A2DBB7;">Search</button>
                             </form>  
+                                                    <!-- display none style="display:none"-->  
+                                                    <div >
+                                                    <ul id="listOfproducts">
+                                                        <li><a href="combined.html#pakbet">Pakbet</a></li>
+                                                        <li><a href="combined.html#chopseuy">Chop Seuy</a></li>
+                                                      
+                                                        <li><a href="combined.html#sigangGabi">Sinigang with Gabi</a></li>
+                                                        <li><a href="combined.html#Sigang">Seafood Sinigang</a></li>
+                                                      
+                                                        <li><a href="combined.html#Laga">Nilaga or Bulalo</a></li>
+                                                        <li><a href="combined.html#miswa">Miswa</a></li>
+                                                        <li><a href="combined.html#Munggo">Monggo</a></li>
+                                                    
+                                                        <li><a href="combined.html#Kare">Kare-Kare</a></li>
+                                                      
+                                                        <li><a href="combined.html#pineappleQty">Pineapple</a></li>
+                                                        <li><a href="combined.html#avocado">Avocado</a></li>
+                                                      
+                                                        <li><a href="combined.html#lemonQty">Lemon</a></li>
+                                                        <li><a href="combined.html#lacatan">Banana</a></li>
+                                                        <li><a href="combined.html#dragon">Dragon Fruit</a></li>
+                                                                                       
+                                                        <li><a href="combined.html#rambutanQty">Rambutan</a></li>
+                                                        <li><a href="combined.html#grapesQty">Grapes</a></li>
+                                                        <li><a href="combined.html#mangoQty">Mango</a></li>
+                                                    
+                                                        <li><a href="combined.html#pearQty">Pear</a></li>
+                                                        <li><a href="combined.html#papaya">Papaya</a></li>
+                                                        <li><a href="combined.html#cucumSalad">Cucumber Salad</a></li>
+                                                        <li><a href="combined.html#talongSalad">Ensaladang Talong</a></li>
+                                                    
+                                                        <li><a href="combined.html#greenSalad">Green Salad</a></li>
+                                                        <li><a href="combined.html#Pantry">Pantry Essentials</a></li>
+                                                        
+                                                        <li><a href="combined.html#Patola">Patola</a></li>
+                                                        <li><a href="combined.html#Pechay">Pechay</a></li>
+                
+                                                        <li><a href="combined.html#PechayB">Pechay Baguio</a></li>
+                                                        <li><a href="combined.html#Potato">Potato Large</a></li>
+                                                        <li><a href="combined.html#PotatoM">Potato Meduim</a></li>
+                
+                                                        <li><a href="combined.html#Saluyot">Saluyot</a></li>
+                                                        <li><a href="combined.html#Radish">Radish</a></li>
+                                                        <li><a href="combined.html#MarblePotato">Potato Marble</a></li>
+                
+                                                        <li><a href="combined.html#sayote">Sayote</a></li>
+                                                        <li><a href="combined.html#sigarilyas">Sigarilyas</a></li>
+                                                        <li><a href="combined.html#labuyo">Sili Labuyo</a></li>
+                
+                                                        <li><a href="combined.html#latundan">Banana Latundan</a></li>
+                                                        <li><a href="combined.html#lacatan">Banana Lacatan</a></li>
+                                                        
+                                                        <li><a href="combined.html#atis">Atis</a></li>
+                                                        <li><a href="combined.html#chico">Chico</a></li>
+                                                        <li><a href="combined.html#calamansi">Calamansi</a></li>
+                
+                                                        <li><a href="combined.html#buko">Buko</a></li>
+                                                        <li><a href="combined.html#senorita">Banana Senorita</a></li>
+                                                        <li><a href="combined.html#corn">Corn</a></li>
+                
+                                                        <li><a href="combined.html#cucumber">Cucumber</a></li>
+                                                        <li><a href="combined.html#dalandan">Dalandan</a></li>
+                                                        
+                                                        <li><a href="combined.html#laurel">Laurel</a></li>
+                                                        <li><a href="combined.html#cilantro">Cilantro</a></li>
+                                                        <li><a href="combined.html#chives">Chives/a></li>
+                
+                                                        <li><a href="combined.html#basil">Basil</a></li>
+                                                        <li><a href="combined.html#seasalt">Sea Salt</a></li>
+                                                        <li><a href="combined.html#honey">Pure Honey</a></li>
+                
+                                                        <li><a href="combined.html#mint">Mint leaves</a></li>
+                                                        <li><a href="combined.html#himalayan">Himalayan Salt</a></li>
+                                                        <li><a href="combined.html#peppercorn">Pamintang Buo</a></li>
+                
+                                                        <li><a href="combined.html#turmeric">Turmeric Powder</a></li>
+                                                        <li><a href="combined.html#tanglad">Tanglad</a></li>
+                                                        <li><a href="combined.html#anise">Star Anise</a></li>
+                                                    
+                                                      </ul>
+                                                    </div> 
                                                 
                             <div class="cartNav px-2 justify-content-center me-3" style="float:right;">
                                 <div class="cartCounter"></div>
@@ -90,7 +168,7 @@
                                         <tbody id="cartContentsBody"></tbody>
                                     </table>
                                     <p class="total-container" id="total-price"></p>
-                                    <button type="submit" class="btn btn-sm text-uppercase" style="background-color: #073418; color:#A2DBB7;">Checkout</button>
+                                    <button type="submit" class="btn btn-sm text-uppercase" style="background-color: #073418; color:#A2DBB7;"><a href="CheckOut.html">Checkout</a></button>
                                     <button class="btn btn-sm shadow text-uppercase" style="background-color: #073418; color:#A2DBB7;" onclick="clearCart(id);">Remove all</button>
                                     <p id="cartEmpty" style="display:none;">Your cart is empty.</p>                        
                                 </div>
@@ -236,4 +314,5 @@
 <script src="main.js"></script>
 <script src="cart.js"></script>
 <script src="bestSellerConfirmBasket.js"></script>
+<script src="search.js"></script>
 </html>
