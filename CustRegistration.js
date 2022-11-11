@@ -28,15 +28,16 @@ function addDataToLocalStorage() {
   let zipCode = document.getElementById('zipCode').value;
   let pRivacy = document.getElementById('privacy').checked;
   let tErms = document.getElementById('tandC').checked;
-
+  let confirmation = document.getElementById("confirmation");
   let isDataInArray = false;
+ 
 
-// <--if one of the required field is null/unchecked, then registration will not proceed:-->
-  // if ((email == "") || (password == "") || (confirmpassword) || (firstName == "") || (middleName == "") || (lastName == "") || (dateOfBirth == "") || (phoneNumber == "") || (address1 == "") || (address2 == "") || (pRovince == "") || (mUnicipality == "") || (bArangay == "") || (zipCode == "") || (pRivacy == "false") || (tErms == "false")) {
-  //   alert("Fill-up required data to register.");
+// if one of the required field is null/unchecked, then registration will not proceed:-->
+  if ((email == "") || (password == "") || (confirmpassword =="") || (firstName == "") || (middleName == "") || (lastName == "") || (dateOfBirth == "") || (phoneNumber == "") || (address1 == "") || (address2 == "") || (pRovince == "") || (mUnicipality == "") || (bArangay == "") || (zipCode == "") || (pRivacy == "false") || (tErms == "false")) {
+    alert("Fill-up required data to register.");
     
-  // }
-  // else {
+  }
+  else {
       registeredUsers = getDataFromLocalStorage();
 
         for (let i=0; i < registeredUsers.length; i++) {
@@ -69,49 +70,15 @@ function addDataToLocalStorage() {
             
             }
           );
-
+          
+          console.log(confirmation);
+          document.getElementById("confirmation").innerHTML = `
+          <p class="display-6" style="color:#073418;">You have successfully created an account.</p>
+          <a href="Login.html"><button type="button" class="btn" style="background-color:#A2DBB7; border-radius:5px; box-shadow:5px 5px grey;">Log in here</button></a>
+          <a href="combined.html"><button type="button" class="btn" style="background-color:#A2DBB7; border-radius:5px; box-shadow:5px 5px grey;">Continue Shopping</button></a>`;
         setDataToLocalStorage();
-          alert("You are now registered!")
-        //registeredUsersCounter();
-        //displayregisteredUsers();
-      
-        }
-      };
-
-      function registeredUsersCounter() {
-        let current = 0;
-        let counter;
-
-        registeredUsers = getDataFromLocalStorage();
-
-        if (registeredUsers.length === 0) {
-            //counter = document.querySelector(".cartCounter");
-        
-            //counter.innerText = 0;
-            counter = 0;
-        }
-        else {
-          registeredUsers.forEach(function(updateCounter){
-                current += updateCounter.quantity;
-            });
-            //counter = document.querySelector(".cartCounter");
-        
-            //counter.innerText = current;
-            counter = current;
-        }
-      };
-
-      function displayregisteredUsers() {
-        registeredUsers = getDataFromLocalStorage();
-
-        if (registeredUsers.length == 0) {
-          alert('No list of registered users..');
-        }
-
-        else if (registeredUsers.length !== 0) {
-          getDataFromLocalStorage()
         
         }
-
       }
-    // }
+    
+    }
