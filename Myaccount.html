@@ -190,20 +190,27 @@
                 <div class="row border g-0 shadow-sm">
                     <h3 class="mb-3">My Profile</h3>
                     <div class="col-3 d-block">
-                        <img src="img/logo.png" class="img-thumbnail h-25" style="width:500px; height:300px;">
+                        
+                        <!--Put in Div-->
+                        <div id="profilePic">
+                            <img src="img/logo.png" class="img-thumbnail h-25" style="width:500px; height:300px;">
+                        </div>
+
                         <div class="input-group">
                             <label class="input-group-text" for="inputGroupFile" style="cursor:pointer;">Change photo</label>
-                            <input type="file" class="form-control" id="inputGroupFile" style="display: none;">
+                            <input type="file" class="form-control" id="inputGroupFile" style="display: none;" onchange="getPic();">
                         </div>
                     </div>
                     <div class="col-9 p-4">
                         <div class="input-group" mb-3>
                             <span class="input-group-text" id="fName">First Name:</span>
-                            <input type="text" class="form-control" id="fName">
+                            <input type="text" class="form-control" id="firstName"> <!--input id change fName to firstName-->
                             <span class="input-group-text" id="mName">Middle Initial:</span>
-                            <input type="text" class="form-control" id="mName">
+                            <input type="text" class="form-control" id="middleName">
+                            <!--input id change mName to middleName-->
                             <span class="input-group-text" id="lName">Last Name:</span>
-                            <input type="text" class="form-control" id="lName">
+                            <input type="text" class="form-control" id="lastName">
+                            <!--input id change lName to lastName-->
                         </div><br>
                         <div class="input-group" mb-3>
                             <label for="date" class="input-group-text">Date of Birth:</label>
@@ -213,7 +220,7 @@
                             <label for="phoneNum" class="input-group-text">Cellphone number:</label>
                             <input type="tel" class="form-control" id="phoneNum" placeholder="09XXXXXXXXX" maxlength="11" minlength="11">
                         </div><br>
-                        <button type="submit" class="btn btn-info text-capitalize btn-sm">Save Changes</button>
+                        <button type="submit" class="btn btn-info text-capitalize btn-sm" onclick="add();">Save Changes</button>
                     </div>
                     
                 </div>
@@ -377,4 +384,5 @@
 <script src="cart.js"></script>
 <script src="bestSellerConfirmBasket.js"></script>
 <script src="search.js"></script>
+<script src="Myaccount.js"></script>
 </html>
