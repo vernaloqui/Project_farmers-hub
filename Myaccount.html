@@ -147,7 +147,10 @@
                 <div class="row border g-0 shadow-sm">
                     <div class="col p-4">
                         <h3 class="mb-3">Banks and Cards</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum rem soluta eveniet odio quibusdam esse doloribus eligendi nobis dignissimos, facere, suscipit eaque fugit magni asperiores, neque repellat molestiae tempore voluptatum?</p>
+                        <p>Registered Account:</p> <br>
+                        <p>Bank:  BPI</p>
+                        <p>Account Name:  John Doe</p>
+                        <p>Account No.:  55** *** ****</p>
                     </div>
                     <div class="col-auto">
                         <img src="img/about 2.png" class="img-thumbnail" style="width:500px; height:300px;">
@@ -159,19 +162,19 @@
                     <div class="col p-4 ">
                         <h3 class="mb-3">Addresses</h3>
                         <p class="fw-bold">Current Address: </p>
-                        <label> 253 M.L. Quezon Street,
+                        <label id="cAddress"> 253 M.L. Quezon Street,
                             Santo Niño Tukuran
                             7019 Zamboanga del Sur,
                             Philippines</label>
-                        <button class="btn btn-link" data-bs-toggle="modal" 
+                        <button id="cAdd" class="btn btn-link" data-bs-toggle="modal" 
                         data-bs-target="#editAddress">Edit Address</button>
                         <br>
                         <p class="fw-bold">Shipping Address: </p>
-                        <label> 253 M.L. Quezon Street,
+                        <label id="sAddress"> 253 M.L. Quezon Street,
                             Santo Niño Tukuran
                             7019 Zamboanga del Sur,
                             Philippines</label>
-                        <button class="btn btn-link" data-bs-toggle="modal" 
+                        <button id="sAdd" class="btn btn-link" data-bs-toggle="modal" 
                         data-bs-target="#editAddress">Edit Address</button>
                     </div>
                 </div>
@@ -180,7 +183,8 @@
                 <div class="row border g-0 shadow-sm">
                     <div class="col p-4">
                         <h3 class="mb-3">Purchases</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum rem soluta eveniet odio quibusdam esse doloribus eligendi nobis dignissimos, facere, suscipit eaque fugit magni asperiores, neque repellat molestiae tempore voluptatum?</p>
+                        <p>You don't have any purchase yet.</p>
+                        <p>Please see our produce now.</p>
                     </div>
                     <div class="col-auto">
                         <img src="img/about 2.png" class="img-thumbnail" style="width:500px; height:300px;">
@@ -191,7 +195,8 @@
                 <div class="row border g-0 shadow-sm">
                     <div class="col p-4">
                         <h3 class="mb-3">Messages</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum rem soluta eveniet odio quibusdam esse doloribus eligendi nobis dignissimos, facere, suscipit eaque fugit magni asperiores, neque repellat molestiae tempore voluptatum?</p>
+                        <p>Thank you for patronizing our platform.</p>
+                        <p>It's a pleasure to serve you.</p>
                     </div>
                     <div class="col-auto">
                         <img src="img/about 2.png" class="img-thumbnail" style="width:500px; height:300px;">
@@ -205,6 +210,7 @@
 
     <br>
 
+    <!--Edit current address-->
     <!--Edit Address Modal-->
     <div class="modal fade" id="editAddress" tabindex="-1">
         <div class="modal-dialog"> <!--dialog box-->
@@ -226,18 +232,61 @@
                 <p class="fst-italic">Input your new address so we can update it.</p>
                 <div class="input-group" mb-3>
                     <span class="input-group-text" id="address">Address:</span>
-                    <input type="text-area" class="form-control" id="address">
+                    <input type="text-area" class="form-control" id="addressaddressInput">
                 </div>
             </div>
              <!--End of modal body-->
              <!--start of modal footer-->
              <div class="modal-footer">
                 <button class="btn btn-info"
-                        type="submit">
+                        type="submit" onclick="applyEditAdd();">
                         OK
                 </button>
                 <button class="btn btn-info"
-                        type="button">
+                        type="button" data-bs-dismiss="modal">
+                        Cancel
+                </button>
+            </div>
+             <!--End of modal footer-->
+            </div>
+        </div>
+    </div>
+    <!--End of edit Address Modal-->
+
+    <!--Edit shipping address-->
+    <!--Edit Address Modal-->
+    <div class="modal fade" id="editAddressS" tabindex="-1">
+        <div class="modal-dialog"> <!--dialog box-->
+            <div class="modal-content">
+            <!--start of modal header-->
+            <div class="modal-header">
+                <h5 class="modal-title text-center" id="modalTitle">
+                    Edit Address</h5>
+                    <button class="btn-close" 
+                            type="button"
+                            data-bs-dismiss="modal"
+                            aria-label="close">
+                    </button>  <!--X button sa dialog box-->
+            </div>
+            <!--End of modal header-->
+    
+            <!--start of modal body-->
+            <div class="modal-body">
+                <p class="fst-italic">Input your new address so we can update it.</p>
+                <div class="input-group" mb-3>
+                    <span class="input-group-text" id="address">Address:</span>
+                    <input type="text-area" class="form-control" id="addressInputS">
+                </div>
+            </div>
+             <!--End of modal body-->
+             <!--start of modal footer-->
+             <div class="modal-footer">
+                <button class="btn btn-info"
+                        type="submit" onclick="applyEditAddS();">
+                        OK
+                </button>
+                <button class="btn btn-info"
+                        type="button" data-bs-dismiss="modal">
                         Cancel
                 </button>
             </div>

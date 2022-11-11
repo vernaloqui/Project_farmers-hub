@@ -1,3 +1,5 @@
+//My Profile Tab Pane
+
 //id="profilePic"
 //id="firstName"
 //id="middleName"
@@ -27,7 +29,7 @@ function getPic() {
     sessionStorage.setItem("userProfilePic", reader.result);
     showProfilePic();
 })
-reader.readAsDataURL(event.target.files[0]);
+reader.readAsDataURL(target.files[0]);
 
 }
 
@@ -36,4 +38,34 @@ function showProfilePic() {
   let profilePicURL = sessionStorage.getItem("userProfilePic");
   profilePic.innerHTML = "<img src='" + profilePicURL +"'style='width: 100px;'>";
 
+}
+
+
+//Address Tab Pane
+
+function applyEditAdd() {
+  let cAddressEdit = document.getElementById("cAddress");
+  let iAddress = document.getElementById("addressInput").value;
+
+  if (iAddress != "") {
+    cAddressEdit.innerText = iAddress;
+  }
+ 
+  else {
+    alert("Please input data.")
+  }
+}
+
+function applyEditAddS() {
+  let sAddressEdit = document.getElementById("sAddress");
+  let iAddressS = document.getElementById("addressInputS").value;
+
+  if (iAddressS != "") {
+    sAddressEdit.innerText = iAddressS;
+    //sessionStorage.setItem("userFirstName", JSON.stringify(inputFName));
+  }
+ 
+  else {
+    alert("Please input data.")
+  }
 }
