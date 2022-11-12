@@ -18,18 +18,5 @@ function SearchBar(){
             Userli[bar].style.display = "none";
         }
     }
-//     const form = document.getElementById('form');
-// // const input = document.getElementById('userInput');
-// // const link = 'BestSellers.html#UlamBundles';
-
-
-// // function submitted(event) {
-// //   event.preventDefault();
-// //   const url = link + input.value;
-// //   const window = window.open(url, '_blank');
-// //   window.focus();
-// // }
-
-// // form.addEventListener('submit', submitted);
 
 }
