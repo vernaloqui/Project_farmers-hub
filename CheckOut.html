@@ -32,7 +32,7 @@
     </style>
 </head>
 
-<body class="d-flex flex-column min-vh-100" style="background: linear-gradient(-120deg,white 50%, RGBA(162, 219, 183, 0.4) 50%);">
+<body onload="printOrderSummary();" style="background: linear-gradient(-120deg,white 50%, RGBA(162, 219, 183, 0.4) 50%);">
 
     <!--Navigation Bar-->
     <div class="container-fluid" style="background-color:#F8FEFA;">
@@ -170,7 +170,7 @@
                                         <tbody id="cartContentsBody"></tbody>
                                     </table>
                                     <p class="total-container" id="total-price"></p>
-                                    <button type="submit" class="btn btn-sm text-uppercase" style="background-color: #073418; color:#A2DBB7;" ><a href="CheckOut.html">Checkout</a></button>
+                                    <button type="submit" class="btn btn-sm text-uppercase" style="background-color: #073418; color:#A2DBB7;" onclick="printOrderSummary();">Checkout</button>
                                     <button class="btn btn-sm shadow text-uppercase" style="background-color: #073418; color:#A2DBB7;" onclick="clearCart(id);">Remove all</button>
                                     <p id="cartEmpty" style="display:none;">Your cart is empty.</p>                        
                                 </div>
@@ -182,13 +182,106 @@
 <br>
 
 <!--Start of Check Out section-->
-<form class="container border shadow border-secondary rounded p-4">
-    <div class="container-fluid" style="background-color: rgba(0, 0, 0, 0.2);">
-        <p class="display-6 text-center text-uppercase" style="color: #073418">Checkout</p>
+<div class="container-fluid" style="background-color: rgba(0, 0, 0, 0.2);">
+    <p class="display-6 text-center text-uppercase" style="color: #073418">Checkout</p>
+</div>
+<br><br>
+<div class="container confirm" style="background-color: #A2DBB7"></div>
+<div class="container" id="orderConfirmation">
+    <table class="table table-hover table-striped" id="orderContents">
+        <thead>
+            <tr>
+                <th scope="col" >Product</th>
+                <th scope="col" >Price</th>
+                <th scope="col" >Quantity</th>
+                <th scope="col" >Subtotal</th>
+            </tr>
+        </thead>
+    </table>
+        <br><br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col ms-3">                
+                <label>Special Instructions to the Seller:</label><br>
+                <textarea class="border shadow-sm p-1" rows="5" cols="45" style="resize:none"></textarea>
+            </div>
+            <div class="col">
+                <br>
+                <!--Summary table-->
+                <table class="table table-bordered table-hover table-striped" id="cartContents">
+                    <thead>
+                        <tr class="text-center">
+                            <th colspan="2">Cart Totals</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                Subtotal
+                            </th>
+                            <td id="subtotal">₱0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                Shipping
+                            </th>
+                            <td id="shipFee">₱0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                Total
+                            </th>
+                            <th id="totalPrice">₱0.00</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
-    <br><br>
-<section class="container mt-2  text-center">
+</div><br>
+<!-- <center>
+<div class="container border shadow p-3">
+    <p>Do you already have an account?</p><br>
+    <button type="button" class="btn text-capitalize btn-sm" style="background-color:#A2DBB7;"><a href="Login.html" style="text-decoration:none; color:#073418">Click here to Log in</a></button>
+</div>
+</center> -->
+<br><br>
+<form class="container p-4">
+    
+<section class="container mt-2 p-3 text-center">
     <div class="accordion accordion-flush" id="CheckOut">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="NameHeading">
+                <button class="accordion-button btn btn-outline fw-bold" 
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#NameBody"
+                        aria-expanded="true"
+                        aria-controls="NameBody">
+                        Contact Details
+                </button>
+            </h2>
+            
+            <div class="accordion-collapsee"
+                id="NameBody"
+                aria-labelledby="#AddressHeading"
+                data-bs-parent="#CheckOut">
+                    <div class="accordion-body text-justify">
+                        <div class="input-group" mb-3>
+                            <label for="custName" class="input-group-text">Full Name:</label>
+                                <input type="text" class="form-control" id="custName" >
+                        </div><br>
+                        <div class="input-group" mb-3>
+                                <label for="Phone" class="input-group-text">Phone number:</label>
+                                <input type="tel" class="form-control" id="Phone" minlength="11" maxlength="11"> 
+                        </div><br>
+                        <div class="input-group" mb-3>
+                            <label for="userEmail" class="input-group-text">Email address:</label>
+                            <input type="email" class="form-control" id="userEmail">
+                        </div><br>
+                    </div>
+            </div>
+        </div>
         <!--Shipping Address Info-->
         <div class="accordion-item">
             <h2 class="accordion-header" id="AddressHeading">
@@ -209,11 +302,11 @@
                     <div class="accordion-body text-justify">
                         <div class="input-group" mb-3>
                             <label for="Housenum" class="input-group-text">House No.:</label>
-                                <input type="text" class="form-control" id="Address1" placeholder="Address Line 1">
+                                <input type="text" class="form-control" id="Housenum" placeholder="Address Line 1">
                         </div><br>
                         <div class="input-group" mb-3>
                                 <label for="Street" class="input-group-text">Street:</label>
-                                <input type="text" class="form-control" id="Address2" placeholder="Address Line 2"> 
+                                <input type="text" class="form-control" id="Street" placeholder="Address Line 2"> 
                         </div><br>
                         <div class="input-group" mb-3>
                             <label for="Barangay" class="input-group-text">Barangay:</label>
@@ -293,7 +386,7 @@
         </div>
     </div>
     <br>
-    <button class="btn" style="border-radius:5px; box-shadow:5px 5px grey; background-color:#A2DBB7;">Place Order</button>
+    <button class="btn" type="submit" style="border-radius:5px; box-shadow:5px 5px grey; background-color:#A2DBB7;" onclick="PlaceOrder();">Place Order</button>
 </form>
 </section>
 <!--End of Checkout section-->

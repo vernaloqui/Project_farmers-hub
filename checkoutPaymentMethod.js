@@ -15,21 +15,21 @@ function showSelected(e) {
       x = document.querySelector('#paymentMethodData');
         x.innerHTML = 'You selected ' + this.value + ' payment method.' + ' <br><br>';
 
-          // Create element:
-          const label = document.createElement("label");
-            label.setAttribute("for", "useraddress");
-            label.innerHTML = "Address : ";
-            document.getElementById("paymentMethodData").appendChild(label);
+          // // Create element:
+          // const label = document.createElement("label");
+          //   label.setAttribute("for", "userName");
+          //   label.innerHTML = "Full Name : ";
+          //   document.getElementById("paymentMethodData").appendChild(label);
 
-          const para = document.createElement("input");
-          var i = document.createElement("input"); //input element, text
-            i.setAttribute('type',"text");
-            i.setAttribute('id',"useraddress");
-            i.setAttribute('name',"useraddress");
-            i.setAttribute('value',"default");
-            //para.innerText = "This is a paragraph.";
-            // Append to body:
-            document.getElementById("paymentMethodData").appendChild(para);
+          // const para = document.createElement("input");
+          // var i = document.createElement("input"); //input element, text
+          //   i.setAttribute('type',"text");
+          //   i.setAttribute('id',"userName");
+          //   i.setAttribute('name',"userName");
+          //   i.setAttribute('value',"default");
+          //   //para.innerText = "This is a paragraph.";
+          //   // Append to body:
+          //   document.getElementById("paymentMethodData").appendChild(para);
     }
 
     if ((this.value) == "CARD") {
@@ -131,10 +131,85 @@ function showSelected(e) {
         const out3 = document.getElementById("paymentMethodData").appendChild(label2);
         const out4 = document.getElementById("paymentMethodData").appendChild(para2);
 
-        let outPut = document.getElementById("paymentMethodDataGrid1").innerHTML;
+        // let outPut = document.getElementById("paymentMethodDataGrid1").innerHTML;
         
      
     }
   }
 }
 
+//print order summary
+function goToCheckout(orderContents){
+  
+  window.location.href = 'CheckOut.html';
+  printOrderSummary(orderContents);
+}
+
+function printOrderSummary(){
+  let table = document.querySelector("#orderContents");
+  // let table = document.getElementById("orderContents");
+  cart = JSON.parse(localStorage.getItem("cart"));
+  
+  let shipping;
+  let subtotals = 0;
+  let count = 0;
+  var total = 0;
+
+  
+  for (let i=0; i < cart.length; i++){
+    let row = table.insertRow();
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    var cell4 = row.insertCell(3);
+    //removes spaces between two word item name to be used as an ID for the cells
+    console.log(cart[i].item);
+    cellID = cart[i].item.replace(/ /g, ""); 
+    console.log(cellID);
+    cell1.innerHTML = `<p id="${cellID}SumItem">${cart[i].item}</p>`;
+    cell2.innerHTML = `<p id="${cellID}PriceSum">${cart[i].price}</p>`;
+    cell3.innerHTML = `<p id="${cellID}qtySum">${cart[i].quantity}</p>`;
+    cell4.innerHTML = `<p id="${cellID}SubtotalSum">${cart[i].subtotal}</p>`;
+    count = count + 1;
+    subtotals += computeSubtotal(cart[i].subtotal);
+    console.log(subtotals);
+  }       
+  if (count < 5){
+    shipping = 45.00;
+  }
+  else if (count < 10){
+    shipping = 65.00;
+  }
+  else {
+    shipping = 70.00;
+  }
+  
+  total = Number(subtotals) + Number(shipping);
+  document.getElementById('subtotal').innerText = `₱${subtotals.toFixed(2)}`;
+  document.getElementById('shipFee').innerText = `₱${shipping.toFixed(2)}`;
+  document.getElementById('totalPrice').innerText = `₱${total.toFixed(2)}`;
+}
+
+function computeSubtotal(sub) {
+  
+    //remove the ₱ from the text and transform the price string into a number ;
+    subT = sub.replace(/(\₱)/, "");
+    subT = Number(subT);
+
+    return subT;
+}
+
+function PlaceOrder(){
+ let name = document.getElementById('custName').value;
+ let Phone = document.getElementById('Phone').value;
+ let Email = document.getElementById('userEmail').value;
+ let Address1 = document.getElementById('Housenum').value;
+ let Address = document.getElementById('province').value;
+
+ if (name == "" || Phone == "" || Email == "" || Phone == "" || Address == ""){
+    alert("Please make sure you have entered all details.");
+ }
+ else{
+  alert('Your order has been completed successfully.');
+}
+}
